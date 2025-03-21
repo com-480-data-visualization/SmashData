@@ -4,56 +4,40 @@
 | -------------- | ------ |
 |Ellen DAGHER| |
 |Karine RAFLA| 345139|
-|Mohammed AL-HUSSINI| |
+|Mohammed AL-HUSSINI| 325673|
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
-## Milestone 1 (21st March, 5pm)
+# Tennis Performance Visualization Project
 
-**10% of the final grade**
+This repository contains the files and notebooks related to our analysis and visualization of professional tennis data from 2000 to 2024. The project focuses on exploring player performance, career trajectories, betting odds, court surface effects, and other influencing factors through interactive visualizations.
 
-This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
-Please, fill the following sections about your project.
+## Repository Contents
 
-*(max. 2000 characters per section)*
+Milestone 1.pdf: The report for the first milestone, outlining the project goals, datasets, and preliminary findings.
 
-### Dataset
+preliminaries.ipynb: The initial exploratory data analysis (EDA) for the Ultimate Tennis Matches Dataset, covering both ATP and WTA matches.
 
-> Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
->
-> Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+preliminaries_evo.ipynb: The exploratory data analysis (EDA) for the tennis_atp dataset, which focuses exclusively on ATP matches dating back to 1968.
 
-### Problematic
+README.md: This file, providing an overview of the repository structure and project scope.
 
-> Frame the general topic of your visualization and the main axis that you want to develop.
-> - What am I trying to show with my visualization?
-> - Think of an overview for the project, your motivation, and the target audience.
+.gitignore: Specifies files to be ignored in version control.
 
-### Exploratory Data Analysis
+Project Overview
 
-> Pre-processing of the data set you chose
-> - Show some basic statistics and get insights about the data
+This project aims to create an interactive visualization platform that demystifies tennis analytics, making it accessible to a broader audience. We analyze factors such as:
 
-### Related work
+Betting accuracy and market predictions
 
+Surface-specific performance trends
 
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+Player career trajectories and major interruptions (injuries, pregnancies, etc.)
 
-## Milestone 2 (18th April, 5pm)
+Rivalries and head-to-head comparisons
 
-**10% of the final grade**
+Geographic and climate influences on performance
 
+Gender-based performance differences
 
-## Milestone 3 (30th May, 5pm)
-
-**80% of the final grade**
-
-
-## Late policy
-
-- < 24h: 80% of the grade for the milestone
-- < 48h: 70% of the grade for the milestone
-
+By leveraging rich datasets and interactive data visualizations, this project seeks to provide both casual fans and analysts with new insights into the world of professional tennis.
