@@ -4,56 +4,30 @@
 | -------------- | ------ |
 |Ellen DAGHER| |
 |Karine RAFLA| 345139|
-|Mohammed AL-HUSSINI| |
+|Mohammed AL-HUSSINI| 325673|
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
-## Milestone 1 (21st March, 5pm)
+# Tennis Performance Analysis
 
-**10% of the final grade**
+## Overview
+This repository contains an interactive data analysis and visualization project focused on professional tennis. Using data from **2000 to 2024**, we explore various aspects of player performance, betting accuracy, career progressions, and external influences such as surface type and climate.
 
-This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
-Please, fill the following sections about your project.
+## Repository Structure
 
-*(max. 2000 characters per section)*
+### `Milestone 1.pdf`
+- This document contains the **report for Milestone 1**, detailing the objectives, dataset selection, problem statement, exploratory data analysis, and related work.
 
-### Dataset
+### `preliminaries.ipynb`
+- A **Jupyter Notebook** dedicated to the **exploratory data analysis (EDA) of the Ultimate Tennis Matches Dataset**.
+- Covers data quality assessment, statistical insights, and preliminary visualizations.
 
-> Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
->
-> Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+### `preliminaries_evo.ipynb`
+- A **Jupyter Notebook** dedicated to the **exploratory data analysis (EDA) of the tennis_atp dataset**.
+- Focuses on a detailed evaluation of historical ATP match data.
 
-### Problematic
+### `README.md`
+- This file! Provides an overview of the repository and its contents.
 
-> Frame the general topic of your visualization and the main axis that you want to develop.
-> - What am I trying to show with my visualization?
-> - Think of an overview for the project, your motivation, and the target audience.
-
-### Exploratory Data Analysis
-
-> Pre-processing of the data set you chose
-> - Show some basic statistics and get insights about the data
-
-### Related work
-
-
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
-
-## Milestone 2 (18th April, 5pm)
-
-**10% of the final grade**
-
-
-## Milestone 3 (30th May, 5pm)
-
-**80% of the final grade**
-
-
-## Late policy
-
-- < 24h: 80% of the grade for the milestone
-- < 48h: 70% of the grade for the milestone
-
+###  `.gitignore`
+- Specifies files and folders to exclude from version control.

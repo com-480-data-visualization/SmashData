@@ -1,0 +1,8 @@
+# Ignore .docx files
+*.docx
+
+# Ignore .csv files
+*.csv
+
+# Ignore all folders
+*/
