@@ -19,7 +19,7 @@ This repository contains an interactive data analysis and visualization project 
 
 
 <p align="center">
-     <a href="https://com-480-data-visualization.github.io/SmashData/">Go to website</a>
+     <a href="https://com-480-data-visualization.github.io/SmashData/">Click here to see the website</a>
 </p>
 
 
