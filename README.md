@@ -1,41 +1,50 @@
 # Project of Data Visualization (COM-480)
 
-| Student's name | SCIPER |
-| -------------- | ------ |
-|Ellen DAGHER| 327278 |
-|Karine RAFLA| 345139|
-|Mohammed AL-HUSSINI| 325673|
+| Student's name        | SCIPER |
+|------------------------|--------|
+| Ellen DAGHER          | 327278 |
+| Karine RAFLA          | 345139 |
+| Mohammed AL-HUSSINI   | 325673 |
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](#milestone-1pdf) • [Milestone 2](#milestone-2) • [Milestone 3](#readmemd)
 
-# Tennis Performance Analysis
+# 🎾 Tennis Performance Analysis
 
-## Overview
+## 🗒️ Overview
 This repository contains an interactive data analysis and visualization project focused on professional tennis. Using data from **2000 to 2024**, we explore various aspects of player performance, betting accuracy, career progressions, and external influences such as surface type and climate.
 
-## Repository Structure
+---
 
+## 📁 Repository Structure
 
+```
+SmashData/
+│
+├── Milestone 1/
+│   ├── Milestone 1.pdf            # Report for Milestone 1
+│   ├── preliminaries.ipynb        # EDA on Ultimate Tennis Dataset
+│   └── preliminaries_evo.ipynb    # EDA on ATP Dataset
+│
+├── Milestone 2/
+│   ├── Milestone2.pdf             # Report for Milestone 2
+│   └── Milestone_2.ipynb          # Code and visualizations
+│
+├── docs/                          # GitHub Pages website files
+│   ├── index.html                 # Home page of the website
+│   └── assets/, js/, css/         # Web assets (scripts, styles, media)
+│
+├── README.md                      # Project summary and navigation
+└── .gitignore                     # Files ignored by Git
+```
 
+---
+
+## 🌐 Live Website
 
 <p align="center">
-     <a href="https://com-480-data-visualization.github.io/SmashData/">Click here to see the website</a>
+  <a href="https://com-480-data-visualization.github.io/SmashData/" target="_blank"><strong>🔗 Click here to see the website</strong></a>
 </p>
 
+---
 
-### `Milestone 1.pdf`
-- This document contains the **report for Milestone 1**, detailing the objectives, dataset selection, problem statement, exploratory data analysis, and related work.
 
-### `preliminaries.ipynb`
-- A **Jupyter Notebook** dedicated to the **exploratory data analysis (EDA) of the Ultimate Tennis Matches Dataset**.
-- Covers data quality assessment, statistical insights, and preliminary visualizations.
-
-### `preliminaries_evo.ipynb`
-- A **Jupyter Notebook** dedicated to the **exploratory data analysis (EDA) of the tennis_atp dataset**.
-- Focuses on a detailed evaluation of historical ATP match data.
-
-### `README.md`
-- This file! Provides an overview of the repository and its contents.
-
-###  `.gitignore`
-- Specifies files and folders to exclude from version control.
