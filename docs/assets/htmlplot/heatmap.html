@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>my plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.6.2.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="a6317e7e-ca5d-4007-aa79-d86bcb95ba8d" data-root-id="p1225" style="display: contents;"></div>
+  
+    <script type="application/json" id="a7051896-71df-4d8d-a7e6-729bab96c662">
+      {"94d95a85-5145-4690-8a56-d741c8c9b106":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1225","attributes":{"width":800,"x_range":{"type":"object","name":"FactorRange","id":"p1235","attributes":{"factors":["America","Both","Europe"]}},"y_range":{"type":"object","name":"FactorRange","id":"p1236","attributes":{"factors":["Comedy_Western","Comedy_War","Comedy_Teen","Comedy_Superhero","Comedy_Screwball","Comedy_Political","Comedy_Other","Comedy_Holiday","Comedy_Animation"]}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1237"},"y_scale":{"type":"object","name":"CategoricalScale","id":"p1238"},"title":{"type":"object","name":"Title","id":"p1228","attributes":{"text":"Heatmap of Metacritic_Rating"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1258","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1221","attributes":{"selected":{"type":"object","name":"Selection","id":"p1222","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1223"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAA"},"shape":[27],"dtype":"int32","order":"little"}],["Comedy_Types",{"type":"ndarray","array":["Comedy_Animation","Comedy_Animation","Comedy_Animation","Comedy_Holiday","Comedy_Holiday","Comedy_Holiday","Comedy_Other","Comedy_Other","Comedy_Other","Comedy_Political","Comedy_Political","Comedy_Political","Comedy_Screwball","Comedy_Screwball","Comedy_Screwball","Comedy_Superhero","Comedy_Superhero","Comedy_Superhero","Comedy_Teen","Comedy_Teen","Comedy_Teen","Comedy_War","Comedy_War","Comedy_War","Comedy_Western","Comedy_Western","Comedy_Western"],"shape":[27],"dtype":"object","order":"little"}],["Continents",{"type":"ndarray","array":["America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe","America","Both","Europe"],"shape":[27],"dtype":"object","order":"little"}],["Metacritic_Rating",{"type":"ndarray","array":{"type":"bytes","data":"AtMYMI0BGECuR+F6FK4YQJqZmZmZGRtALfnFkl8sEkDrUbgehesXQAAAAAAAABRAaaFKRjkSFEAVrkfhehQVQNejcD0KlxZA3d3d3d0dF0DRC73QC70UQNejcD0K1xlAvQ3J25C8FkBwPQrXo3AVQBWuR+F6lBlAntiJndiJE0CamZmZmdkTQGZmZmZmZhRAvup6T4JnFEAe1EEd1MEVQIGVQ4ts5xlATDeJQWDlGEAAAAAAAAAYQJIkSZIkSRtAkhu5kRu5F0BnZmZmZmYUQAAAAAAAAPh/"},"shape":[27],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1259","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1260"}}},"glyph":{"type":"object","name":"Rect","id":"p1255","attributes":{"x":{"type":"field","field":"Continents"},"y":{"type":"field","field":"Comedy_Types"},"width":{"type":"value","value":1},"height":{"type":"value","value":1},"line_color":{"type":"value","value":null},"fill_color":{"type":"field","field":"Metacritic_Rating","transform":{"type":"object","name":"LinearColorMapper","id":"p1251","attributes":{"palette":["#313695","#4575b4","#74add1","#abd9e9","#e0f3f8","#ffffbf","#fee090","#fdae61","#f46d43","#d73027","#a50026"],"low":4.543333333333334,"high":6.821428571428571}}}}},"nonselection_glyph":{"type":"object","name":"Rect","id":"p1256","attributes":{"x":{"type":"field","field":"Continents"},"y":{"type":"field","field":"Comedy_Types"},"width":{"type":"value","value":1},"height":{"type":"value","value":1},"line_color":{"type":"value","value":null},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"field","field":"Metacritic_Rating","transform":{"id":"p1251"}},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Rect","id":"p1257","attributes":{"x":{"type":"field","field":"Continents"},"y":{"type":"field","field":"Comedy_Types"},"width":{"type":"value","value":1},"height":{"type":"value","value":1},"line_color":{"type":"value","value":null},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"field","field":"Metacritic_Rating","transform":{"id":"p1251"}},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1234","attributes":{"tools":[{"type":"object","name":"HoverTool","id":"p1249","attributes":{"renderers":"auto","tooltips":[["Rating","@Metacritic_Rating"]]}},{"type":"object","name":"SaveTool","id":"p1250"}]}},"left":[{"type":"object","name":"CategoricalAxis","id":"p1244","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1245"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1246"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1247"}}}],"right":[{"type":"object","name":"ColorBar","id":"p1261","attributes":{"location":[0,0],"title":"Average Rating","major_label_policy":{"type":"object","name":"NoOverlap","id":"p1262"},"label_standoff":12,"color_mapper":{"type":"object","name":"LinearColorMapper","id":"p1224","attributes":{"palette":["#313695","#4575b4","#74add1","#abd9e9","#e0f3f8","#ffffbf","#fee090","#fdae61","#f46d43","#d73027","#a50026"],"low":4.543333333333334,"high":6.821428571428571}}}}],"above":[{"type":"object","name":"CategoricalAxis","id":"p1239","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1240"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1241"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1242"}}}],"center":[{"type":"object","name":"Grid","id":"p1243","attributes":{"axis":{"id":"p1239"}}},{"type":"object","name":"Grid","id":"p1248","attributes":{"dimension":1,"axis":{"id":"p1244"}}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('a7051896-71df-4d8d-a7e6-729bab96c662').textContent;
+              const render_items = [{"docid":"94d95a85-5145-4690-8a56-d741c8c9b106","roots":{"p1225":"a6317e7e-ca5d-4007-aa79-d86bcb95ba8d"},"root_ids":["p1225"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
