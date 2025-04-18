@@ -16,11 +16,15 @@ layout: default
 Welcome to our interactive platform dedicated to exploring men’s professional tennis from 2000 to 2024. Built on comprehensive datasets from ATP matches and betting markets, this project allows you to visualize, compare, and analyze the performances of the greatest players of the modern era.
 
 ---
+## Evolution of ELO Ranking
 
 <iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
 
 
-![Evolution ELO](assets/img/Stats.png)
+## Stats of fighters 
+
+
+<img src="assets/img/Stats.png" alt="Evolution ELO" width="600">
 
 ## Project Goals
 
