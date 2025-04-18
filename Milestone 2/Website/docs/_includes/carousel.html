@@ -1,0 +1,52 @@
+<div id="movieCarousel" class="carousel slide border rounded mx-auto" data-bs-ride="carousel" style="max-width: 80%;">
+    <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+            <div class="d-block h-100 ms-auto me-auto">
+                <h3>KS Test</h3>
+                <p><strong>Explanation:</strong> The KS Test checks if a dataset follows a specific distribution by comparing its cumulative distribution to the expected one.</p>
+                <p><strong>Define Hypotheses:</strong> Null hypothesis assumes the data follows the specified distribution; alternative suggests it does not.</p>
+                <p><strong>Assumptions:</strong> Requires continuous data; the distribution of the data is not assumed to be normal.</p>
+                <p><strong>Interpretation:</strong> A low p-value (&lt; 0.05) indicates significant deviation from the specified distribution, rejecting the null hypothesis.</p>
+                <p><strong>Formula:</strong> \( D_n = \sup_x |F_n(x) - F(x)| \)</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-block h-100 ms-auto me-auto">
+                <h3>Independent T-Test</h3>
+                <p><strong>Explanation:</strong> Compares the means of two independent groups to determine if they are significantly different.</p>
+                <p><strong>Define Hypotheses:</strong> Null hypothesis assumes no difference in means; alternative suggests a significant difference.</p>
+                <p><strong>Assumptions:</strong> Data should be normally distributed, with equal variances between the groups. Use Welch's T-Test if variances differ.</p>
+                <p><strong>Interpretation:</strong> A low p-value (&lt; 0.05) indicates a significant difference in means, rejecting the null hypothesis.</p>
+                <p><strong>Formula:</strong> \( t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \)</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-block h-100 ms-auto me-auto">
+                <h3>Mann-Whitney U Test</h3>
+                <p><strong>Explanation:</strong> A non-parametric test comparing distributions of two independent groups without assuming normality.</p>
+                <p><strong>Define Hypotheses:</strong> Null hypothesis assumes no difference in distributions; alternative suggests a significant difference.</p>
+                <p><strong>Assumptions:</strong> Data is ordinal, or continuous but not normally distributed, and samples are independent.</p>
+                <p><strong>Interpretation:</strong> A low p-value (&lt; 0.05) suggests a significant difference in distributions, rejecting the null hypothesis.</p>
+                <p><strong>Formula:</strong> \( U = n_1 n_2 + \frac{n_1 (n_1 + 1)}{2} - R_1 \)</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-block h-100 ms-auto me-auto">
+                <h3>Confidence Interval</h3>
+                <p><strong>Explanation:</strong> A CI estimates a range likely to contain the true population parameter with a given confidence level.</p>
+                <p><strong>Define Hypotheses:</strong> No null or alternative hypothesis; it evaluates the precision of the parameter.</p>
+                <p><strong>Assumptions:</strong> Data should be representative, with larger samples increasing accuracy.</p>
+                <p><strong>Interpretation:</strong> A 95% CI means we are confident the parameter lies within the interval 95% of the time.</p>
+                <p><strong>Formula:</strong> \( CI = \bar{X} \pm Z \frac{\sigma}{\sqrt{n}} \)</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

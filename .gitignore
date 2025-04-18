@@ -4,5 +4,6 @@
 # Ignore .csv files
 *.csv
 
-# Ignore all folders
-*/
+# Ignonre data files
+Dataset/
+Garbage/
