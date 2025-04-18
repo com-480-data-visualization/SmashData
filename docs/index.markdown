@@ -20,7 +20,7 @@ Welcome to our interactive platform dedicated to exploring men’s professional 
 <iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
 
 
-![Evolution ELO](../assets/img/Stats.png)
+![Evolution ELO](assets/img/Stats.png)
 
 ## Project Goals
 
