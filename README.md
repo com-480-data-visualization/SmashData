@@ -15,6 +15,8 @@ This repository contains an interactive data analysis and visualization project 
 
 ## Repository Structure
 
+https://com-480-data-visualization.github.io/SmashData/
+
 ### `Milestone 1.pdf`
 - This document contains the **report for Milestone 1**, detailing the objectives, dataset selection, problem statement, exploratory data analysis, and related work.
 
