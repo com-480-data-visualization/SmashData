@@ -9,43 +9,18 @@ layout: default
 ---
 <!-- titre image  -->
 
-<div class="big-image-wrapper">
-  <img src="{{ '/assets/img/circus_lion.png' | relative_url }}" alt="Alternative text" class="big-image shadow shadow-lg">
-</div>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
-
-
-
-
-  # Men's Tennis (2000–2024): Two Decades of Data and Rivalries
+# Men's Tennis (2000–2024): Two Decades of Data and Rivalries
 
 Welcome to our interactive platform dedicated to exploring men’s professional tennis from 2000 to 2024. Built on comprehensive datasets from ATP matches and betting markets, this project allows you to visualize, compare, and analyze the performances of the greatest players of the modern era.
 
 ---
 
 <iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
+
+
+![Evolution ELO](../assets/img/Stats.png)
 
 ## Project Goals
 

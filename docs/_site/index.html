@@ -31,81 +31,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Abang:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="rideau"></div>
-  <img id="bombeImg" src="assets/img/BOMBE.png" alt="Bombe">
-  <!-- <nav class="navbar the-navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav> -->
-  <!-- <div class="background"></div> -->
-  <div class="wrapper" id="mainContent">
+
+  <div class="wrapper" id="mainContent" style="display: block;">
     <section>
       <!-- titre image  -->
 
-<div class="big-image-wrapper">
-  <img src="/assets/img/circus_lion.png" alt="Alternative text" class="big-image shadow shadow-lg" />
-</div>
-<p><br /><br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br /></p>
-
-<p># Men’s Tennis (2000–2024): Two Decades of Data and Rivalries</p>
+<h1 id="mens-tennis-20002024-two-decades-of-data-and-rivalries">Men’s Tennis (2000–2024): Two Decades of Data and Rivalries</h1>
 
 <p>Welcome to our interactive platform dedicated to exploring men’s professional tennis from 2000 to 2024. Built on comprehensive datasets from ATP matches and betting markets, this project allows you to visualize, compare, and analyze the performances of the greatest players of the modern era.</p>
 
 <hr />
 
 <iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
+
+<p><img src="../assets/img/Stats.png" alt="Evolution ELO" /></p>
 
 <h2 id="project-goals">Project Goals</h2>
 
@@ -182,45 +121,6 @@
     </section>
     <footer>
     </footer>
-</div>
-
-<script>
-  let explosionStarted = false;
-  const baseurl2 = document.querySelector('meta[name="baseurl"]').getAttribute('content');
-
-  setTimeout(() => {
-    if (explosionStarted) return;
-    explosionStarted = true;
-
-    const bombeGif = document.createElement('img');
-    const bombeImg = document.getElementById('bombeImg');
-    bombeGif.src = baseurl2 + '/assets/img/BOMBE.gif';
-    bombeGif.className = 'bombeGif';
-
-    document.body.appendChild(bombeGif);
-
-    bombeImg.style.display = 'none';
-    bombeImg.remove();
-
-    setTimeout(() => {
-      bombeGif.remove();
-      showContent();
-    }, 1500);
-  }, 3000);
-
-  document.body.addEventListener('click', () => {
-    if (!explosionStarted) {
-      explosionStarted = true;
-      document.getElementById('bombeImg').remove();
-      showContent();
-    }
-  });
-
-  function showContent() {
-    document.getElementById('mainContent').style.display = 'block';
-    document.body.style.overflow = 'auto';
-    document.getElementById('rideau').style.display = 'none';
-  }
-</script>
+  </div>
 </body>
 </html>
