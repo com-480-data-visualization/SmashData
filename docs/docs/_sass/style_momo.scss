@@ -1,0 +1,94 @@
+/* Réinitialise les styles des boutons Bootstrap */
+/* Réduction des images */
+/* Transition pour l'image */
+#content-image {
+    width: auto;
+    height: 370px;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin: auto;
+    margin-top: 13px;
+  }
+
+/* Transition pour le texte et le titre */
+#content-title, #content-text {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Transition fluide */
+}
+
+/* Classe pour masquer temporairement */
+.fade-out {
+    opacity: 0;
+}
+
+
+/* Conteneur des boutons */
+.button-panel {
+    display: flex;
+    flex-direction: column; /* Afficher les boutons verticalement */
+    gap: 10px; /* Espacement entre les boutons */
+    padding: 10px; /* Espacement interne autour du panel */
+}
+
+/* Style des boutons */
+.button-panel .btn {
+    width: 100%; /* Les boutons prennent toute la largeur du conteneur */
+    padding: 10px 15px; /* Ajuste l'espacement interne */
+    font-size: 1rem; /* Taille de texte lisible */
+    font-weight: bold; /* Texte en gras */
+    text-align: left; /* Alignement du texte à gauche */
+    background-color: #f8f9fa; /* Couleur de fond par défaut */
+    color: #333; /* Couleur du texte */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+    cursor: pointer; /* Curseur cliquable */
+}
+
+/* Style au survol */
+.button-panel .btn:hover {
+    background-color: #dfe6e9; /* Couleur de fond au survol */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Style actif */
+.button-panel .btn.active {
+    background-color: #6c5ce7; /* Couleur d'arrière-plan pour le bouton actif */
+    color: white; /* Texte en blanc */
+    border-color: #6c5ce7; /* Bordure assortie */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+
+.ratings-plot-ctn {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ratings-plot-ctn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .ratings-plot-ctn .plots-ratings {
+    z-index: 1;
+  }
+
+  .ratings-plot-ctn .card-plots {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .ratings-plot-ctn:hover .card-plots {
+    opacity: 0;
+  }

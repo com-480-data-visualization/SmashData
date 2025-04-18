@@ -1,0 +1,22 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StanfordCoreNLP (1)" type="Application" factoryName="Application">
+    <classpathModifications>
+      <entry path="$PROJECT_DIR$/../stanford-corenlp-models-current.jar" />
+      <entry path="$PROJECT_DIR$/../stanford-corenlp-models-english-default.jar" />
+      <entry path="$PROJECT_DIR$/../stanford-english-kbp-corenlp-models-current.jar" />
+    </classpathModifications>
+    <option name="MAIN_CLASS_NAME" value="edu.stanford.nlp.pipeline.StanfordCoreNLP" />
+    <module name="stanford-corenlp" />
+    <option name="PROGRAM_PARAMETERS" value="-fileList $PROJECT_DIR$/../ada-2024-project-fadadudata2024/corenlp_input.txt -outputFormat xml" />
+    <option name="VM_PARAMETERS" value="-Dprops=src/main/resources/StanfordCoreNLP.properties" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="edu.stanford.nlp.pipeline.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

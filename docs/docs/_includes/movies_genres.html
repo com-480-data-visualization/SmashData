@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row w-100">
+        <!-- Left Panel with Buttons -->
+        <div class="col-md-4 p-3 rounded text-white align-content-center"
+            style="background: linear-gradient(to bottom,rgb(0, 108, 99), #f7e0c3);">
+            <div class="button-panel d-flex flex-column gap-2">
+                <button class="btn btn-light text-dark fw-bold"
+                    data-image="{{ '/assets/img/types/comedy_animation.jpg' | relative_url }}"
+                    data-text="Animated comedy movies are loved by all ages for their visual creativity and humor."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Animation
+                </button>
+                <button class="btn btn-light text-dark fw-bold"
+                    data-image="{{ '/assets/img/types/comedy_holiday.jpg' | relative_url }}"
+                    data-text="Holiday comedies bring joy and laughter, often revolving around festive themes like Christmas or Thanksgiving."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Holiday
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy Other"
+                    data-image="{{ '/assets/img/types/comedy_other.jpg' | relative_url }}"
+                    data-text="These are miscellaneous comedies that don't fit into other categories but still deliver humor."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Other
+                </button>
+                <button class="btn btn-light text-dark fw-bold"
+                    data-image="{{ '/assets/img/types/comedy_political.jpg' | relative_url }}"
+                    data-text="Political comedies satirize political situations, leaders, and events with a humorous twist."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Political
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy Screwball"
+                    data-image="{{ '/assets/img/types/comedy_screwball.jpg' | relative_url }}"
+                    data-text="Screwball comedies involve eccentric characters and absurd situations, often romantic and light-hearted."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Screwball
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy Superhero"
+                    data-image="{{ '/assets/img/types/comedy_superhero.jpg' | relative_url }}"
+                    data-text="Superhero comedies parody the traditional superhero genre, mixing action with humor."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Superhero
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy Teen"
+                    data-image="{{ '/assets/img/types/comedy_teen.jpg' | relative_url }}"
+                    data-text="Teen comedies focus on humorous stories about adolescence, school life, and friendships."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Teen
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy War"
+                    data-image="{{ '/assets/img/types/comedy_war.jpg' | relative_url }}"
+                    data-text="War comedies use humor to depict military life, often highlighting the absurdity of conflict."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    War
+                </button>
+                <button class="btn btn-light text-dark fw-bold" data-title="Comedy Western"
+                    data-image="{{ '/assets/img/types/comedy_western.jpg' | relative_url }}"
+                    data-text="Western comedies parody the Wild West, blending classic cowboy tropes with humorous storytelling."
+                    style="font-family: 'Copperplate', sans-serif;">
+                    Western
+                </button>
+            </div>
+        </div>
+        <!-- Right Panel with Dynamic Content -->
+        <div class="col-md-8 rounded">
+            <div class="card w-75 m-auto shadow-sm">
+                <img id="content-image" src="{{ '/assets/img/types/comedy_animation.jpg' | relative_url }}" alt="Comedy Animation" class="card-img-top">
+                <hr>
+                <div class="card-body">
+                    <h4 class="card-title" id="content-title" style="font-family: 'Copperplate', sans-serif;"></h4>
+                    <p class="card-text" id="content-text" style="font-family: 'Copper Black', sans-serif;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

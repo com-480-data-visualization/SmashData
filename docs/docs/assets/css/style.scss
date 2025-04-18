@@ -1,0 +1,329 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import "style_momo.scss";
+@import "style_lolo.scss";
+
+
+@font-face {
+    font-family: "Abang";
+    src: url({{ '/assets/fonts/Abang.otf' | relative_url }}) format('truetype');
+}
+
+.abang {
+    font-family: 'Abang', sans-serif;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+body {
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23F6F6F6' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.laugh-text {
+    display: inline-block;
+    animation: shake 0.5s;
+    /* Change duration of shake as you like */
+    animation-iteration-count: infinite;
+}
+
+.bokeh-plot {
+    height: 700px;
+}
+
+.background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url({{ "/assets/img/background.svg" | relative_url }});
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+
+section {
+    width: 100%;
+    float: left;
+}
+
+header {
+    width: 310px;
+    position: sticky;
+    height: 400px;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+#canvasContainer {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#bombeImg {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    /* Agrandit 1.5 fois (200px * 1.5) */
+    pointer-events: none;
+    z-index: 99;
+}
+
+#rideau {
+    position: absolute;
+    top: -17%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: url({{ '/assets/img/Titre.png' | relative_url }}) no-repeat center center / cover;
+    z-index: 12;
+    /* Increased z-index */
+}
+
+#mainContent {
+    display: none;
+    /* background: white; */
+    /* position: absolute; top: 0; left: 0; width: 100%; height: 100%; */
+    // overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+img.bombeGif {
+    position: absolute;
+    bottom: -24%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    /* Agrandit 1.5 fois (400px * 1.5) */
+    z-index: 99;
+}
+
+.wordcloud-image {
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.wordcloud-image-hidden {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.wrapper {
+    width: 75vw;
+    padding-top: 350px;
+}
+
+.big-image-wrapper {
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fig-image-frapper {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.fig-frapper {
+    width: 75vw;
+    padding-top: 350px;
+}
+
+.fig-image-spacer {
+    height: 680px;
+}
+
+.fig-image {
+    width: 100vw;
+    height: auto;
+}
+
+
+.big-image-spacer {
+    height: 680px;
+}
+
+.big-image {
+    width: 100vw;
+    height: auto;
+}
+
+.image-container-tikets {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.plot-frame {
+//   position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+// .the-navbar {
+//     z-index: 999;
+//     top: 0;
+//     position: fixed;
+//     width: 100vw;
+//     left: 0;
+// }
+
+.top-banner {
+    height: 350px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.banner-custom {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.comedy-war-txt {
+    width: fit-content;
+    margin: auto;
+    padding-top: 90px;
+    font-size: 140px !important;
+    font-weight: bold !important;
+    text-shadow: 5px 5px #000;
+}
+
+.movie-poster {
+    height: 430px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.banner-circus-image {
+    background-image: url({{ "/assets/img/circus_banner.png" | relative_url }});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 4px solid #f76c6c;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+// .team .emoji {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(0);
+//     transition: transform 0.3s ease-in-out;
+//     font-size: 14rem;
+//     user-select: none;
+//     pointer-events: none;
+// }
+
+// .team .member:hover img {
+//     transform: scale(1.2);
+// }
+
+// .team .member:hover .emoji {
+//     transform: translate(-50%, -50%) scale(1) rotate(360deg);
+// }
