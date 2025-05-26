@@ -1,85 +1,88 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
-
-# START COMMAND : bundle exec jekyll serve -l
-# START COMMAND Pour loris: bundle exec jekyll serve --livereload
 ---
-<!-- titre image  -->
 
+# 👟 WTA Tour (2000–2024): Underdogs, Surfaces, and Surprises
 
-
-# Men's Tennis (2000–2024): Two Decades of Data and Rivalries
-
-Welcome to our interactive platform dedicated to exploring men’s professional tennis from 2000 to 2024. Built on comprehensive datasets from ATP matches and betting markets, this project allows you to visualize, compare, and analyze the performances of the greatest players of the modern era.
-
----
-## Evolution of ELO Ranking
-
-<iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
-
-
-## Stats of fighters 
-
-
-<img src="assets/img/Stats.png" alt="Evolution ELO" width="600">
-
-## Project Goals
-
-Our mission is to make tennis statistics more accessible and insightful for both casual fans and tennis enthusiasts. With clean, interactive visualizations, you can explore:
-
-- ELO rating evolution of players over time
-- Performance across surfaces (Hard, Clay, Grass)
-- Detailed head-to-head statistical comparisons
-- Historical duel outcomes with interactive pie charts
-- Bookmaker prediction accuracy
+Welcome to our interactive data platform dedicated to **women’s professional tennis** between 2000 and 2024. This project offers a deep dive into match performance, player rankings, and betting outcomes using dynamic visualizations and rich datasets from the WTA Tour.
 
 ---
 
-## Key Insights
+## 📈 Evolution of ELO Rankings
 
-- The rise of the Big 3: Federer, Nadal, and Djokovic and their dominance in major tournaments
-- Surface specialists: some thrive on clay, others dominate on grass
-- Legendary matchups: explore iconic rivalries and victory breakdowns
-- Next-gen talents: follow the trajectory of rising stars in the 2020s
+Explore how players’ ELO scores have changed over time, revealing trends, rivalries, and rising stars.
 
----
-
-## Data Sources
-
-- ATP Matches (2000–2024): Historical tournament results and player stats
-- Dynamic ELO Ratings: Performance-based scores calculated after each match
-- Detailed player stats: Aces, double faults, break points, service games, tie-breaks, and more
-- Betting market odds: Implied win probabilities from multiple bookmakers
+<iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px" style="border:none; border-radius: 12px;"></iframe>
 
 ---
 
-## What You Can Do
+## 🧨 Underdogs vs Top-10 (Interactive Plot)
 
-- Compare two players based on form and performance metrics
-- Visualize stats by surface or tournament stage
-- Explore head-to-head results with pie charts
-- Track ELO rankings and consistency across seasons
+Which lower-ranked players beat top-10 opponents? On what surfaces? With what betting returns?
 
----
+Dive into our interactive dashboard to filter by year, surface, and opponent. Click and explore:
 
-## Technologies Used
-
-- Python, Pandas, Plotly, ipywidgets
-- Dynamic visualizations via Jupyter, or web-ready via Dash/Streamlit
-
----
-
-## Timeline Coverage
-
-- From January 1st, 2000 to December 31st, 2024
-- Over 100,000 matches analyzed
-- Continuously updated with the latest ATP results
+<iframe 
+  src="https://your-dash-app-url.onrender.com" 
+  width="100%" 
+  height="900px" 
+  style="border: none; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.1);">
+</iframe>
 
 ---
 
-> “Data doesn’t replace the game… but it tells the story better.”  
-> – Tennis Data Explorer Team
+## 📊 Player Performance Stats
 
+A static summary of key stats — ELO ranges, match frequency, and player categories:
+
+<img src="assets/img/Stats.png" alt="WTA Stats Overview" width="100%" style="border-radius: 8px; margin-top: 20px;">
+
+---
+
+## 🎯 Goals of This Project
+
+To give fans and analysts an intuitive, data-rich way to:
+
+- Track player momentum over the years  
+- Visualize performance across Hard, Clay, and Grass  
+- Compare betting outcomes and underdog wins  
+- Explore rivalries and upsets with interactive charts  
+
+---
+
+## 🧠 Key Takeaways
+
+- **WTA's Unpredictability**: Underdogs often shine, especially on fast courts  
+- **Surface Specialists**: Some players dominate on clay, others on grass  
+- **Top-10 Upsets**: Learn which top-ranked players are most vulnerable  
+- **Rising Stars**: Track breakout players gaining momentum in recent seasons
+
+---
+
+## 📚 Data Sources
+
+- **WTA Match Records (2000–2024)**: Match stats, winners, surfaces  
+- **Dynamic ELO Ratings**: Calculated after every match using custom algorithms  
+- **Betting Odds (Bet365)**: Implied win probabilities and return stats  
+- **Tournament Metadata**: Tier, surface, and level breakdowns
+
+---
+
+## 🧰 Tech Stack
+
+- **Python**, **Pandas**, **Plotly**, **Dash**, **Jupyter**  
+- **Jekyll** for this site  
+- Clean, reproducible code & interactive web deployment via **Render**
+
+---
+
+## 🗓️ Timeline
+
+- Match data: January 1, 2000 → December 31, 2024  
+- 100,000+ matches analyzed  
+- Interactive updates powered by the latest WTA datasets
+
+---
+
+> “Surfaces change. Ranks change. But stats reveal the story.”  
+> — *The WTA Visual Team*
