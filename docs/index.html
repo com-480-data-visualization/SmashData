@@ -2,221 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>WTA Underdog Wins</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎾 Tennis Trends: WTA & ATP Betting Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #111;
-      color: white;
-      font-family: sans-serif;
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: url('assets/img/tennis-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
-    #controls {
-      margin-bottom: 20px;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #0d6efd;
     }
-
-    label {
-      margin: 0 10px;
+    header p {
+      font-size: 1.2rem;
+      color: #444;
     }
-
-    select {
-      padding: 5px;
-      background: #222;
+    .animation {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .animation img {
+      width: 120px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .selector {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .selector button {
+      margin: 0 1rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #0d6efd;
+      border: none;
       color: white;
-      border: 1px solid #444;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .selector button:hover {
+      background-color: #0b5ed7;
+      transform: scale(1.05);
+    }
+    .section {
+      display: none;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    .visible {
+      display: block;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 700px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <h2>🎾 Underdog Wins vs Top-10 (WTA)</h2>
-  <div id="controls">
-    <label for="year">Year:</label>
-    <select id="year"></select>
+  <header>
+    <h1>🎾 Tennis Betting Trends: WTA & ATP Over the Years</h1>
+    <p>Dive into the evolution of underdog wins, top-10 clashes, and player momentum across both tours.</p>
+  </header>
 
-    <label for="surface">Surface:</label>
-    <select id="surface">
-      <option value="Hard">Hard</option>
-      <option value="Clay">Clay</option>
-      <option value="Grass">Grass</option>
-    </select>
-
-    <label for="opponent">Top-10 Opponent:</label>
-    <select id="opponent">
-      <option value="">All</option>
-    </select>
+  <div class="animation">
+    <img src="assets/img/tennis-ball.gif" alt="Tennis animation">
   </div>
 
-  <div id="plot" style="width: 90%; margin: auto; height: 600px;"></div>
+  <div class="selector">
+    <button onclick="showSection('wta')">Explore WTA</button>
+    <button onclick="showSection('atp')">Explore ATP</button>
+  </div>
+
+  <div id="wta" class="section">
+    <h2>WTA Insights</h2>
+    <h3>Bets</h3>
+    <iframe src="wta.html"></iframe>
+  </div>
+
+  <div id="atp" class="section">
+    <h2>ATP Insights</h2>
+    <h3>Player evolution</h3>
+    <iframe src="atp.html"></iframe>
+  </div>
 
   <script>
-    let rawData = [];
-    let surfaceBg = {
-      hard: "images/hard.jpeg",
-      clay: "images/clay.jpg",
-      grass: "images/grass.jpg"
-    };
-
-    let tierLogos = {
-      "Grand Slam": {
-        australian: "images/ao.png",
-        roland: "images/rg.png",
-        wimbledon: "images/wimbledon.png",
-        "us open": "images/usopen.png"
-      },
-      "WTA 1000": "images/logo-wta1000-black-1.png",
-      "WTA 500": "images/wta500.png",
-      "WTA 250": "images/wta250.png",
-      "WTA Finals": "images/wtafinals.png",
-      "125 / ITF": "images/wta125.png"
-    };
-
-    fetch("data/underdogs.json")
-      .then(res => res.json())
-      .then(data => {
-        rawData = data;
-        populateControls();
-        updatePlot();
-      });
-
-    function populateControls() {
-      const yearSelect = document.getElementById("year");
-      const oppSelect = document.getElementById("opponent");
-
-      let years = [...new Set(rawData.map(d => d.Year))].sort();
-      for (let y of years) {
-        let opt = document.createElement("option");
-        opt.value = y;
-        opt.textContent = y;
-        yearSelect.appendChild(opt);
-      }
-      yearSelect.value = years[years.length - 1];
-
-      let opponents = [...new Set(rawData.map(d => d.Top10))].sort();
-      for (let p of opponents) {
-        if (!p) continue;
-        let opt = document.createElement("option");
-        opt.value = p;
-        opt.textContent = p;
-        oppSelect.appendChild(opt);
-      }
-
-      document.getElementById("year").addEventListener("change", updatePlot);
-      document.getElementById("surface").addEventListener("change", updatePlot);
-      document.getElementById("opponent").addEventListener("change", updatePlot);
-    }
-
-    function updatePlot() {
-      const year = +document.getElementById("year").value;
-      const surface = document.getElementById("surface").value;
-      const opponent = document.getElementById("opponent").value;
-
-      let filtered = rawData.filter(d =>
-        d.Year === year &&
-        d.Surface === surface &&
-        (!opponent || d.Top10 === opponent)
-      );
-
-      let players = {};
-      for (let row of filtered) {
-        const name = row.Underdog;
-        if (!players[name]) {
-          players[name] = {
-            ranks: [],
-            odds: [],
-            tier: row.TierCat,
-            tournaments: []
-          };
-        }
-        players[name].ranks.push(row.UDRank);
-        players[name].odds.push(row.Return);
-        if (row.Tournament) players[name].tournaments.push(row.Tournament.toLowerCase());
-      }
-
-      const data = [];
-      const layoutImages = [];
-
-      for (let [player, stats] of Object.entries(players)) {
-        const x = average(stats.ranks);
-        const y = average(stats.odds);
-        const tier = stats.tier;
-
-        data.push({
-          x: [x],
-          y: [y],
-          mode: "markers+text",
-          type: "scatter",
-          name: player,
-          text: [player],
-          textposition: "top center",
-          marker: { size: 10 }
-        });
-
-        // Determine logo
-        let logoPath = null;
-        if (tier === "Grand Slam") {
-          for (let t of stats.tournaments) {
-            for (let key in tierLogos["Grand Slam"]) {
-              if (t.includes(key)) {
-                logoPath = tierLogos["Grand Slam"][key];
-                break;
-              }
-            }
-            if (logoPath) break;
-          }
-        } else {
-          logoPath = tierLogos[tier];
-        }
-
-        if (logoPath) {
-          layoutImages.push({
-            source: logoPath,
-            xref: "x",
-            yref: "y",
-            x: x,
-            y: y,
-            sizex: 3,
-            sizey: 0.6,
-            xanchor: "center",
-            yanchor: "middle",
-            layer: "above"
-          });
-        }
-      }
-
-      const layout = {
-        title: `Underdog Wins vs Top-10 • ${year} on ${surface}`,
-        xaxis: { title: "Average Rank", autorange: "reversed" },
-        yaxis: { title: "Average Return ($1 Bet)", rangemode: "tozero" },
-        paper_bgcolor: "#111",
-        plot_bgcolor: "#111",
-        font: { color: "white" },
-        images: layoutImages
-      };
-
-      const bgImage = surfaceBg[surface.toLowerCase()];
-      if (bgImage) {
-        layout.images.push({
-          source: bgImage,
-          xref: "paper",
-          yref: "paper",
-          x: 0,
-          y: 1,
-          sizex: 1,
-          sizey: 1,
-          xanchor: "left",
-          yanchor: "top",
-          sizing: "stretch",
-          opacity: 0.5,
-          layer: "below"
-        });
-      }
-
-      Plotly.newPlot("plot", data, layout);
-    }
-
-    function average(arr) {
-      return arr.reduce((a, b) => a + b, 0) / arr.length;
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+      document.getElementById(id).classList.add('visible');
     }
   </script>
 </body>
