@@ -1,8 +1,6 @@
 # Ignore .docx files
-*.docx
 
 # Ignore .csv files
-*.csv
 
 # Ignonre data files
 Dataset/
