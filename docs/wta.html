@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WTA Insights</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WTA Bets Visualized</title>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -25,43 +25,6 @@
       padding: 2rem;
     }
 
-    .sub-selector {
-      margin-bottom: 2rem;
-    }
-
-    .sub-btn {
-      background: #007bff;
-      color: white;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 0.6rem 1.4rem;
-      margin: 0 0.5rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .sub-btn:hover {
-      background: #0056b3;
-    }
-
-    .sub-btn.active {
-      background: #0056b3;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 8px;
-    }
-
     select {
       font-size: 1rem;
       padding: 0.6rem;
@@ -73,21 +36,68 @@
       font-weight: 600;
       margin-right: 0.5rem;
     }
+
+    #playerPopup {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: white;
+      border: 2px solid #007bff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 400px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    #playerPopup h4 {
+      margin-top: 0;
+    }
+
+    #playerPopup ul {
+      padding-left: 1.2rem;
+    }
+
+    #playerPopup button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #topPlayersPrompt {
+      margin-top: 2rem;
+    }
+
+    #topOpponentsButtons button {
+      background: #dc3545;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 0.3rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+
   <div class="card">
-    <h2>🎾 WTA Insights</h2>
-
-    <div class="sub-selector">
-      <button class="sub-btn active" onclick="switchSection('bets')">Bets</button>
-      <button class="sub-btn" onclick="switchSection('evolution')">Evolution</button>
-      <button class="sub-btn" onclick="switchSection('map')">Map</button>
-    </div>
-  </div>
-
-  <div id="bets-section" class="card">
     <h3>💸 WTA Underdog Wins vs Top-10 Players</h3>
+    <p style="max-width: 800px; margin: auto; font-size: 1rem;">
+      Explore which underdogs delivered the biggest surprises by beating top-10 players. Each point shows the player's average rank and betting return. Click on a point or choose a top-10 opponent to see results.
+    </p>
+
     <div class="controls">
       <label for="year">Year:</label>
       <select id="year"></select>
@@ -104,34 +114,25 @@
         <option value="">All</option>
       </select>
     </div>
-    <div id="plot"></div>
+
+    <div id="topPlayersPrompt">
+      <p><strong>Who do you want to see first?</strong></p>
+      <div id="topOpponentsButtons" style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
+    </div>
+
+    <div id="plot" style="margin-top: 2rem;"></div>
   </div>
 
-  <div id="evolution-section" class="card hidden">
-    <h3>📈 WTA Player Elo Rating Evolution</h3>
-    <iframe src="assets/htmlplot/wta_elo_evolution.html"></iframe>
-  </div>
-
-  <div id="map-section" class="card hidden">
-    <h3>🗺️ WTA Map Coming Soon</h3>
-    <p>Placeholder for upcoming geographic visualizations.</p>
+  <div id="playerPopup" class="hidden">
+    <h4 id="popupName"></h4>
+    <p><strong>Avg Rank:</strong> <span id="popupRank"></span></p>
+    <p><strong>Avg Return:</strong> $<span id="popupReturn"></span></p>
+    <p><strong>Top-10 Matches:</strong></p>
+    <ul id="popupMatches"></ul>
+    <button onclick="document.getElementById('playerPopup').classList.add('hidden')">Close</button>
   </div>
 
   <script>
-    function switchSection(id) {
-      // Hide all sections
-      document.getElementById('bets-section').classList.add('hidden');
-      document.getElementById('evolution-section').classList.add('hidden');
-      document.getElementById('map-section').classList.add('hidden');
-
-      // Show the one we want
-      document.getElementById(id + '-section').classList.remove('hidden');
-
-      // Toggle button styles
-      document.querySelectorAll('.sub-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.sub-btn[onclick*="${id}"]`).classList.add('active');
-    }
-
     let rawData = [];
     const surfaceBg = {
       hard: "assets/img/hard.jpeg",
@@ -147,6 +148,8 @@
       "WTA Finals": "assets/img/wtafinals.png",
       "125 / ITF": "assets/img/wta125.png"
     };
+
+    let playerStats = {};
 
     fetch("assets/data/underdogs.json")
       .then(res => res.json())
@@ -167,7 +170,6 @@
         yearSelect.appendChild(opt);
       }
       yearSelect.value = years[years.length - 1];
-
       yearSelect.addEventListener("change", () => {
         populateOpponentDropdown(+yearSelect.value);
         updatePlot();
@@ -185,42 +187,81 @@
         opt.textContent = name;
         oppSelect.appendChild(opt);
       }
-      oppSelect.addEventListener("change", updatePlot);
-      document.getElementById("surface").addEventListener("change", updatePlot);
+      oppSelect.addEventListener("change", () => updatePlot());
+      document.getElementById("surface").addEventListener("change", () => updatePlot());
     }
 
-    function updatePlot() {
+    function updatePlot(selectedOpponent = "") {
       const year = +document.getElementById("year").value;
       const surface = document.getElementById("surface").value;
-      const opponent = document.getElementById("opponent").value;
+      const manualOpponent = selectedOpponent || document.getElementById("opponent").value;
 
       const filtered = rawData.filter(d =>
         d.Year === year &&
         d.Surface.toLowerCase() === surface.toLowerCase() &&
-        (!opponent || d.Top10 === opponent)
+        (!manualOpponent || d.Top10 === manualOpponent)
       );
 
-      let players = {};
+      playerStats = {};
+      const data = [];
+      const layoutImages = [];
+
       for (let row of filtered) {
         const name = row.Underdog;
-        if (!players[name]) {
-          players[name] = {
+        if (!playerStats[name]) {
+          playerStats[name] = {
             ranks: [],
             odds: [],
+            matches: [],
             tier: row.TierCat
           };
         }
-        players[name].ranks.push(row.UDRank);
-        players[name].odds.push(row.Odds);
+        playerStats[name].ranks.push(row.UDRank);
+        playerStats[name].odds.push(row.Odds);
+        playerStats[name].matches.push(`${row.Tournament} vs ${row.Top10} (${row.Odds})`);
       }
 
-      const data = [];
-      const layoutImages = [];
-      for (let [player, stats] of Object.entries(players)) {
+      const top10Counts = {};
+      rawData
+        .filter(d => d.Year === year && d.Top10)
+        .forEach(d => {
+          top10Counts[d.Top10] = (top10Counts[d.Top10] || 0) + 1;
+        });
+
+      const topOpponents = Object.entries(top10Counts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([name]) => name);
+
+      const btnContainer = document.getElementById("topOpponentsButtons");
+      btnContainer.innerHTML = "";
+      topOpponents.forEach(opponent => {
+        const btn = document.createElement("button");
+        btn.textContent = opponent;
+        btn.onclick = () => {
+          document.getElementById("opponent").value = opponent;
+          updatePlot(opponent);
+        };
+        btnContainer.appendChild(btn);
+      });
+
+      for (let [player, stats] of Object.entries(playerStats)) {
         const x = average(stats.ranks);
         const y = average(stats.odds);
         const tier = stats.tier;
-        data.push({ x: [x], y: [y], mode: "markers+text", type: "scatter", name: player, text: [""], marker: { size: 0, opacity: 0 } });
+        data.push({
+          x: [x],
+          y: [y],
+          mode: "markers+text",
+          type: "scatter",
+          name: player,
+          text: [player],
+          textposition: "top center",
+          marker: { size: 20, opacity: 0.9 },
+          customdata: [player],
+          hovertemplate: `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<extra></extra>`
+        });
+
         const logoPath = tierLogos[tier];
         if (logoPath) {
           layoutImages.push({
@@ -235,7 +276,7 @@
       }
 
       const layout = {
-        title: `WTA Underdog Returns in ${year} on ${surface}`,
+        title: `WTA Underdog Returns in ${year} on ${surface}${manualOpponent ? ` vs ${manualOpponent}` : ""}`,
         xaxis: { title: "Average Rank", autorange: "reversed" },
         yaxis: { title: "Avg Return ($1 Stake)", rangemode: "tozero" },
         paper_bgcolor: "#fff",
@@ -258,8 +299,39 @@
         });
       }
 
-      Plotly.newPlot("plot", data, layout);
+      Plotly.newPlot("plot", data, layout).then(plot => {
+        plot.on('plotly_click', function(event) {
+          const player = event.points[0].customdata;
+          showPlayerPopup(player);
+        });
+      });
     }
+
+    function showPlayerPopup(player) {
+      const popup = document.getElementById("playerPopup");
+      const info = playerStats[player];
+      if (info) {
+        document.getElementById("popupName").textContent = player;
+        document.getElementById("popupRank").textContent = average(info.ranks).toFixed(1);
+        document.getElementById("popupReturn").textContent = average(info.odds).toFixed(2);
+        const list = document.getElementById("popupMatches");
+        list.innerHTML = '';
+        info.matches.forEach(m => {
+          const li = document.createElement("li");
+          li.textContent = m;
+          list.appendChild(li);
+        });
+        popup.classList.remove("hidden");
+      }
+    }
+
+    // Close popup when clicking outside
+    window.addEventListener("click", function(event) {
+      const popup = document.getElementById("playerPopup");
+      if (!popup.classList.contains("hidden") && !popup.contains(event.target)) {
+        popup.classList.add("hidden");
+      }
+    });
 
     function average(arr) {
       return arr.reduce((a, b) => a + b, 0) / arr.length;

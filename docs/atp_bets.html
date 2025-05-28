@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATP Insights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATP Bets Only</title>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
   <style>
@@ -29,19 +29,6 @@
       color: #0d6efd;
       font-size: 2rem;
       margin-bottom: 1rem;
-    }
-
-    p {
-      font-weight: 300;
-      margin-top: 0;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 8px;
-      background: #fff;
     }
 
     .controls {
@@ -72,13 +59,7 @@
 </head>
 <body>
   <div class="card">
-    <h2>📈 ATP Player Elo Rating Evolution</h2>
-    <p>Track how top ATP players' Elo ratings evolved through the years.</p>
-    <iframe src="assets/htmlplot/elo_evolution.html"></iframe>
-  </div>
-
-  <div class="card">
-    <h2>🎾 ATP Underdog Wins vs Top-10 Players</h2>
+    <h2>ATP Underdog Wins vs Top-10 Players</h2>
     <div class="controls">
       <label for="year">Year:</label>
       <select id="year"></select>
@@ -182,13 +163,11 @@
           players[name] = {
             ranks: [],
             odds: [],
-            tier: row.TierCat,
-            matches: []
+            tier: row.TierCat
           };
         }
         players[name].ranks.push(row.UDRank);
         players[name].odds.push(row.Odds);
-        players[name].matches.push(`${row.Tournament} vs ${row.Top10} (${row.Odds})`);
       }
 
       const data = [];
@@ -198,7 +177,6 @@
         const x = average(stats.ranks);
         const y = average(stats.odds);
         const tier = stats.tier;
-        const hoverText = `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<br>${stats.matches.join("<br>")}`;
 
         data.push({
           x: [x],
@@ -206,10 +184,8 @@
           mode: "markers+text",
           type: "scatter",
           name: player,
-          text: [player],
-          textposition: "top center",
-          marker: { size: 16, opacity: 0.9 },
-          hovertemplate: hoverText
+          text: [""],
+          marker: { size: 0, opacity: 0 }
         });
 
         const logoPath = tierLogos[tier];
@@ -230,7 +206,7 @@
       }
 
       const layout = {
-        title: `ATP Underdog Returns in ${year} on ${surface}${opponent ? ` vs ${opponent}` : ""}`,
+        title: `ATP Underdog Returns in ${year} on ${surface}`,
         xaxis: { title: "Average Rank", autorange: "reversed" },
         yaxis: { title: "Avg Return ($1 Stake)", rangemode: "tozero" },
         paper_bgcolor: "#fff",
