@@ -182,11 +182,13 @@
           players[name] = {
             ranks: [],
             odds: [],
-            tier: row.TierCat
+            tier: row.TierCat,
+            matches: []
           };
         }
         players[name].ranks.push(row.UDRank);
         players[name].odds.push(row.Odds);
+        players[name].matches.push(`${row.Tournament} vs ${row.Top10} (${row.Odds})`);
       }
 
       const data = [];
@@ -196,6 +198,7 @@
         const x = average(stats.ranks);
         const y = average(stats.odds);
         const tier = stats.tier;
+        const hoverText = `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<br>${stats.matches.join("<br>")}`;
 
         data.push({
           x: [x],
@@ -203,8 +206,10 @@
           mode: "markers+text",
           type: "scatter",
           name: player,
-          text: [""],
-          marker: { size: 0, opacity: 0 }
+          text: [player],
+          textposition: "top center",
+          marker: { size: 16, opacity: 0.9 },
+          hovertemplate: hoverText
         });
 
         const logoPath = tierLogos[tier];
@@ -225,7 +230,7 @@
       }
 
       const layout = {
-        title: `ATP Underdog Returns in ${year} on ${surface}`,
+        title: `ATP Underdog Returns in ${year} on ${surface}${opponent ? ` vs ${opponent}` : ""}`,
         xaxis: { title: "Average Rank", autorange: "reversed" },
         yaxis: { title: "Avg Return ($1 Stake)", rangemode: "tozero" },
         paper_bgcolor: "#fff",

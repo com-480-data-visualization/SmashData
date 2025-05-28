@@ -12,10 +12,9 @@
       background: url('../assets/img/tennis-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      cursor: none; /* hide default cursor */
+      cursor: none;
     }
 
-    /* Floating custom cursor */
     .custom-cursor {
       position: fixed;
       pointer-events: none;
@@ -139,14 +138,13 @@
       color: #0d6efd;
     }
 
-    .wta-buttons {
+    .wta-buttons, .atp-buttons {
       text-align: center;
       margin-bottom: 1.5rem;
     }
 
-    .wta-buttons button {
-      background: #ff5cad;
-      color: white;
+    .wta-buttons button,
+    .atp-buttons button {
       border: none;
       border-radius: 30px;
       padding: 0.8rem 1.8rem;
@@ -155,11 +153,25 @@
       font-weight: 600;
       cursor: pointer;
       transition: background 0.3s ease;
+      color: white;
+    }
+
+    .wta-buttons button {
+      background: #ff5cad;
     }
 
     .wta-buttons button:hover,
     .wta-buttons button.active {
       background: #e0449a;
+    }
+
+    .atp-buttons button {
+      background: #00aaff;
+    }
+
+    .atp-buttons button:hover,
+    .atp-buttons button.active {
+      background: #0088cc;
     }
 
     .wta-frame {
@@ -169,10 +181,13 @@
     .wta-frame.active {
       display: block;
     }
+
+    .map-container iframe {
+      cursor: auto !important;
+    }
   </style>
 </head>
 <body>
-  <!-- Floating racket cursor -->
   <img src="../assets/img/tennis-racket.png" alt="Cursor" class="custom-cursor" id="customCursor" />
 
   <header>
@@ -191,13 +206,11 @@
 
   <div id="wta" class="section">
     <h2>WTA Insights</h2>
-
     <div class="wta-buttons">
       <button onclick="switchWtaTab('bets')" class="active">Bets</button>
       <button onclick="switchWtaTab('evolution')">Player Evolution</button>
       <button onclick="switchWtaTab('map')">Around the World</button>
     </div>
-
     <div id="wta-bets" class="wta-frame active">
       <iframe src="wta.html"></iframe>
     </div>
@@ -205,43 +218,62 @@
       <iframe src="assets/htmlplot/wta_elo_evolution.html"></iframe>
     </div>
     <div id="wta-map" class="wta-frame">
-      <h3>Map Visual Coming Soon</h3>
-      <p>Exciting geographic insights will be available here soon!</p>
+      <iframe src="assets/htmlplot/wta_map.html"></iframe>
     </div>
   </div>
 
   <div id="atp" class="section">
     <h2>ATP Insights</h2>
-    <h3>Player Evolution</h3>
-    <iframe src="atp.html"></iframe>
+    <div class="atp-buttons">
+      <button onclick="switchAtpTab('bets')" class="active">Bets</button>
+      <button onclick="switchAtpTab('evolution')">Player Evolution</button>
+      <button onclick="switchAtpTab('map')">Around the World</button>
+    </div>
+    <div id="atp-bets" class="wta-frame active">
+      <iframe src="atp_bets.html"></iframe>
+    </div>
+    <div id="atp-evolution" class="wta-frame">
+      <iframe src="assets/htmlplot/elo_evolution.html"></iframe>
+    </div>
+    <div id="atp-map" class="wta-frame map-container">
+      <iframe src="atp_map.html"></iframe>
+    </div>
   </div>
 
   <script>
     function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
-
       document.querySelectorAll('.explore-btn').forEach(btn => btn.classList.remove('active'));
-      if (id === 'wta') {
-        document.querySelector('.explore-btn.wta').classList.add('active');
-      } else {
-        document.querySelector('.explore-btn.atp').classList.add('active');
-      }
+      document.querySelector('.explore-btn.' + id).classList.add('active');
     }
 
     function switchWtaTab(tab) {
-      document.querySelectorAll('.wta-frame').forEach(f => f.classList.remove('active'));
+      document.querySelectorAll('#wta .wta-frame').forEach(f => f.classList.remove('active'));
       document.getElementById('wta-' + tab).classList.add('active');
-
       document.querySelectorAll('.wta-buttons button').forEach(b => b.classList.remove('active'));
-      document.querySelector('.wta-buttons button[onclick*="' + tab + '"]').classList.add('active');
+      document.querySelector(`.wta-buttons button[onclick*="${tab}"]`).classList.add('active');
     }
 
-    // Floating cursor movement
+    function switchAtpTab(tab) {
+      document.querySelectorAll('#atp .wta-frame').forEach(f => f.classList.remove('active'));
+      document.getElementById('atp-' + tab).classList.add('active');
+      document.querySelectorAll('.atp-buttons button').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.atp-buttons button[onclick*="${tab}"]`).classList.add('active');
+    }
+
     const cursor = document.getElementById('customCursor');
     document.addEventListener('mousemove', e => {
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
+    });
+
+    const atpMapFrame = document.querySelector("#atp-map iframe");
+    atpMapFrame.addEventListener("mouseenter", () => {
+      document.getElementById("customCursor").style.display = "none";
+    });
+    atpMapFrame.addEventListener("mouseleave", () => {
+      document.getElementById("customCursor").style.display = "block";
     });
   </script>
 </body>
