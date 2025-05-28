@@ -84,21 +84,21 @@
     let rawData = [];
 
     const surfaceBg = {
-      hard: "assets/img/hard.jpeg",
-      clay: "assets/img/clay.jpg",
-      grass: "assets/img/grass.jpg"
+      hard: "./assets/img/hard.jpeg",
+      clay: "./assets/img/clay.jpg",
+      grass: "./assets/img/grass.jpg"
     };
 
     const tierLogos = {
-      "Grand Slam": "assets/img/grandslam.png",
-      "ATP 1000": "assets/img/atp1000.png",
-      "ATP 500": "assets/img/atp500.png",
-      "ATP 250": "assets/img/atp250.png",
-      "ATP Finals": "assets/img/atpfinals.png",
-      "Challenger": "assets/img/challenger.png"
+      "Grand Slam": "./assets/img/grandslam.png",
+      "ATP 1000": "./assets/img/atp1000.png",
+      "ATP 500": "./assets/img/atp500.png",
+      "ATP 250": "./assets/img/atp250.png",
+      "ATP Finals": "./assets/img/atpfinals.png",
+      "Challenger": "./assets/img/challenger.png"
     };
 
-    fetch("assets/data/underdogs_atp.json")
+    fetch("./assets/data/underdogs_atp.json")
       .then(res => res.json())
       .then(data => {
         rawData = data;

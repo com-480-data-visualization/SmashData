@@ -135,23 +135,23 @@
   <script>
     let rawData = [];
     const surfaceBg = {
-      hard: "assets/img/hard.jpeg",
-      clay: "assets/img/clay.jpg",
-      grass: "assets/img/grass.jpg"
+      hard: "./assets/img/hard.jpeg",
+      clay: "./assets/img/clay.jpg",
+      grass: "./assets/img/grass.jpg"
     };
 
     const tierLogos = {
-      "Grand Slam": "assets/img/grandslam.png",
-      "WTA 1000": "assets/img/logo-wta1000-black-1.png",
-      "WTA 500": "assets/img/wta500.png",
-      "WTA 250": "assets/img/wta250.png",
-      "WTA Finals": "assets/img/wtafinals.png",
-      "125 / ITF": "assets/img/wta125.png"
+      "Grand Slam": "./assets/img/grandslam.png",
+      "WTA 1000": "./assets/img/logo-wta1000-black-1.png",
+      "WTA 500": "./assets/img/wta500.png",
+      "WTA 250": "./assets/img/wta250.png",
+      "WTA Finals": "./assets/img/wtafinals.png",
+      "125 / ITF": "./assets/img/wta125.png"
     };
 
     let playerStats = {};
 
-    fetch("assets/data/underdogs.json")
+    fetch("./assets/data/underdogs.json")
       .then(res => res.json())
       .then(data => {
         rawData = data;
@@ -325,7 +325,6 @@
       }
     }
 
-    // Close popup when clicking outside
     window.addEventListener("click", function(event) {
       const popup = document.getElementById("playerPopup");
       if (!popup.classList.contains("hidden") && !popup.contains(event.target)) {
