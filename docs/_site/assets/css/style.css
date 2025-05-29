@@ -358,3 +358,11 @@ img.bombeGif { position: absolute; bottom: -24%; left: 50%; transform: translate
 .banner-circus-image { background-image: url(/assets/img/circus_banner.png); background-size: 100% 100%; background-repeat: no-repeat; }
 
 .member img { width: 125px; height: 125px; border-radius: 50%; border: 4px solid #f76c6c; transition: transform 0.3s ease-in-out; }
+
+body { font-family: sans-serif; background: white; margin: 20px; }
+
+#controls { margin-bottom: 10px; }
+
+button { padding: 5px 10px; font-size: 16px; }
+
+#graph svg { border: 1px solid #ccc; }

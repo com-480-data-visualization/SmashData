@@ -1,0 +1,5282 @@
+[
+  {
+    "Date": "2000-01-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1585.6477219693334
+  },
+  {
+    "Date": "2000-01-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1434.3368048899058
+  },
+  {
+    "Date": "2000-01-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1593.2918882981805
+  },
+  {
+    "Date": "2000-02-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1582.3145565690234
+  },
+  {
+    "Date": "2000-02-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1521.5233019688465
+  },
+  {
+    "Date": "2000-02-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1543.0079537598458
+  },
+  {
+    "Date": "2000-02-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1437.687852303409
+  },
+  {
+    "Date": "2000-03-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1521.6074276285058
+  },
+  {
+    "Date": "2000-04-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1491.8822471253852
+  },
+  {
+    "Date": "2000-04-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1335.8026466654753
+  },
+  {
+    "Date": "2000-05-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1425.853481809528
+  },
+  {
+    "Date": "2000-05-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1453.2716701822653
+  },
+  {
+    "Date": "2000-05-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1384.693573353169
+  },
+  {
+    "Date": "2000-05-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1587.7619373352898
+  },
+  {
+    "Date": "2000-06-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1563.9441277616443
+  },
+  {
+    "Date": "2000-06-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1546.4165485386993
+  },
+  {
+    "Date": "2000-06-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1553.2290833335348
+  },
+  {
+    "Date": "2000-07-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1345.6771902003634
+  },
+  {
+    "Date": "2000-07-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1579.151616912636
+  },
+  {
+    "Date": "2000-07-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1373.868069000153
+  },
+  {
+    "Date": "2000-08-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1353.9777456752167
+  },
+  {
+    "Date": "2000-08-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1401.1731353989057
+  },
+  {
+    "Date": "2000-08-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1578.7533380281955
+  },
+  {
+    "Date": "2000-09-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1590.411047500583
+  },
+  {
+    "Date": "2000-10-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1593.1678464619733
+  },
+  {
+    "Date": "2000-10-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1510.167753492195
+  },
+  {
+    "Date": "2000-10-30",
+    "Joueur": "Roger Federer",
+    "ELO": 1533.2240474502637
+  },
+  {
+    "Date": "2000-11-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1526.6897523434438
+  },
+  {
+    "Date": "2000-11-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1518.9389053141297
+  },
+  {
+    "Date": "2000-11-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1368.943513275361
+  },
+  {
+    "Date": "2001-01-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1608.992917406785
+  },
+  {
+    "Date": "2001-01-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1676.3935002384399
+  },
+  {
+    "Date": "2001-01-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1628.635868958731
+  },
+  {
+    "Date": "2001-02-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1675.9802076747087
+  },
+  {
+    "Date": "2001-02-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1636.3940291572005
+  },
+  {
+    "Date": "2001-02-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1586.7198837250885
+  },
+  {
+    "Date": "2001-03-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1536.802668329202
+  },
+  {
+    "Date": "2001-03-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1574.8239744996717
+  },
+  {
+    "Date": "2001-04-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1660.710219307623
+  },
+  {
+    "Date": "2001-04-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1676.5312453369836
+  },
+  {
+    "Date": "2001-05-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1643.7434020068185
+  },
+  {
+    "Date": "2001-05-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1636.8629453924739
+  },
+  {
+    "Date": "2001-05-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1652.567977465879
+  },
+  {
+    "Date": "2001-06-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1638.0969450455414
+  },
+  {
+    "Date": "2001-06-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1625.3259032918063
+  },
+  {
+    "Date": "2001-06-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1668.466270931005
+  },
+  {
+    "Date": "2001-07-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1536.6794137621284
+  },
+  {
+    "Date": "2001-08-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1679.440410840255
+  },
+  {
+    "Date": "2001-10-01",
+    "Joueur": "Roger Federer",
+    "ELO": 1605.167617928266
+  },
+  {
+    "Date": "2001-10-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1601.5819107559837
+  },
+  {
+    "Date": "2001-10-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1546.0467443720152
+  },
+  {
+    "Date": "2001-10-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1584.3646761604657
+  },
+  {
+    "Date": "2001-10-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1574.5753459874372
+  },
+  {
+    "Date": "2002-01-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1717.963100238486
+  },
+  {
+    "Date": "2002-01-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1611.7105433459412
+  },
+  {
+    "Date": "2002-01-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1745.9068164843138
+  },
+  {
+    "Date": "2002-02-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1645.913865492602
+  },
+  {
+    "Date": "2002-02-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1743.124025492087
+  },
+  {
+    "Date": "2002-02-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1636.4625845926012
+  },
+  {
+    "Date": "2002-03-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1746.5565335483645
+  },
+  {
+    "Date": "2002-03-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1745.5358732537688
+  },
+  {
+    "Date": "2002-04-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1729.6544371620862
+  },
+  {
+    "Date": "2002-04-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1529.4398931371393
+  },
+  {
+    "Date": "2002-05-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1727.8681343623682
+  },
+  {
+    "Date": "2002-05-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1739.2702144886964
+  },
+  {
+    "Date": "2002-05-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1608.7306412948471
+  },
+  {
+    "Date": "2002-06-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1638.5509736383945
+  },
+  {
+    "Date": "2002-06-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1675.948262709732
+  },
+  {
+    "Date": "2002-06-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1589.357816697241
+  },
+  {
+    "Date": "2002-07-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1656.6766887671886
+  },
+  {
+    "Date": "2002-07-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1703.6705948278757
+  },
+  {
+    "Date": "2002-08-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1680.88067908638
+  },
+  {
+    "Date": "2002-08-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1639.5201789137132
+  },
+  {
+    "Date": "2002-08-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1605.4124094166552
+  },
+  {
+    "Date": "2002-09-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1666.7359736535352
+  },
+  {
+    "Date": "2002-09-30",
+    "Joueur": "Roger Federer",
+    "ELO": 1685.731719379826
+  },
+  {
+    "Date": "2002-10-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1677.2608056983415
+  },
+  {
+    "Date": "2002-10-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1674.6844914592414
+  },
+  {
+    "Date": "2002-10-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1659.6674826133788
+  },
+  {
+    "Date": "2002-10-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1732.0275738699795
+  },
+  {
+    "Date": "2002-11-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1612.8582059682185
+  },
+  {
+    "Date": "2002-12-30",
+    "Joueur": "Roger Federer",
+    "ELO": 1694.3252291632245
+  },
+  {
+    "Date": "2003-01-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1712.2320967943583
+  },
+  {
+    "Date": "2003-01-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1784.607956637164
+  },
+  {
+    "Date": "2003-02-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1823.2596953721302
+  },
+  {
+    "Date": "2003-02-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1739.9783905147895
+  },
+  {
+    "Date": "2003-02-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1705.1762352713065
+  },
+  {
+    "Date": "2003-02-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1703.6382247640154
+  },
+  {
+    "Date": "2003-03-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1699.1508528541199
+  },
+  {
+    "Date": "2003-03-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1716.0349894940023
+  },
+  {
+    "Date": "2003-04-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1833.2116885871258
+  },
+  {
+    "Date": "2003-04-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1480.298864782728
+  },
+  {
+    "Date": "2003-04-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1519.9605242280868
+  },
+  {
+    "Date": "2003-04-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1696.7734874286757
+  },
+  {
+    "Date": "2003-05-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1703.4510846736423
+  },
+  {
+    "Date": "2003-05-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1516.7032735508483
+  },
+  {
+    "Date": "2003-05-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1699.0764842495175
+  },
+  {
+    "Date": "2003-05-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1748.4932643020707
+  },
+  {
+    "Date": "2003-06-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1759.7190330846406
+  },
+  {
+    "Date": "2003-06-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1578.9312411523322
+  },
+  {
+    "Date": "2003-06-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1767.2814930823265
+  },
+  {
+    "Date": "2003-07-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1511.1459356378393
+  },
+  {
+    "Date": "2003-07-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1721.7212358077675
+  },
+  {
+    "Date": "2003-07-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1507.287767677075
+  },
+  {
+    "Date": "2003-07-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1556.7019045387524
+  },
+  {
+    "Date": "2003-08-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1711.7090733829555
+  },
+  {
+    "Date": "2003-08-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1699.5467071155301
+  },
+  {
+    "Date": "2003-08-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1559.1691210122453
+  },
+  {
+    "Date": "2003-08-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1786.2413931809633
+  },
+  {
+    "Date": "2003-09-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1829.2447991649226
+  },
+  {
+    "Date": "2003-10-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1408.6821773580882
+  },
+  {
+    "Date": "2003-10-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1720.1416549828823
+  },
+  {
+    "Date": "2003-10-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1456.5979214144693
+  },
+  {
+    "Date": "2003-10-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1688.080983878148
+  },
+  {
+    "Date": "2003-10-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1435.2835602974192
+  },
+  {
+    "Date": "2003-10-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1711.0627052945615
+  },
+  {
+    "Date": "2003-10-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1716.5626813952185
+  },
+  {
+    "Date": "2003-11-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1806.5636738191322
+  },
+  {
+    "Date": "2004-01-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1578.5630901520196
+  },
+  {
+    "Date": "2004-01-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1596.3542001427268
+  },
+  {
+    "Date": "2004-01-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1618.527107014798
+  },
+  {
+    "Date": "2004-01-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1919.4436268071697
+  },
+  {
+    "Date": "2004-02-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1564.5105501560806
+  },
+  {
+    "Date": "2004-02-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1927.5091502325672
+  },
+  {
+    "Date": "2004-02-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1566.1371719696463
+  },
+  {
+    "Date": "2004-02-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1859.1022532333543
+  },
+  {
+    "Date": "2004-03-01",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1640.4462625415817
+  },
+  {
+    "Date": "2004-03-01",
+    "Joueur": "Roger Federer",
+    "ELO": 1856.4016416998438
+  },
+  {
+    "Date": "2004-03-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1576.7575840416387
+  },
+  {
+    "Date": "2004-03-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1847.372849918085
+  },
+  {
+    "Date": "2004-03-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1556.3931319060932
+  },
+  {
+    "Date": "2004-03-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1845.3960198214395
+  },
+  {
+    "Date": "2004-04-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1484.4795298039016
+  },
+  {
+    "Date": "2004-04-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1932.1604830056724
+  },
+  {
+    "Date": "2004-04-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1524.266571184724
+  },
+  {
+    "Date": "2004-05-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1865.4904906555084
+  },
+  {
+    "Date": "2004-05-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1862.6605238593938
+  },
+  {
+    "Date": "2004-05-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1870.6417938526113
+  },
+  {
+    "Date": "2004-06-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1866.955936819988
+  },
+  {
+    "Date": "2004-06-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1870.2730470832278
+  },
+  {
+    "Date": "2004-07-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1619.5592863334562
+  },
+  {
+    "Date": "2004-07-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1846.9269144654259
+  },
+  {
+    "Date": "2004-07-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1617.3103559504905
+  },
+  {
+    "Date": "2004-07-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1379.3433096045217
+  },
+  {
+    "Date": "2004-07-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1536.6809603552967
+  },
+  {
+    "Date": "2004-07-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1862.8924515739382
+  },
+  {
+    "Date": "2004-08-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1503.310099310682
+  },
+  {
+    "Date": "2004-08-02",
+    "Joueur": "Roger Federer",
+    "ELO": 1850.0615625469104
+  },
+  {
+    "Date": "2004-08-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1583.4812331500884
+  },
+  {
+    "Date": "2004-08-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1936.3079782083753
+  },
+  {
+    "Date": "2004-08-30",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1616.0949323279615
+  },
+  {
+    "Date": "2004-08-30",
+    "Joueur": "Roger Federer",
+    "ELO": 1892.52415567141
+  },
+  {
+    "Date": "2004-09-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1440.8158369013868
+  },
+  {
+    "Date": "2004-09-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1590.9171744598327
+  },
+  {
+    "Date": "2004-09-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1434.3368048899058
+  },
+  {
+    "Date": "2004-09-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1597.8471764121418
+  },
+  {
+    "Date": "2004-09-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1829.771989262775
+  },
+  {
+    "Date": "2004-10-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1516.759162847243
+  },
+  {
+    "Date": "2004-10-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1549.9588323363168
+  },
+  {
+    "Date": "2004-10-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1546.8953705224847
+  },
+  {
+    "Date": "2004-11-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1939.520782205424
+  },
+  {
+    "Date": "2004-12-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1607.5176555887188
+  },
+  {
+    "Date": "2005-01-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1870.8462095456925
+  },
+  {
+    "Date": "2005-01-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1983.8900376349661
+  },
+  {
+    "Date": "2005-01-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1655.382458654334
+  },
+  {
+    "Date": "2005-01-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1441.9266311892595
+  },
+  {
+    "Date": "2005-01-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1805.2388726292875
+  },
+  {
+    "Date": "2005-01-17",
+    "Joueur": "Roger Federer",
+    "ELO": 2013.6662187025565
+  },
+  {
+    "Date": "2005-02-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1817.57831542167
+  },
+  {
+    "Date": "2005-02-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1860.9621266881218
+  },
+  {
+    "Date": "2005-02-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1977.1640826877306
+  },
+  {
+    "Date": "2005-02-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1826.1869042014332
+  },
+  {
+    "Date": "2005-02-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1990.9717760413328
+  },
+  {
+    "Date": "2005-03-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1497.5211069572374
+  },
+  {
+    "Date": "2005-03-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1966.8276260745663
+  },
+  {
+    "Date": "2005-03-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1780.569267312849
+  },
+  {
+    "Date": "2005-03-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1950.4486967734547
+  },
+  {
+    "Date": "2005-04-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1476.5117689454225
+  },
+  {
+    "Date": "2005-04-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1817.9813906402571
+  },
+  {
+    "Date": "2005-04-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1804.921367320521
+  },
+  {
+    "Date": "2005-04-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1977.7189595799607
+  },
+  {
+    "Date": "2005-04-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1866.1021867433606
+  },
+  {
+    "Date": "2005-04-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1468.892095366293
+  },
+  {
+    "Date": "2005-05-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1838.2987635495294
+  },
+  {
+    "Date": "2005-05-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1968.0737100444912
+  },
+  {
+    "Date": "2005-05-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1482.5278025292066
+  },
+  {
+    "Date": "2005-05-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1822.5686702969867
+  },
+  {
+    "Date": "2005-05-23",
+    "Joueur": "Roger Federer",
+    "ELO": 2001.3008559238767
+  },
+  {
+    "Date": "2005-06-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.127051323882
+  },
+  {
+    "Date": "2005-06-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1997.6498693917906
+  },
+  {
+    "Date": "2005-06-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1513.9668976521773
+  },
+  {
+    "Date": "2005-06-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1857.3700721864982
+  },
+  {
+    "Date": "2005-06-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1995.353482766339
+  },
+  {
+    "Date": "2005-07-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1690.8669338421628
+  },
+  {
+    "Date": "2005-07-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1740.5139049030993
+  },
+  {
+    "Date": "2005-07-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1485.5982702349797
+  },
+  {
+    "Date": "2005-08-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1865.267122865375
+  },
+  {
+    "Date": "2005-08-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1458.5730668101316
+  },
+  {
+    "Date": "2005-08-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1843.7098798629254
+  },
+  {
+    "Date": "2005-08-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1976.8600634255165
+  },
+  {
+    "Date": "2005-08-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1542.729457401707
+  },
+  {
+    "Date": "2005-08-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1838.6292609171257
+  },
+  {
+    "Date": "2005-08-29",
+    "Joueur": "Roger Federer",
+    "ELO": 2007.347183088253
+  },
+  {
+    "Date": "2005-09-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1804.3705050280773
+  },
+  {
+    "Date": "2005-09-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1840.0907616973004
+  },
+  {
+    "Date": "2005-09-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1991.1706139629382
+  },
+  {
+    "Date": "2005-09-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1937.7611758470296
+  },
+  {
+    "Date": "2005-10-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1643.0345945001682
+  },
+  {
+    "Date": "2005-10-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1512.8462824937142
+  },
+  {
+    "Date": "2005-10-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1523.422057461831
+  },
+  {
+    "Date": "2005-11-14",
+    "Joueur": "Roger Federer",
+    "ELO": 2002.0468903757396
+  },
+  {
+    "Date": "2006-01-02",
+    "Joueur": "Roger Federer",
+    "ELO": 2002.766521218479
+  },
+  {
+    "Date": "2006-01-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1610.148996222126
+  },
+  {
+    "Date": "2006-01-16",
+    "Joueur": "Roger Federer",
+    "ELO": 2030.2366844489857
+  },
+  {
+    "Date": "2006-01-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1549.7661745395353
+  },
+  {
+    "Date": "2006-02-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1648.9296274340013
+  },
+  {
+    "Date": "2006-02-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1872.1524327955499
+  },
+  {
+    "Date": "2006-02-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1629.2150987641653
+  },
+  {
+    "Date": "2006-02-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1848.5280782116624
+  },
+  {
+    "Date": "2006-02-27",
+    "Joueur": "Roger Federer",
+    "ELO": 2005.3925276883565
+  },
+  {
+    "Date": "2006-03-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1605.3783369993291
+  },
+  {
+    "Date": "2006-03-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1791.3781135155925
+  },
+  {
+    "Date": "2006-03-06",
+    "Joueur": "Roger Federer",
+    "ELO": 2026.4789772659815
+  },
+  {
+    "Date": "2006-03-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1655.8316894368418
+  },
+  {
+    "Date": "2006-03-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1782.9707320586758
+  },
+  {
+    "Date": "2006-03-20",
+    "Joueur": "Roger Federer",
+    "ELO": 2018.821390566152
+  },
+  {
+    "Date": "2006-04-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1671.6733375641247
+  },
+  {
+    "Date": "2006-04-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1608.9585702864745
+  },
+  {
+    "Date": "2006-04-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1798.31489742807
+  },
+  {
+    "Date": "2006-04-17",
+    "Joueur": "Roger Federer",
+    "ELO": 2031.672215080138
+  },
+  {
+    "Date": "2006-04-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1546.529243167525
+  },
+  {
+    "Date": "2006-04-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1852.9681632143395
+  },
+  {
+    "Date": "2006-05-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1850.4700070774136
+  },
+  {
+    "Date": "2006-05-08",
+    "Joueur": "Roger Federer",
+    "ELO": 2021.5443853967336
+  },
+  {
+    "Date": "2006-05-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1612.2962867814972
+  },
+  {
+    "Date": "2006-05-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1631.6089271198334
+  },
+  {
+    "Date": "2006-05-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1873.358470900132
+  },
+  {
+    "Date": "2006-05-29",
+    "Joueur": "Roger Federer",
+    "ELO": 2008.6145577224795
+  },
+  {
+    "Date": "2006-06-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1824.0607553389018
+  },
+  {
+    "Date": "2006-06-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1998.82453091149
+  },
+  {
+    "Date": "2006-06-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1597.2064384207135
+  },
+  {
+    "Date": "2006-06-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1655.9697818444486
+  },
+  {
+    "Date": "2006-06-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1910.645101207354
+  },
+  {
+    "Date": "2006-06-26",
+    "Joueur": "Roger Federer",
+    "ELO": 2009.3203966473482
+  },
+  {
+    "Date": "2006-07-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1612.4072582742851
+  },
+  {
+    "Date": "2006-07-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1591.9432580590178
+  },
+  {
+    "Date": "2006-08-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1874.1363101144104
+  },
+  {
+    "Date": "2006-08-07",
+    "Joueur": "Roger Federer",
+    "ELO": 2015.96027743862
+  },
+  {
+    "Date": "2006-08-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1591.018835393349
+  },
+  {
+    "Date": "2006-08-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1861.52784174414
+  },
+  {
+    "Date": "2006-08-14",
+    "Joueur": "Roger Federer",
+    "ELO": 2009.804850121182
+  },
+  {
+    "Date": "2006-08-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1650.636580476781
+  },
+  {
+    "Date": "2006-08-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1908.0189087728497
+  },
+  {
+    "Date": "2006-08-28",
+    "Joueur": "Roger Federer",
+    "ELO": 2023.6955900748665
+  },
+  {
+    "Date": "2006-09-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1630.9352999224807
+  },
+  {
+    "Date": "2006-09-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1866.4215461450945
+  },
+  {
+    "Date": "2006-09-22",
+    "Joueur": "Roger Federer",
+    "ELO": 2047.237516645325
+  },
+  {
+    "Date": "2006-10-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1673.4181765823098
+  },
+  {
+    "Date": "2006-10-02",
+    "Joueur": "Roger Federer",
+    "ELO": 2011.242604494269
+  },
+  {
+    "Date": "2006-10-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1643.0614821080408
+  },
+  {
+    "Date": "2006-10-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1846.6109181367344
+  },
+  {
+    "Date": "2006-10-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1501.9175850081558
+  },
+  {
+    "Date": "2006-10-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1839.9907132575083
+  },
+  {
+    "Date": "2006-10-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1995.9622932058996
+  },
+  {
+    "Date": "2006-10-23",
+    "Joueur": "Roger Federer",
+    "ELO": 2004.443000101303
+  },
+  {
+    "Date": "2006-10-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1660.9603648167497
+  },
+  {
+    "Date": "2006-11-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1872.1352241307025
+  },
+  {
+    "Date": "2006-11-13",
+    "Joueur": "Roger Federer",
+    "ELO": 2040.0470164262156
+  },
+  {
+    "Date": "2007-01-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1750.5694551916324
+  },
+  {
+    "Date": "2007-01-01",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1883.1603494753997
+  },
+  {
+    "Date": "2007-01-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1827.9901249130712
+  },
+  {
+    "Date": "2007-01-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1839.5440054309888
+  },
+  {
+    "Date": "2007-01-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1915.927489143506
+  },
+  {
+    "Date": "2007-01-15",
+    "Joueur": "Roger Federer",
+    "ELO": 2016.383297069986
+  },
+  {
+    "Date": "2007-02-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1780.8043121724115
+  },
+  {
+    "Date": "2007-02-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1813.0508949071618
+  },
+  {
+    "Date": "2007-02-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1812.0936736922124
+  },
+  {
+    "Date": "2007-02-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1890.879328717484
+  },
+  {
+    "Date": "2007-02-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1986.3801306833946
+  },
+  {
+    "Date": "2007-03-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1813.8374224807628
+  },
+  {
+    "Date": "2007-03-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1839.593708137014
+  },
+  {
+    "Date": "2007-03-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1991.5763841330336
+  },
+  {
+    "Date": "2007-03-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1769.2607984532078
+  },
+  {
+    "Date": "2007-03-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1833.8219138374336
+  },
+  {
+    "Date": "2007-03-19",
+    "Joueur": "Roger Federer",
+    "ELO": 2021.233634041291
+  },
+  {
+    "Date": "2007-04-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1789.2304627277929
+  },
+  {
+    "Date": "2007-04-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1783.2605572985321
+  },
+  {
+    "Date": "2007-04-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1869.3003944436005
+  },
+  {
+    "Date": "2007-04-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1991.8224095337985
+  },
+  {
+    "Date": "2007-04-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1886.8675715458296
+  },
+  {
+    "Date": "2007-04-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1799.6561150340156
+  },
+  {
+    "Date": "2007-05-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1754.9067142860404
+  },
+  {
+    "Date": "2007-05-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1907.7930343813653
+  },
+  {
+    "Date": "2007-05-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1987.200183846871
+  },
+  {
+    "Date": "2007-05-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1769.2711220897218
+  },
+  {
+    "Date": "2007-05-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.3084418988558
+  },
+  {
+    "Date": "2007-05-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1987.8745891019867
+  },
+  {
+    "Date": "2007-05-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1797.145025699421
+  },
+  {
+    "Date": "2007-05-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1893.3673559031063
+  },
+  {
+    "Date": "2007-05-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1993.1690188738082
+  },
+  {
+    "Date": "2007-06-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1693.5000654049545
+  },
+  {
+    "Date": "2007-06-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1851.317868957025
+  },
+  {
+    "Date": "2007-06-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1812.6429036742313
+  },
+  {
+    "Date": "2007-06-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1929.9144348887432
+  },
+  {
+    "Date": "2007-06-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1990.512539758536
+  },
+  {
+    "Date": "2007-07-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1845.1590141228928
+  },
+  {
+    "Date": "2007-07-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1799.4001818510128
+  },
+  {
+    "Date": "2007-08-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1796.8516548650975
+  },
+  {
+    "Date": "2007-08-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1915.9676047779758
+  },
+  {
+    "Date": "2007-08-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1979.5811420101586
+  },
+  {
+    "Date": "2007-08-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1809.4111935130545
+  },
+  {
+    "Date": "2007-08-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1879.3820729012905
+  },
+  {
+    "Date": "2007-08-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1975.601644401971
+  },
+  {
+    "Date": "2007-08-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1829.970036061787
+  },
+  {
+    "Date": "2007-08-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1930.822747068672
+  },
+  {
+    "Date": "2007-08-27",
+    "Joueur": "Roger Federer",
+    "ELO": 2003.9158360983313
+  },
+  {
+    "Date": "2007-09-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1780.3389804494677
+  },
+  {
+    "Date": "2007-09-21",
+    "Joueur": "Roger Federer",
+    "ELO": 2015.7678065149507
+  },
+  {
+    "Date": "2007-10-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1699.639310078744
+  },
+  {
+    "Date": "2007-10-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1702.7857040015724
+  },
+  {
+    "Date": "2007-10-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1866.3384503845664
+  },
+  {
+    "Date": "2007-10-15",
+    "Joueur": "Roger Federer",
+    "ELO": 2047.057180564191
+  },
+  {
+    "Date": "2007-10-22",
+    "Joueur": "Roger Federer",
+    "ELO": 2038.281595761541
+  },
+  {
+    "Date": "2007-10-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1736.6113012640303
+  },
+  {
+    "Date": "2007-10-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1835.4890177324294
+  },
+  {
+    "Date": "2007-10-28",
+    "Joueur": "Roger Federer",
+    "ELO": 2033.0860772949904
+  },
+  {
+    "Date": "2007-11-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1795.1993029018251
+  },
+  {
+    "Date": "2007-11-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1889.3508172844427
+  },
+  {
+    "Date": "2007-11-12",
+    "Joueur": "Roger Federer",
+    "ELO": 2022.8561650907081
+  },
+  {
+    "Date": "2007-12-31",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1924.446799561203
+  },
+  {
+    "Date": "2008-01-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1814.8589211203725
+  },
+  {
+    "Date": "2008-01-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1936.0942645359767
+  },
+  {
+    "Date": "2008-01-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1940.7251907679154
+  },
+  {
+    "Date": "2008-02-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1834.285678503345
+  },
+  {
+    "Date": "2008-02-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1794.7842690409561
+  },
+  {
+    "Date": "2008-02-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1847.4234492623705
+  },
+  {
+    "Date": "2008-03-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1814.4168761961225
+  },
+  {
+    "Date": "2008-03-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1895.0869551786602
+  },
+  {
+    "Date": "2008-03-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1905.2294726118832
+  },
+  {
+    "Date": "2008-03-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1769.63416070872
+  },
+  {
+    "Date": "2008-03-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1861.2922444902874
+  },
+  {
+    "Date": "2008-03-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1979.0413374710188
+  },
+  {
+    "Date": "2008-03-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1743.9113073206481
+  },
+  {
+    "Date": "2008-03-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1862.7132269802132
+  },
+  {
+    "Date": "2008-03-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1992.2547017192642
+  },
+  {
+    "Date": "2008-04-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1933.7366903077454
+  },
+  {
+    "Date": "2008-04-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1916.9541890244868
+  },
+  {
+    "Date": "2008-04-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1804.848321436688
+  },
+  {
+    "Date": "2008-04-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1851.3264847851162
+  },
+  {
+    "Date": "2008-04-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1971.0176676969418
+  },
+  {
+    "Date": "2008-04-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1892.8035414282044
+  },
+  {
+    "Date": "2008-05-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1813.957629599295
+  },
+  {
+    "Date": "2008-05-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1881.8770851510124
+  },
+  {
+    "Date": "2008-05-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1956.3173994478764
+  },
+  {
+    "Date": "2008-05-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1807.3433126393722
+  },
+  {
+    "Date": "2008-05-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1883.529828490768
+  },
+  {
+    "Date": "2008-05-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1966.6515922652397
+  },
+  {
+    "Date": "2008-05-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1797.1216334152095
+  },
+  {
+    "Date": "2008-05-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1892.7441352153182
+  },
+  {
+    "Date": "2008-05-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1916.833454616358
+  },
+  {
+    "Date": "2008-06-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1780.4995002425094
+  },
+  {
+    "Date": "2008-06-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1860.7477300838298
+  },
+  {
+    "Date": "2008-06-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1909.4929449692936
+  },
+  {
+    "Date": "2008-06-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1787.239348590861
+  },
+  {
+    "Date": "2008-06-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1923.0119650892116
+  },
+  {
+    "Date": "2008-06-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1921.13967269225
+  },
+  {
+    "Date": "2008-07-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1819.424831889907
+  },
+  {
+    "Date": "2008-07-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1889.4825803830383
+  },
+  {
+    "Date": "2008-07-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1929.0453678470442
+  },
+  {
+    "Date": "2008-07-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1816.0797528103533
+  },
+  {
+    "Date": "2008-07-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1896.5803419520464
+  },
+  {
+    "Date": "2008-07-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1921.1832657759255
+  },
+  {
+    "Date": "2008-08-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1854.0221282347663
+  },
+  {
+    "Date": "2008-08-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1920.9377543318794
+  },
+  {
+    "Date": "2008-08-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1909.7914067569056
+  },
+  {
+    "Date": "2008-08-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1789.8914186343497
+  },
+  {
+    "Date": "2008-08-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1942.4268082963174
+  },
+  {
+    "Date": "2008-08-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1926.073837192155
+  },
+  {
+    "Date": "2008-09-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1843.789022565049
+  },
+  {
+    "Date": "2008-09-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1936.342674737593
+  },
+  {
+    "Date": "2008-09-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1902.5475389409532
+  },
+  {
+    "Date": "2008-09-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1771.1658296042797
+  },
+  {
+    "Date": "2008-10-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1777.4568526058986
+  },
+  {
+    "Date": "2008-10-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1867.1160259802905
+  },
+  {
+    "Date": "2008-10-12",
+    "Joueur": "Roger Federer",
+    "ELO": 2014.3221132918902
+  },
+  {
+    "Date": "2008-10-20",
+    "Joueur": "Roger Federer",
+    "ELO": 2004.636883814524
+  },
+  {
+    "Date": "2008-10-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1781.0340856798684
+  },
+  {
+    "Date": "2008-10-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1868.5091312806999
+  },
+  {
+    "Date": "2008-10-26",
+    "Joueur": "Roger Federer",
+    "ELO": 2005.7964885105948
+  },
+  {
+    "Date": "2008-11-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1844.7265664303573
+  },
+  {
+    "Date": "2008-11-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1912.6833473617128
+  },
+  {
+    "Date": "2009-01-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1827.9115220071037
+  },
+  {
+    "Date": "2009-01-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1954.7278645641009
+  },
+  {
+    "Date": "2009-01-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1892.7017966855003
+  },
+  {
+    "Date": "2009-01-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1868.3464229767176
+  },
+  {
+    "Date": "2009-01-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1850.9653252897679
+  },
+  {
+    "Date": "2009-01-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1916.0045805969442
+  },
+  {
+    "Date": "2009-01-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1915.2551769728432
+  },
+  {
+    "Date": "2009-02-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1942.9286322075545
+  },
+  {
+    "Date": "2009-02-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1894.660574132512
+  },
+  {
+    "Date": "2009-02-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1884.1380156417813
+  },
+  {
+    "Date": "2009-03-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1831.9011444372536
+  },
+  {
+    "Date": "2009-03-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1879.4078195124357
+  },
+  {
+    "Date": "2009-03-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1870.9830369314113
+  },
+  {
+    "Date": "2009-03-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1926.2168898200462
+  },
+  {
+    "Date": "2009-03-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1900.9244010788655
+  },
+  {
+    "Date": "2009-03-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1869.43794167288
+  },
+  {
+    "Date": "2009-03-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1929.2421536339775
+  },
+  {
+    "Date": "2009-03-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1903.093179815262
+  },
+  {
+    "Date": "2009-04-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1861.1940943568297
+  },
+  {
+    "Date": "2009-04-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1943.60647769246
+  },
+  {
+    "Date": "2009-04-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.3747908809974
+  },
+  {
+    "Date": "2009-04-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1953.08020947919
+  },
+  {
+    "Date": "2009-04-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1865.288581205777
+  },
+  {
+    "Date": "2009-04-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1962.405591646731
+  },
+  {
+    "Date": "2009-04-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1882.3190681557219
+  },
+  {
+    "Date": "2009-05-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1866.9014750187578
+  },
+  {
+    "Date": "2009-05-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1848.5717640619541
+  },
+  {
+    "Date": "2009-05-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1941.7614097198098
+  },
+  {
+    "Date": "2009-05-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1910.9635949435365
+  },
+  {
+    "Date": "2009-05-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1867.3173476161785
+  },
+  {
+    "Date": "2009-05-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1929.6992246845625
+  },
+  {
+    "Date": "2009-05-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1891.2243473162123
+  },
+  {
+    "Date": "2009-06-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1884.898014411124
+  },
+  {
+    "Date": "2009-06-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1858.1230397020395
+  },
+  {
+    "Date": "2009-06-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1902.0552679639131
+  },
+  {
+    "Date": "2009-08-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1866.5784382781655
+  },
+  {
+    "Date": "2009-08-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1967.8999550229755
+  },
+  {
+    "Date": "2009-08-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1875.3738336984686
+  },
+  {
+    "Date": "2009-08-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1870.0396262319996
+  },
+  {
+    "Date": "2009-08-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1954.2203510569
+  },
+  {
+    "Date": "2009-08-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1878.533997625554
+  },
+  {
+    "Date": "2009-08-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1851.6773396091985
+  },
+  {
+    "Date": "2009-08-31",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1918.2100443071906
+  },
+  {
+    "Date": "2009-08-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1913.9854145544243
+  },
+  {
+    "Date": "2009-09-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1897.7001731013997
+  },
+  {
+    "Date": "2009-10-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1849.8396881070344
+  },
+  {
+    "Date": "2009-10-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1884.551397750638
+  },
+  {
+    "Date": "2009-10-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1871.8851984844825
+  },
+  {
+    "Date": "2009-10-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1943.9717114790133
+  },
+  {
+    "Date": "2009-11-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1856.6144286740305
+  },
+  {
+    "Date": "2009-11-02",
+    "Joueur": "Roger Federer",
+    "ELO": 1923.191691309315
+  },
+  {
+    "Date": "2009-11-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1842.5013867493144
+  },
+  {
+    "Date": "2009-11-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1938.6483132340472
+  },
+  {
+    "Date": "2009-11-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1900.4936968430077
+  },
+  {
+    "Date": "2009-11-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1828.8463441543493
+  },
+  {
+    "Date": "2009-11-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1897.307240932276
+  },
+  {
+    "Date": "2009-11-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1911.0925367990317
+  },
+  {
+    "Date": "2009-12-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1888.0276731527752
+  },
+  {
+    "Date": "2010-01-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1890.7638879354586
+  },
+  {
+    "Date": "2010-01-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1898.3454646620937
+  },
+  {
+    "Date": "2010-01-18",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1833.839836384762
+  },
+  {
+    "Date": "2010-01-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1885.9693200491079
+  },
+  {
+    "Date": "2010-01-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1901.2169990912803
+  },
+  {
+    "Date": "2010-02-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1828.7534841539073
+  },
+  {
+    "Date": "2010-02-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1826.3288588935768
+  },
+  {
+    "Date": "2010-03-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1838.6415240453293
+  },
+  {
+    "Date": "2010-03-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1837.1331530086475
+  },
+  {
+    "Date": "2010-03-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1881.2208916156637
+  },
+  {
+    "Date": "2010-03-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1911.13640698688
+  },
+  {
+    "Date": "2010-03-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1804.4038637263645
+  },
+  {
+    "Date": "2010-03-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1880.6349243083569
+  },
+  {
+    "Date": "2010-03-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1900.4261930126188
+  },
+  {
+    "Date": "2010-04-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1810.1504414656665
+  },
+  {
+    "Date": "2010-04-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1883.6606501878923
+  },
+  {
+    "Date": "2010-04-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1798.6167405136823
+  },
+  {
+    "Date": "2010-04-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1894.901936948003
+  },
+  {
+    "Date": "2010-04-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1875.9039839288112
+  },
+  {
+    "Date": "2010-05-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1780.1005661565628
+  },
+  {
+    "Date": "2010-05-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1873.5001127205762
+  },
+  {
+    "Date": "2010-05-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1906.795438721072
+  },
+  {
+    "Date": "2010-05-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1868.1223662057248
+  },
+  {
+    "Date": "2010-05-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1774.1716923514705
+  },
+  {
+    "Date": "2010-05-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1922.604884132488
+  },
+  {
+    "Date": "2010-05-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1867.1951998293237
+  },
+  {
+    "Date": "2010-06-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1754.5917027854798
+  },
+  {
+    "Date": "2010-06-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1924.4885750245178
+  },
+  {
+    "Date": "2010-06-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1858.7036227208082
+  },
+  {
+    "Date": "2010-06-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1759.5129433829443
+  },
+  {
+    "Date": "2010-06-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1920.4443749253512
+  },
+  {
+    "Date": "2010-06-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1851.2651900786325
+  },
+  {
+    "Date": "2010-07-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1765.111174389862
+  },
+  {
+    "Date": "2010-08-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1774.4356045906834
+  },
+  {
+    "Date": "2010-08-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1933.395362889127
+  },
+  {
+    "Date": "2010-08-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1849.8290631916766
+  },
+  {
+    "Date": "2010-08-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1775.8943746046423
+  },
+  {
+    "Date": "2010-08-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1921.5766605482324
+  },
+  {
+    "Date": "2010-08-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1858.2899920960178
+  },
+  {
+    "Date": "2010-08-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1787.4357750589427
+  },
+  {
+    "Date": "2010-08-30",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1919.267659429194
+  },
+  {
+    "Date": "2010-08-30",
+    "Joueur": "Roger Federer",
+    "ELO": 1867.913006220103
+  },
+  {
+    "Date": "2010-09-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1803.7030098945597
+  },
+  {
+    "Date": "2010-09-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1926.9530490950674
+  },
+  {
+    "Date": "2010-10-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1814.7183717235941
+  },
+  {
+    "Date": "2010-10-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1919.0596683848023
+  },
+  {
+    "Date": "2010-10-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1828.8412932937777
+  },
+  {
+    "Date": "2010-10-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1913.95668182187
+  },
+  {
+    "Date": "2010-10-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1868.227432048355
+  },
+  {
+    "Date": "2010-10-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1872.0763031318038
+  },
+  {
+    "Date": "2010-11-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1829.7378639363137
+  },
+  {
+    "Date": "2010-11-01",
+    "Joueur": "Roger Federer",
+    "ELO": 1882.159180518191
+  },
+  {
+    "Date": "2010-11-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1817.62372728114
+  },
+  {
+    "Date": "2010-11-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1891.6925716028463
+  },
+  {
+    "Date": "2010-11-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1799.2618260788354
+  },
+  {
+    "Date": "2010-11-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1909.5650769062079
+  },
+  {
+    "Date": "2010-11-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1897.0700464496415
+  },
+  {
+    "Date": "2010-12-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1814.5713418026899
+  },
+  {
+    "Date": "2011-01-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1920.8757035190706
+  },
+  {
+    "Date": "2011-01-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1916.6369554963476
+  },
+  {
+    "Date": "2011-01-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1832.0307978140577
+  },
+  {
+    "Date": "2011-01-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1913.358047935931
+  },
+  {
+    "Date": "2011-01-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1928.3335330437683
+  },
+  {
+    "Date": "2011-02-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1867.3962251959103
+  },
+  {
+    "Date": "2011-02-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1922.8433352815186
+  },
+  {
+    "Date": "2011-03-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1904.6209950703478
+  },
+  {
+    "Date": "2011-03-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1893.61061512151
+  },
+  {
+    "Date": "2011-03-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1910.8194949448082
+  },
+  {
+    "Date": "2011-03-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1917.7873245156625
+  },
+  {
+    "Date": "2011-03-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1921.815541961232
+  },
+  {
+    "Date": "2011-03-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1914.0733765054492
+  },
+  {
+    "Date": "2011-03-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1914.4466568726396
+  },
+  {
+    "Date": "2011-04-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1921.4871239683366
+  },
+  {
+    "Date": "2011-04-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1907.4222317202632
+  },
+  {
+    "Date": "2011-04-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1934.1902028503296
+  },
+  {
+    "Date": "2011-04-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1937.7883659084798
+  },
+  {
+    "Date": "2011-05-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1947.546229353576
+  },
+  {
+    "Date": "2011-05-01",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1945.161491548764
+  },
+  {
+    "Date": "2011-05-01",
+    "Joueur": "Roger Federer",
+    "ELO": 1899.922791163469
+  },
+  {
+    "Date": "2011-05-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1966.1575737983717
+  },
+  {
+    "Date": "2011-05-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1945.6157027399277
+  },
+  {
+    "Date": "2011-05-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1893.5224270716958
+  },
+  {
+    "Date": "2011-05-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1981.5486148187294
+  },
+  {
+    "Date": "2011-05-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1947.7341353670292
+  },
+  {
+    "Date": "2011-05-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1892.5285474015789
+  },
+  {
+    "Date": "2011-06-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1958.100813540781
+  },
+  {
+    "Date": "2011-06-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1981.049446832967
+  },
+  {
+    "Date": "2011-06-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1954.543588572033
+  },
+  {
+    "Date": "2011-06-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1899.7313299972661
+  },
+  {
+    "Date": "2011-07-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1896.4577558447536
+  },
+  {
+    "Date": "2011-08-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2005.5505589337888
+  },
+  {
+    "Date": "2011-08-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1935.3436863938146
+  },
+  {
+    "Date": "2011-08-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1893.0308561131496
+  },
+  {
+    "Date": "2011-08-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2010.1671784339737
+  },
+  {
+    "Date": "2011-08-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1932.6321070392796
+  },
+  {
+    "Date": "2011-08-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1889.1764326614912
+  },
+  {
+    "Date": "2011-08-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2008.0525903909095
+  },
+  {
+    "Date": "2011-08-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1930.4774408810292
+  },
+  {
+    "Date": "2011-08-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1886.304879119185
+  },
+  {
+    "Date": "2011-09-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2004.0385496304793
+  },
+  {
+    "Date": "2011-09-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1937.446438734977
+  },
+  {
+    "Date": "2011-09-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1890.9829563938579
+  },
+  {
+    "Date": "2011-10-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1941.34005638374
+  },
+  {
+    "Date": "2011-10-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1924.4902684822646
+  },
+  {
+    "Date": "2011-10-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2001.2639086552094
+  },
+  {
+    "Date": "2011-10-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1896.417527915791
+  },
+  {
+    "Date": "2011-11-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1984.110716189848
+  },
+  {
+    "Date": "2011-11-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1909.6504667097038
+  },
+  {
+    "Date": "2011-11-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1957.5691992494878
+  },
+  {
+    "Date": "2011-11-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1906.8440171825332
+  },
+  {
+    "Date": "2011-11-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1928.1582440584207
+  },
+  {
+    "Date": "2011-12-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.5620491561804
+  },
+  {
+    "Date": "2012-01-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1901.5535046533817
+  },
+  {
+    "Date": "2012-01-02",
+    "Joueur": "Roger Federer",
+    "ELO": 1939.9341652669527
+  },
+  {
+    "Date": "2012-01-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1947.7922443925888
+  },
+  {
+    "Date": "2012-01-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.2680194398727
+  },
+  {
+    "Date": "2012-01-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1935.4098775298098
+  },
+  {
+    "Date": "2012-02-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1916.2715498550704
+  },
+  {
+    "Date": "2012-02-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1922.7008356926854
+  },
+  {
+    "Date": "2012-02-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1963.0538463576265
+  },
+  {
+    "Date": "2012-02-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1934.7017113988156
+  },
+  {
+    "Date": "2012-03-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1953.0719033316375
+  },
+  {
+    "Date": "2012-03-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1906.2447045434049
+  },
+  {
+    "Date": "2012-03-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1948.8789073084583
+  },
+  {
+    "Date": "2012-03-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1945.7741541595633
+  },
+  {
+    "Date": "2012-03-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1906.914858219528
+  },
+  {
+    "Date": "2012-03-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1951.3118235838156
+  },
+  {
+    "Date": "2012-04-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1956.0297930896595
+  },
+  {
+    "Date": "2012-04-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1909.3131968742
+  },
+  {
+    "Date": "2012-04-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1924.4899002765028
+  },
+  {
+    "Date": "2012-05-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1945.0848814680967
+  },
+  {
+    "Date": "2012-05-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1925.2265501633533
+  },
+  {
+    "Date": "2012-05-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1948.8313282889278
+  },
+  {
+    "Date": "2012-05-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1941.1387828949178
+  },
+  {
+    "Date": "2012-05-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1924.3977890317667
+  },
+  {
+    "Date": "2012-05-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1952.883968203363
+  },
+  {
+    "Date": "2012-05-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1949.1840999459253
+  },
+  {
+    "Date": "2012-05-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1940.7065339618682
+  },
+  {
+    "Date": "2012-05-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1950.3119326546666
+  },
+  {
+    "Date": "2012-06-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1944.3373224525544
+  },
+  {
+    "Date": "2012-06-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1945.9024714514794
+  },
+  {
+    "Date": "2012-06-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1954.7171184093252
+  },
+  {
+    "Date": "2012-06-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1928.4593227216455
+  },
+  {
+    "Date": "2012-06-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1944.0448542426275
+  },
+  {
+    "Date": "2012-07-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1949.530266376254
+  },
+  {
+    "Date": "2012-07-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1959.0291835089004
+  },
+  {
+    "Date": "2012-08-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1935.1189523693897
+  },
+  {
+    "Date": "2012-08-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1943.4728143335165
+  },
+  {
+    "Date": "2012-08-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1957.3895955049688
+  },
+  {
+    "Date": "2012-08-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1944.2093720139505
+  },
+  {
+    "Date": "2012-08-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1964.3465311978987
+  },
+  {
+    "Date": "2012-09-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1955.8197112508287
+  },
+  {
+    "Date": "2012-10-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1944.8779896314195
+  },
+  {
+    "Date": "2012-10-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1957.8035056114536
+  },
+  {
+    "Date": "2012-10-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1955.9473238219875
+  },
+  {
+    "Date": "2012-10-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1949.883645842414
+  },
+  {
+    "Date": "2012-10-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1949.4584258796374
+  },
+  {
+    "Date": "2012-11-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1966.3834008743422
+  },
+  {
+    "Date": "2012-11-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1937.5001665540726
+  },
+  {
+    "Date": "2013-01-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1983.9580606463217
+  },
+  {
+    "Date": "2013-01-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1936.4551971789833
+  },
+  {
+    "Date": "2013-02-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1995.0016819640996
+  },
+  {
+    "Date": "2013-02-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1919.247211337636
+  },
+  {
+    "Date": "2013-02-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1911.9286086250222
+  },
+  {
+    "Date": "2013-02-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1929.8839208902543
+  },
+  {
+    "Date": "2013-02-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1998.8765158847527
+  },
+  {
+    "Date": "2013-02-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1919.795356911662
+  },
+  {
+    "Date": "2013-02-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1921.3635988323201
+  },
+  {
+    "Date": "2013-03-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2003.646945523817
+  },
+  {
+    "Date": "2013-03-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1932.5776964109052
+  },
+  {
+    "Date": "2013-03-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1914.260498569374
+  },
+  {
+    "Date": "2013-03-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1990.313386386937
+  },
+  {
+    "Date": "2013-04-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1981.3839816094703
+  },
+  {
+    "Date": "2013-04-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1986.7261218384542
+  },
+  {
+    "Date": "2013-04-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1946.918532766001
+  },
+  {
+    "Date": "2013-04-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1946.7148743415146
+  },
+  {
+    "Date": "2013-05-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1976.3325940014463
+  },
+  {
+    "Date": "2013-05-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1952.8735496136255
+  },
+  {
+    "Date": "2013-05-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1903.662902146201
+  },
+  {
+    "Date": "2013-05-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1972.5153269164011
+  },
+  {
+    "Date": "2013-05-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1961.0639524700243
+  },
+  {
+    "Date": "2013-05-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1899.3069972140518
+  },
+  {
+    "Date": "2013-05-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1965.1391862220523
+  },
+  {
+    "Date": "2013-05-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1976.488299764826
+  },
+  {
+    "Date": "2013-05-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1898.2625639710307
+  },
+  {
+    "Date": "2013-06-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1895.7329024839546
+  },
+  {
+    "Date": "2013-06-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1965.641498718674
+  },
+  {
+    "Date": "2013-06-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1968.8356150647826
+  },
+  {
+    "Date": "2013-06-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1892.5232122699217
+  },
+  {
+    "Date": "2013-07-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1885.1244635687196
+  },
+  {
+    "Date": "2013-07-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1862.0384350539812
+  },
+  {
+    "Date": "2013-08-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1962.1244059573753
+  },
+  {
+    "Date": "2013-08-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1974.9129807954166
+  },
+  {
+    "Date": "2013-08-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1951.9336723047652
+  },
+  {
+    "Date": "2013-08-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1988.2003980400852
+  },
+  {
+    "Date": "2013-08-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1863.9954404574846
+  },
+  {
+    "Date": "2013-08-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1944.8177416929034
+  },
+  {
+    "Date": "2013-08-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1998.5092762820973
+  },
+  {
+    "Date": "2013-08-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1861.27787719388
+  },
+  {
+    "Date": "2013-09-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1942.4602414814535
+  },
+  {
+    "Date": "2013-09-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 2007.8667932035814
+  },
+  {
+    "Date": "2013-09-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1950.3863404857639
+  },
+  {
+    "Date": "2013-09-30",
+    "Joueur": "Rafael Nadal",
+    "ELO": 2008.2919849718764
+  },
+  {
+    "Date": "2013-10-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1965.9766967019518
+  },
+  {
+    "Date": "2013-10-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1999.792086320068
+  },
+  {
+    "Date": "2013-10-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1846.0021368719715
+  },
+  {
+    "Date": "2013-10-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1842.294496021522
+  },
+  {
+    "Date": "2013-10-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1979.5394598336256
+  },
+  {
+    "Date": "2013-10-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1987.5113301164488
+  },
+  {
+    "Date": "2013-10-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1843.2898122034157
+  },
+  {
+    "Date": "2013-11-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1995.422281597363
+  },
+  {
+    "Date": "2013-11-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1980.369569861707
+  },
+  {
+    "Date": "2013-11-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1843.144852950109
+  },
+  {
+    "Date": "2013-11-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2007.5866345793165
+  },
+  {
+    "Date": "2013-12-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1841.630435094291
+  },
+  {
+    "Date": "2013-12-30",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1982.048467988466
+  },
+  {
+    "Date": "2014-01-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2007.070433494197
+  },
+  {
+    "Date": "2014-01-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1987.6734979330056
+  },
+  {
+    "Date": "2014-01-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1842.740222844546
+  },
+  {
+    "Date": "2014-01-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1849.6672001350482
+  },
+  {
+    "Date": "2014-02-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1982.324105168526
+  },
+  {
+    "Date": "2014-02-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1992.539535250954
+  },
+  {
+    "Date": "2014-02-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1858.4314503412352
+  },
+  {
+    "Date": "2014-03-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1988.4504677062002
+  },
+  {
+    "Date": "2014-03-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1976.4833423352088
+  },
+  {
+    "Date": "2014-03-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1872.9533690509534
+  },
+  {
+    "Date": "2014-03-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2003.4934053274199
+  },
+  {
+    "Date": "2014-03-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1971.19223028168
+  },
+  {
+    "Date": "2014-03-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1871.915968488489
+  },
+  {
+    "Date": "2014-04-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1865.5785314277718
+  },
+  {
+    "Date": "2014-04-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2013.9718396689464
+  },
+  {
+    "Date": "2014-04-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1963.1371551285822
+  },
+  {
+    "Date": "2014-04-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1873.3253643603334
+  },
+  {
+    "Date": "2014-04-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1949.7356787385877
+  },
+  {
+    "Date": "2014-05-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1943.0191125270837
+  },
+  {
+    "Date": "2014-05-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2009.3686197725735
+  },
+  {
+    "Date": "2014-05-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1953.0068833906785
+  },
+  {
+    "Date": "2014-05-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1857.1365151515822
+  },
+  {
+    "Date": "2014-05-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2019.4703091190142
+  },
+  {
+    "Date": "2014-05-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1957.9976615138291
+  },
+  {
+    "Date": "2014-05-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1856.9787339097077
+  },
+  {
+    "Date": "2014-06-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1957.247403346237
+  },
+  {
+    "Date": "2014-06-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1852.8951077990155
+  },
+  {
+    "Date": "2014-06-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2017.944683126177
+  },
+  {
+    "Date": "2014-06-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1955.9492212981088
+  },
+  {
+    "Date": "2014-06-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1861.0580273081516
+  },
+  {
+    "Date": "2014-08-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2018.2592579398147
+  },
+  {
+    "Date": "2014-08-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1863.3926268275027
+  },
+  {
+    "Date": "2014-08-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2002.9338019883553
+  },
+  {
+    "Date": "2014-08-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1865.7654504235684
+  },
+  {
+    "Date": "2014-08-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1995.4566146780144
+  },
+  {
+    "Date": "2014-08-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1874.2932552722496
+  },
+  {
+    "Date": "2014-09-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1867.138794712291
+  },
+  {
+    "Date": "2014-09-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1990.3127147805
+  },
+  {
+    "Date": "2014-09-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1941.4308619564526
+  },
+  {
+    "Date": "2014-10-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1994.5795687342418
+  },
+  {
+    "Date": "2014-10-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1915.4795138622083
+  },
+  {
+    "Date": "2014-10-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1875.8211474581287
+  },
+  {
+    "Date": "2014-10-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1912.1649725127
+  },
+  {
+    "Date": "2014-10-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.588822115918
+  },
+  {
+    "Date": "2014-10-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1992.3710399082051
+  },
+  {
+    "Date": "2014-10-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.8467060076657
+  },
+  {
+    "Date": "2014-11-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2002.0918220127285
+  },
+  {
+    "Date": "2014-11-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.330128836897
+  },
+  {
+    "Date": "2014-11-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1874.5244779068876
+  },
+  {
+    "Date": "2015-01-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1878.749307149895
+  },
+  {
+    "Date": "2015-01-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2005.0875471497075
+  },
+  {
+    "Date": "2015-01-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1886.733288454643
+  },
+  {
+    "Date": "2015-01-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1998.9014353064765
+  },
+  {
+    "Date": "2015-01-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1888.8350924162405
+  },
+  {
+    "Date": "2015-01-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1878.0262716843126
+  },
+  {
+    "Date": "2015-02-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1878.8498593973964
+  },
+  {
+    "Date": "2015-02-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2004.5281957212396
+  },
+  {
+    "Date": "2015-02-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1873.2361466322868
+  },
+  {
+    "Date": "2015-02-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1876.7119486141837
+  },
+  {
+    "Date": "2015-03-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1997.683615265547
+  },
+  {
+    "Date": "2015-03-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2002.9553847006584
+  },
+  {
+    "Date": "2015-03-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1875.3206228357985
+  },
+  {
+    "Date": "2015-03-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1891.4251985700091
+  },
+  {
+    "Date": "2015-03-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2016.2589138467222
+  },
+  {
+    "Date": "2015-03-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1859.5416669676893
+  },
+  {
+    "Date": "2015-04-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2025.281110594105
+  },
+  {
+    "Date": "2015-04-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1857.1141352061004
+  },
+  {
+    "Date": "2015-04-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1885.439954534605
+  },
+  {
+    "Date": "2015-04-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1849.939987200963
+  },
+  {
+    "Date": "2015-04-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1882.102610001302
+  },
+  {
+    "Date": "2015-05-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1846.0673786335342
+  },
+  {
+    "Date": "2015-05-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1872.2276807991677
+  },
+  {
+    "Date": "2015-05-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2033.6205100099519
+  },
+  {
+    "Date": "2015-05-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1840.0828332092563
+  },
+  {
+    "Date": "2015-05-10",
+    "Joueur": "Roger Federer",
+    "ELO": 1876.5576881710294
+  },
+  {
+    "Date": "2015-05-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2041.3914721358162
+  },
+  {
+    "Date": "2015-05-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1836.2332186389663
+  },
+  {
+    "Date": "2015-05-24",
+    "Joueur": "Roger Federer",
+    "ELO": 1877.3402175350875
+  },
+  {
+    "Date": "2015-06-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1840.662610741263
+  },
+  {
+    "Date": "2015-06-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1829.5380310243079
+  },
+  {
+    "Date": "2015-06-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1874.9778507702158
+  },
+  {
+    "Date": "2015-06-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2035.6734999205476
+  },
+  {
+    "Date": "2015-06-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1824.7283979683384
+  },
+  {
+    "Date": "2015-06-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1883.7426545645014
+  },
+  {
+    "Date": "2015-07-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1826.3953659718998
+  },
+  {
+    "Date": "2015-08-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2040.4290297538778
+  },
+  {
+    "Date": "2015-08-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1831.0042956161606
+  },
+  {
+    "Date": "2015-08-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2030.077367379588
+  },
+  {
+    "Date": "2015-08-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.4826766717342
+  },
+  {
+    "Date": "2015-08-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1892.734835942727
+  },
+  {
+    "Date": "2015-08-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2025.848630996875
+  },
+  {
+    "Date": "2015-08-31",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1811.7366721261067
+  },
+  {
+    "Date": "2015-08-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1909.5137990012097
+  },
+  {
+    "Date": "2015-09-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1805.6961843325519
+  },
+  {
+    "Date": "2015-09-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1910.791285964953
+  },
+  {
+    "Date": "2015-10-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2035.4911060679544
+  },
+  {
+    "Date": "2015-10-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1811.501570318298
+  },
+  {
+    "Date": "2015-10-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2043.7578418432768
+  },
+  {
+    "Date": "2015-10-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1816.7135569405045
+  },
+  {
+    "Date": "2015-10-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1897.956377888398
+  },
+  {
+    "Date": "2015-10-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1817.815162447908
+  },
+  {
+    "Date": "2015-10-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1901.9585599022962
+  },
+  {
+    "Date": "2015-11-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2051.522491995483
+  },
+  {
+    "Date": "2015-11-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1815.0670745875907
+  },
+  {
+    "Date": "2015-11-02",
+    "Joueur": "Roger Federer",
+    "ELO": 1902.251098405257
+  },
+  {
+    "Date": "2015-11-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2050.872221971673
+  },
+  {
+    "Date": "2015-11-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.5229323654185
+  },
+  {
+    "Date": "2015-11-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1908.5361683948063
+  },
+  {
+    "Date": "2016-01-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2059.832093446216
+  },
+  {
+    "Date": "2016-01-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1823.9204621606623
+  },
+  {
+    "Date": "2016-01-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1909.086967769054
+  },
+  {
+    "Date": "2016-01-18",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2067.896145844559
+  },
+  {
+    "Date": "2016-01-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1810.9719634195083
+  },
+  {
+    "Date": "2016-01-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1904.3099547768181
+  },
+  {
+    "Date": "2016-02-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1808.8505879841198
+  },
+  {
+    "Date": "2016-02-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1801.2892765314996
+  },
+  {
+    "Date": "2016-02-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2070.077446523565
+  },
+  {
+    "Date": "2016-03-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2060.4498166180792
+  },
+  {
+    "Date": "2016-03-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2065.019027378963
+  },
+  {
+    "Date": "2016-03-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1801.899952098044
+  },
+  {
+    "Date": "2016-03-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2072.1707970641833
+  },
+  {
+    "Date": "2016-03-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1790.5541819191546
+  },
+  {
+    "Date": "2016-04-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2058.352344904816
+  },
+  {
+    "Date": "2016-04-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1801.8492652062614
+  },
+  {
+    "Date": "2016-04-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1901.844828442435
+  },
+  {
+    "Date": "2016-04-18",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.0141831363242
+  },
+  {
+    "Date": "2016-05-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2061.186042536123
+  },
+  {
+    "Date": "2016-05-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1825.6155136581913
+  },
+  {
+    "Date": "2016-05-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2064.7466199153932
+  },
+  {
+    "Date": "2016-05-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1823.4943057282544
+  },
+  {
+    "Date": "2016-05-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1890.6467294957552
+  },
+  {
+    "Date": "2016-05-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2058.394931636078
+  },
+  {
+    "Date": "2016-05-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1821.7275397201795
+  },
+  {
+    "Date": "2016-06-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1882.7203546710346
+  },
+  {
+    "Date": "2016-06-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1875.1444478466224
+  },
+  {
+    "Date": "2016-06-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2058.2829156457806
+  },
+  {
+    "Date": "2016-06-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1869.2113797949935
+  },
+  {
+    "Date": "2016-07-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2050.159334529772
+  },
+  {
+    "Date": "2016-08-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2038.433254180459
+  },
+  {
+    "Date": "2016-08-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1814.8081002169486
+  },
+  {
+    "Date": "2016-08-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1797.5047227445616
+  },
+  {
+    "Date": "2016-08-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2040.7388229799892
+  },
+  {
+    "Date": "2016-08-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1791.5752565099244
+  },
+  {
+    "Date": "2016-10-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1781.3953539427755
+  },
+  {
+    "Date": "2016-10-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2029.1057894737405
+  },
+  {
+    "Date": "2016-10-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1759.0310677161008
+  },
+  {
+    "Date": "2016-10-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2013.799190256136
+  },
+  {
+    "Date": "2016-11-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2005.675968095718
+  },
+  {
+    "Date": "2017-01-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 2000.9545361098637
+  },
+  {
+    "Date": "2017-01-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1760.5435572168353
+  },
+  {
+    "Date": "2017-01-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1999.3039709655745
+  },
+  {
+    "Date": "2017-01-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1766.7061620263107
+  },
+  {
+    "Date": "2017-01-16",
+    "Joueur": "Roger Federer",
+    "ELO": 1871.531789074063
+  },
+  {
+    "Date": "2017-02-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1992.3221365482714
+  },
+  {
+    "Date": "2017-02-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1992.0039908733788
+  },
+  {
+    "Date": "2017-02-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1774.4925910564318
+  },
+  {
+    "Date": "2017-02-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1875.94702572082
+  },
+  {
+    "Date": "2017-03-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1983.8076249969326
+  },
+  {
+    "Date": "2017-03-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1771.53229178807
+  },
+  {
+    "Date": "2017-03-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1879.7066634614002
+  },
+  {
+    "Date": "2017-03-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1776.0770824235815
+  },
+  {
+    "Date": "2017-03-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1898.321901781969
+  },
+  {
+    "Date": "2017-04-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1978.228480436871
+  },
+  {
+    "Date": "2017-04-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1974.542220237876
+  },
+  {
+    "Date": "2017-04-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1784.332152604936
+  },
+  {
+    "Date": "2017-04-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1797.956150303935
+  },
+  {
+    "Date": "2017-05-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1964.5692722324059
+  },
+  {
+    "Date": "2017-05-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1820.753149547279
+  },
+  {
+    "Date": "2017-05-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1959.9776799511735
+  },
+  {
+    "Date": "2017-05-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1831.196783722227
+  },
+  {
+    "Date": "2017-05-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1951.6709087129925
+  },
+  {
+    "Date": "2017-05-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1832.0249703529262
+  },
+  {
+    "Date": "2017-06-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1895.973156456161
+  },
+  {
+    "Date": "2017-06-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1899.6004500459007
+  },
+  {
+    "Date": "2017-06-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1944.648269281924
+  },
+  {
+    "Date": "2017-07-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1947.6122670637208
+  },
+  {
+    "Date": "2017-07-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1842.198502418505
+  },
+  {
+    "Date": "2017-07-03",
+    "Joueur": "Roger Federer",
+    "ELO": 1908.486115832191
+  },
+  {
+    "Date": "2017-08-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1830.291799290509
+  },
+  {
+    "Date": "2017-08-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1914.6224590900838
+  },
+  {
+    "Date": "2017-08-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1823.232604765674
+  },
+  {
+    "Date": "2017-08-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1826.780249195447
+  },
+  {
+    "Date": "2017-08-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1908.0489962783765
+  },
+  {
+    "Date": "2017-09-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1826.437518442181
+  },
+  {
+    "Date": "2017-09-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1920.2777348080572
+  },
+  {
+    "Date": "2017-10-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1844.4750938754485
+  },
+  {
+    "Date": "2017-10-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1856.478625449506
+  },
+  {
+    "Date": "2017-10-09",
+    "Joueur": "Roger Federer",
+    "ELO": 1907.2121532856352
+  },
+  {
+    "Date": "2017-10-23",
+    "Joueur": "Roger Federer",
+    "ELO": 1918.7879830608726
+  },
+  {
+    "Date": "2017-10-30",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1852.316706194837
+  },
+  {
+    "Date": "2017-11-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1831.1406280800093
+  },
+  {
+    "Date": "2017-11-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1923.0940276815745
+  },
+  {
+    "Date": "2018-01-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1936.353369028196
+  },
+  {
+    "Date": "2018-01-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1823.3971319811967
+  },
+  {
+    "Date": "2018-01-15",
+    "Joueur": "Roger Federer",
+    "ELO": 1925.6581173935533
+  },
+  {
+    "Date": "2018-02-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1932.4496804516032
+  },
+  {
+    "Date": "2018-03-05",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1911.2947529245525
+  },
+  {
+    "Date": "2018-03-05",
+    "Joueur": "Roger Federer",
+    "ELO": 1938.12427295544
+  },
+  {
+    "Date": "2018-03-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1896.2750657596425
+  },
+  {
+    "Date": "2018-03-19",
+    "Joueur": "Roger Federer",
+    "ELO": 1919.3173373678087
+  },
+  {
+    "Date": "2018-04-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.8810618352973
+  },
+  {
+    "Date": "2018-04-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1895.2380631646108
+  },
+  {
+    "Date": "2018-04-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1829.4804953629641
+  },
+  {
+    "Date": "2018-04-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1874.2963592598378
+  },
+  {
+    "Date": "2018-04-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1843.2918761173944
+  },
+  {
+    "Date": "2018-05-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1869.9611401932725
+  },
+  {
+    "Date": "2018-05-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1848.3408736266185
+  },
+  {
+    "Date": "2018-05-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1866.2207277279972
+  },
+  {
+    "Date": "2018-05-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1852.18077626865
+  },
+  {
+    "Date": "2018-05-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1864.3133478623058
+  },
+  {
+    "Date": "2018-05-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1867.945966938591
+  },
+  {
+    "Date": "2018-06-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1922.9408746189283
+  },
+  {
+    "Date": "2018-06-18",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1857.0834114888287
+  },
+  {
+    "Date": "2018-06-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1926.8522916389018
+  },
+  {
+    "Date": "2018-07-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1858.6381519088038
+  },
+  {
+    "Date": "2018-07-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1883.2526795150834
+  },
+  {
+    "Date": "2018-07-02",
+    "Joueur": "Roger Federer",
+    "ELO": 1918.3255451820871
+  },
+  {
+    "Date": "2018-08-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1867.654307117965
+  },
+  {
+    "Date": "2018-08-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1888.0522682059552
+  },
+  {
+    "Date": "2018-08-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1866.0111718965318
+  },
+  {
+    "Date": "2018-08-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1911.3471025295305
+  },
+  {
+    "Date": "2018-08-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1884.1452529386374
+  },
+  {
+    "Date": "2018-08-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1896.0871670830777
+  },
+  {
+    "Date": "2018-08-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1907.7739416098448
+  },
+  {
+    "Date": "2018-09-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1885.3095154510088
+  },
+  {
+    "Date": "2018-09-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1885.9874828133418
+  },
+  {
+    "Date": "2018-10-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1899.0349708226895
+  },
+  {
+    "Date": "2018-10-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1900.2677205083985
+  },
+  {
+    "Date": "2018-10-22",
+    "Joueur": "Roger Federer",
+    "ELO": 1898.7715427261385
+  },
+  {
+    "Date": "2018-10-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1909.1592482712804
+  },
+  {
+    "Date": "2018-10-29",
+    "Joueur": "Roger Federer",
+    "ELO": 1903.4709214913519
+  },
+  {
+    "Date": "2018-11-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1907.416246443113
+  },
+  {
+    "Date": "2018-11-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.4663303404318
+  },
+  {
+    "Date": "2018-12-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1873.174997321736
+  },
+  {
+    "Date": "2019-01-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1890.390783228438
+  },
+  {
+    "Date": "2019-01-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1889.5914322331316
+  },
+  {
+    "Date": "2019-01-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1877.8518175988495
+  },
+  {
+    "Date": "2019-02-25",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1883.1413909676878
+  },
+  {
+    "Date": "2019-02-25",
+    "Joueur": "Roger Federer",
+    "ELO": 1887.3024001099554
+  },
+  {
+    "Date": "2019-03-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1885.3778804031208
+  },
+  {
+    "Date": "2019-03-04",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1879.9949507015597
+  },
+  {
+    "Date": "2019-03-04",
+    "Joueur": "Roger Federer",
+    "ELO": 1888.9214555931578
+  },
+  {
+    "Date": "2019-03-18",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1874.1430236604965
+  },
+  {
+    "Date": "2019-03-18",
+    "Joueur": "Roger Federer",
+    "ELO": 1900.5570845125567
+  },
+  {
+    "Date": "2019-04-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1862.7702021233854
+  },
+  {
+    "Date": "2019-04-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1872.0794780572244
+  },
+  {
+    "Date": "2019-04-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1867.5735332825318
+  },
+  {
+    "Date": "2019-05-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1874.695623204922
+  },
+  {
+    "Date": "2019-05-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1860.87143241146
+  },
+  {
+    "Date": "2019-05-06",
+    "Joueur": "Roger Federer",
+    "ELO": 1896.8393262891004
+  },
+  {
+    "Date": "2019-05-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1875.610163679337
+  },
+  {
+    "Date": "2019-05-13",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1876.3670247111509
+  },
+  {
+    "Date": "2019-05-13",
+    "Joueur": "Roger Federer",
+    "ELO": 1889.6274087110016
+  },
+  {
+    "Date": "2019-05-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1884.6959178485893
+  },
+  {
+    "Date": "2019-05-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1889.095271325995
+  },
+  {
+    "Date": "2019-05-27",
+    "Joueur": "Roger Federer",
+    "ELO": 1894.5233408718234
+  },
+  {
+    "Date": "2019-06-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1897.4188944329246
+  },
+  {
+    "Date": "2019-07-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1888.2890628714588
+  },
+  {
+    "Date": "2019-07-01",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1910.6116359859361
+  },
+  {
+    "Date": "2019-07-01",
+    "Joueur": "Roger Federer",
+    "ELO": 1908.1981250473286
+  },
+  {
+    "Date": "2019-08-05",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1912.7838241184957
+  },
+  {
+    "Date": "2019-08-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1888.0188187319054
+  },
+  {
+    "Date": "2019-08-12",
+    "Joueur": "Roger Federer",
+    "ELO": 1897.2338228300578
+  },
+  {
+    "Date": "2019-08-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1890.3263150291018
+  },
+  {
+    "Date": "2019-08-26",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1921.427870548527
+  },
+  {
+    "Date": "2019-08-26",
+    "Joueur": "Roger Federer",
+    "ELO": 1898.9112045122474
+  },
+  {
+    "Date": "2019-09-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1923.7992573781055
+  },
+  {
+    "Date": "2019-09-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1889.7850285004477
+  },
+  {
+    "Date": "2019-09-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1886.7616932003432
+  },
+  {
+    "Date": "2019-10-07",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1881.4607736177024
+  },
+  {
+    "Date": "2019-10-07",
+    "Joueur": "Roger Federer",
+    "ELO": 1882.085550262027
+  },
+  {
+    "Date": "2019-10-21",
+    "Joueur": "Roger Federer",
+    "ELO": 1890.8633070234216
+  },
+  {
+    "Date": "2019-10-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1890.691369522991
+  },
+  {
+    "Date": "2019-10-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1916.8816774650031
+  },
+  {
+    "Date": "2019-11-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1881.9591454224676
+  },
+  {
+    "Date": "2019-11-11",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1921.2149934674962
+  },
+  {
+    "Date": "2019-11-11",
+    "Joueur": "Roger Federer",
+    "ELO": 1886.6973913667593
+  },
+  {
+    "Date": "2019-11-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1918.13963010238
+  },
+  {
+    "Date": "2019-11-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1882.732857147144
+  },
+  {
+    "Date": "2019-11-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1916.8862060718134
+  },
+  {
+    "Date": "2019-11-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1881.4441760398556
+  },
+  {
+    "Date": "2019-11-22",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1884.2221381033548
+  },
+  {
+    "Date": "2019-11-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1918.8031341329422
+  },
+  {
+    "Date": "2019-11-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1921.8212571130719
+  },
+  {
+    "Date": "2019-11-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1920.8663596049682
+  },
+  {
+    "Date": "2020-01-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1897.7285231623173
+  },
+  {
+    "Date": "2020-01-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1908.7499289648476
+  },
+  {
+    "Date": "2020-01-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1909.5293261400961
+  },
+  {
+    "Date": "2020-01-20",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1909.6202684613029
+  },
+  {
+    "Date": "2020-01-20",
+    "Joueur": "Roger Federer",
+    "ELO": 1895.1377320127824
+  },
+  {
+    "Date": "2020-02-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1930.3173832368252
+  },
+  {
+    "Date": "2020-02-24",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1909.7097030880122
+  },
+  {
+    "Date": "2020-08-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1936.5328064051664
+  },
+  {
+    "Date": "2020-08-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1937.4771360790048
+  },
+  {
+    "Date": "2020-09-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1930.627586567272
+  },
+  {
+    "Date": "2020-09-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.202424036872
+  },
+  {
+    "Date": "2020-09-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1937.1278490069562
+  },
+  {
+    "Date": "2020-09-28",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1906.5402395394583
+  },
+  {
+    "Date": "2020-10-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1922.9005621399308
+  },
+  {
+    "Date": "2020-11-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1908.5048519080751
+  },
+  {
+    "Date": "2020-11-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1911.33548654661
+  },
+  {
+    "Date": "2020-11-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1895.7796222709837
+  },
+  {
+    "Date": "2021-02-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1930.8441173727792
+  },
+  {
+    "Date": "2021-02-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1916.47606059743
+  },
+  {
+    "Date": "2021-02-08",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1897.613937638113
+  },
+  {
+    "Date": "2021-03-08",
+    "Joueur": "Roger Federer",
+    "ELO": 1874.7855505923935
+  },
+  {
+    "Date": "2021-04-12",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1897.2196451554473
+  },
+  {
+    "Date": "2021-04-12",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1896.0330080087833
+  },
+  {
+    "Date": "2021-04-19",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1886.2210138149378
+  },
+  {
+    "Date": "2021-04-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.3844771837867
+  },
+  {
+    "Date": "2021-05-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1903.461117944548
+  },
+  {
+    "Date": "2021-05-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1894.0959863377716
+  },
+  {
+    "Date": "2021-05-10",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1897.073618944452
+  },
+  {
+    "Date": "2021-05-17",
+    "Joueur": "Roger Federer",
+    "ELO": 1879.3230484303301
+  },
+  {
+    "Date": "2021-05-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1936.485788995808
+  },
+  {
+    "Date": "2021-05-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1885.5456791681347
+  },
+  {
+    "Date": "2021-05-31",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1900.8306993475755
+  },
+  {
+    "Date": "2021-05-31",
+    "Joueur": "Roger Federer",
+    "ELO": 1858.2722970989912
+  },
+  {
+    "Date": "2021-06-14",
+    "Joueur": "Roger Federer",
+    "ELO": 1863.8617361987035
+  },
+  {
+    "Date": "2021-06-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1901.750798576942
+  },
+  {
+    "Date": "2021-06-28",
+    "Joueur": "Roger Federer",
+    "ELO": 1851.3671421546765
+  },
+  {
+    "Date": "2021-07-24",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1910.455344333508
+  },
+  {
+    "Date": "2021-08-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1900.9156087923097
+  },
+  {
+    "Date": "2021-08-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1911.6430904718216
+  },
+  {
+    "Date": "2021-11-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1898.4860307290426
+  },
+  {
+    "Date": "2021-11-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1893.500300603364
+  },
+  {
+    "Date": "2021-11-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1939.22476684932
+  },
+  {
+    "Date": "2021-11-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1939.9288375407452
+  },
+  {
+    "Date": "2021-12-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1942.416408346682
+  },
+  {
+    "Date": "2021-12-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1941.3471453276538
+  },
+  {
+    "Date": "2022-01-03",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1893.4296571920904
+  },
+  {
+    "Date": "2022-01-17",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1900.6098080688296
+  },
+  {
+    "Date": "2022-02-21",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1930.36034328871
+  },
+  {
+    "Date": "2022-02-21",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1911.9047452871116
+  },
+  {
+    "Date": "2022-03-07",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1905.4052750237552
+  },
+  {
+    "Date": "2022-04-11",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1917.774478306861
+  },
+  {
+    "Date": "2022-04-18",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1907.4020302495733
+  },
+  {
+    "Date": "2022-05-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1899.9159447110978
+  },
+  {
+    "Date": "2022-05-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1898.5894053346874
+  },
+  {
+    "Date": "2022-05-09",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1911.060966575066
+  },
+  {
+    "Date": "2022-05-09",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1888.5057427246547
+  },
+  {
+    "Date": "2022-05-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1916.270747440432
+  },
+  {
+    "Date": "2022-05-23",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1899.1496744368471
+  },
+  {
+    "Date": "2022-06-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1916.4263119512832
+  },
+  {
+    "Date": "2022-06-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1911.987867888199
+  },
+  {
+    "Date": "2022-08-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1893.0541133692589
+  },
+  {
+    "Date": "2022-08-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1892.7785290780444
+  },
+  {
+    "Date": "2022-09-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1916.6179139809387
+  },
+  {
+    "Date": "2022-09-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1913.4885561330188
+  },
+  {
+    "Date": "2022-10-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1922.1522708530233
+  },
+  {
+    "Date": "2022-10-31",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1914.9099070977056
+  },
+  {
+    "Date": "2022-10-31",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1870.8194852428378
+  },
+  {
+    "Date": "2022-11-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1922.8043473429727
+  },
+  {
+    "Date": "2022-11-14",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1860.416440597417
+  },
+  {
+    "Date": "2023-01-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1933.4807969453445
+  },
+  {
+    "Date": "2023-01-02",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1829.0877894611647
+  },
+  {
+    "Date": "2023-01-16",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1941.7127069356907
+  },
+  {
+    "Date": "2023-01-16",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1818.2660675912416
+  },
+  {
+    "Date": "2023-02-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1937.255033932827
+  },
+  {
+    "Date": "2023-04-10",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1926.0108504189643
+  },
+  {
+    "Date": "2023-04-17",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1913.6997323895978
+  },
+  {
+    "Date": "2023-05-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1904.042536965876
+  },
+  {
+    "Date": "2023-05-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1911.4385028060904
+  },
+  {
+    "Date": "2023-07-03",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1920.2326951923424
+  },
+  {
+    "Date": "2023-08-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1923.316936191745
+  },
+  {
+    "Date": "2023-08-28",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1931.7661823904637
+  },
+  {
+    "Date": "2023-09-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1940.5581778473136
+  },
+  {
+    "Date": "2023-10-30",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1942.1339677608853
+  },
+  {
+    "Date": "2023-11-13",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1941.116427953256
+  },
+  {
+    "Date": "2023-11-23",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1928.8283425788925
+  },
+  {
+    "Date": "2023-11-25",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1927.6446744290297
+  },
+  {
+    "Date": "2024-01-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1917.2655349445038
+  },
+  {
+    "Date": "2024-01-01",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1804.4397348986029
+  },
+  {
+    "Date": "2024-01-15",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1919.9214200628528
+  },
+  {
+    "Date": "2024-03-04",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1899.4624354010202
+  },
+  {
+    "Date": "2024-04-08",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1890.1682942880366
+  },
+  {
+    "Date": "2024-04-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1802.193862105108
+  },
+  {
+    "Date": "2024-04-22",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1795.6511336362453
+  },
+  {
+    "Date": "2024-05-06",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1880.6352589724693
+  },
+  {
+    "Date": "2024-05-06",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1789.5038998788418
+  },
+  {
+    "Date": "2024-05-20",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1869.8246897288054
+  },
+  {
+    "Date": "2024-05-27",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1861.936617855646
+  },
+  {
+    "Date": "2024-05-27",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1783.378576242619
+  },
+  {
+    "Date": "2024-07-01",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1870.7845377150568
+  },
+  {
+    "Date": "2024-07-15",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1776.4315607874091
+  },
+  {
+    "Date": "2024-07-29",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1876.2471683162194
+  },
+  {
+    "Date": "2024-07-29",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1780.2158118822695
+  },
+  {
+    "Date": "2024-08-26",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1881.7429765438262
+  },
+  {
+    "Date": "2024-09-14",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1872.2253824541651
+  },
+  {
+    "Date": "2024-10-02",
+    "Joueur": "Novak Djokovic",
+    "ELO": 1867.115837239525
+  },
+  {
+    "Date": "2024-11-19",
+    "Joueur": "Rafael Nadal",
+    "ELO": 1765.5140086962897
+  }
+]
