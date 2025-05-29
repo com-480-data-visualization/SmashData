@@ -309,6 +309,26 @@ img.bombeGif {
 }
 
 
+body {
+  font-family: sans-serif;
+  background: white;
+  margin: 20px;
+}
+
+#controls {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#graph svg {
+  border: 1px solid #ccc;
+}
+
+
 // .team .emoji {
 //     position: absolute;
 //     top: 50%;
