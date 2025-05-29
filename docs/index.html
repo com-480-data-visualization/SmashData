@@ -215,9 +215,12 @@
       <iframe src="assets/htmlplot/wta_elo_evolution.html"></iframe>
     </div>
     <div id="wta-map" class="wta-frame">
-      <h3>Map Visual Coming Soon</h3>
-      <p>Exciting geographic insights will be available here soon!</p>
+      <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
+        This interactive map displays the number of matches played per city in the WTA tour. Each marker is colored by the surface type typically used in that city, and the top player (by number of match wins) is highlighted for each location.
+      </p>
+      <iframe src="wta-map.html"></iframe>
     </div>
+    
   </div>
 
   <!-- ATP Section -->
@@ -235,8 +238,12 @@
       <iframe src="assets/htmlplot/elo_evolution.html"></iframe>
     </div>
     <div id="atp-map" class="wta-frame">
+      <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
+        This interactive map displays the number of matches played per city in the ATP tour. Each marker is colored by the surface type typically used in that city, and the top player (by number of match wins) is highlighted for each location.
+      </p>
       <iframe src="atp-map.html"></iframe>
     </div>
+    
   </div>
 
   <script>
@@ -266,6 +273,16 @@
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
     });
+      // Hide custom cursor when mouse is over iframes
+  document.querySelectorAll('iframe').forEach(iframe => {
+    iframe.addEventListener('mouseenter', () => {
+      cursor.style.display = 'none';
+    });
+    iframe.addEventListener('mouseleave', () => {
+      cursor.style.display = 'block';
+    });
+  });
+
   </script>
 </body>
 </html>
