@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATP Insights</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Raleway', sans-serif;
+      background-color: #f6f6f6;
+      color: #111;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 1200px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0d6efd;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: 300;
+      margin-top: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .controls {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      margin-right: 10px;
+      font-weight: 600;
+    }
+
+    select {
+      padding: 6px 10px;
+      background: #eee;
+      color: #111;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 0 0.5rem;
+    }
+
+    #plot {
+      width: 100%;
+      height: 750px;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>📈 ATP Player Elo Rating Evolution</h2>
+    <p>Track how top ATP players' Elo ratings evolved through the years.</p>
+    <iframe src="elo_evolution.html"></iframe>
+  </div>
+
+  <div class="card">
+    <h2>🎾 ATP Underdog Wins vs Top-10 Players</h2>
+    <div class="controls">
+      <label for="year">Year:</label>
+      <select id="year"></select>
+
+      <label for="surface">Surface:</label>
+      <select id="surface">
+        <option value="Hard">Hard</option>
+        <option value="Clay">Clay</option>
+        <option value="Grass">Grass</option>
+      </select>
+
+      <label for="opponent">Top-10 Opponent:</label>
+      <select id="opponent">
+        <option value="">All</option>
+      </select>
+    </div>
+
+    <div id="plot"></div>
+  </div>
+
+  <script>
+    let rawData = [];
+
+    const surfaceBg = {
+      hard: "../img/hard.jpeg",
+      clay: "../img/clay.jpg",
+      grass: "../img/grass.jpg"
+    };
+
+    const tierLogos = {
+      "Grand Slam": "../img/grandslam.png",
+      "ATP 1000": "../img/atp1000.png",
+      "ATP 500": "../img/atp500.png",
+      "ATP 250": "../img/atp250.png",
+      "ATP Finals": "../img/atpfinals.png",
+      "Challenger": "../img/challenger.png"
+    };
+
+    fetch("../data/underdogs_atp.json")
+      .then(res => res.json())
+      .then(data => {
+        rawData = data;
+        populateYearDropdown();
+        populateOpponentDropdown(+document.getElementById("year").value);
+        updatePlot();
+      });
+
+    function populateYearDropdown() {
+      const yearSelect = document.getElementById("year");
+      const years = [...new Set(rawData.map(d => d.Year))].sort();
+      for (const y of years) {
+        const opt = document.createElement("option");
+        opt.value = y;
+        opt.textContent = y;
+        yearSelect.appendChild(opt);
+      }
+      yearSelect.value = years[years.length - 1];
+
+      yearSelect.addEventListener("change", () => {
+        populateOpponentDropdown(+yearSelect.value);
+        updatePlot();
+      });
+    }
+
+    function populateOpponentDropdown(selectedYear) {
+      const oppSelect = document.getElementById("opponent");
+      oppSelect.innerHTML = `<option value="">All</option>`;
+
+      const top10s = rawData
+        .filter(d => d.Year === selectedYear)
+        .map(d => d.Top10)
+        .filter(Boolean);
+
+      const uniqueTop10 = [...new Set(top10s)].sort();
+      for (const name of uniqueTop10) {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        oppSelect.appendChild(opt);
+      }
+
+      oppSelect.addEventListener("change", updatePlot);
+      document.getElementById("surface").addEventListener("change", updatePlot);
+    }
+
+    function updatePlot() {
+      const year = +document.getElementById("year").value;
+      const surface = document.getElementById("surface").value;
+      const opponent = document.getElementById("opponent").value;
+
+      const filtered = rawData.filter(d =>
+        d.Year === year &&
+        d.Surface.toLowerCase() === surface.toLowerCase() &&
+        (!opponent || d.Top10 === opponent)
+      );
+
+      let players = {};
+      for (let row of filtered) {
+        const name = row.Underdog;
+        if (!players[name]) {
+          players[name] = {
+            ranks: [],
+            odds: [],
+            tier: row.TierCat,
+            matches: []
+          };
+        }
+        players[name].ranks.push(row.UDRank);
+        players[name].odds.push(row.Odds);
+        players[name].matches.push(`${row.Tournament} vs ${row.Top10} (${row.Odds})`);
+      }
+
+      const data = [];
+      const layoutImages = [];
+
+      for (let [player, stats] of Object.entries(players)) {
+        const x = average(stats.ranks);
+        const y = average(stats.odds);
+        const tier = stats.tier;
+        const hoverText = `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<br>${stats.matches.join("<br>")}`;
+
+        data.push({
+          x: [x],
+          y: [y],
+          mode: "markers+text",
+          type: "scatter",
+          name: player,
+          text: [player],
+          textposition: "top center",
+          marker: { size: 16, opacity: 0.9 },
+          hovertemplate: hoverText
+        });
+
+        const logoPath = tierLogos[tier];
+        if (logoPath) {
+          layoutImages.push({
+            source: logoPath,
+            xref: "x",
+            yref: "y",
+            x: x,
+            y: y,
+            sizex: 3,
+            sizey: 0.6,
+            xanchor: "center",
+            yanchor: "middle",
+            layer: "above"
+          });
+        }
+      }
+
+      const layout = {
+        title: `ATP Underdog Returns in ${year} on ${surface}${opponent ? ` vs ${opponent}` : ""}`,
+        xaxis: { title: "Average Rank", autorange: "reversed" },
+        yaxis: { title: "Avg Return ($1 Stake)", rangemode: "tozero" },
+        paper_bgcolor: "#fff",
+        plot_bgcolor: "#fff",
+        font: { color: "#111" },
+        images: layoutImages
+      };
+
+      const bg = surfaceBg[surface.toLowerCase()];
+      if (bg) {
+        layout.images.unshift({
+          source: bg,
+          xref: "paper",
+          yref: "paper",
+          x: 0,
+          y: 1,
+          sizex: 1,
+          sizey: 1,
+          xanchor: "left",
+          yanchor: "top",
+          sizing: "stretch",
+          opacity: 0.2,
+          layer: "below"
+        });
+      }
+
+      Plotly.newPlot("plot", data, layout);
+    }
+
+    function average(arr) {
+      return arr.reduce((a, b) => a + b, 0) / arr.length;
+    }
+  </script>
+</body>
+</html>

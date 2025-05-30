@@ -29,9 +29,20 @@ SmashData/
 │   ├── Milestone2.pdf             # Report for Milestone 2
 │   └── Milestone_2.ipynb          # Code and visualizations
 │
+├── Milestone 3/
+│   ├── bets.ipynb                 # Jupyter notebook for betting analysis
+│   ├── map.ipynb                  # Jupyter notebook for tennis map
+│   └── elo_other_non_published_plots.ipynb # Extra plots and analysis
+│
 ├── docs/                          # GitHub Pages website files
 │   ├── index.html                 # Home page of the website
-│   └── assets/, js/, css/         # Web assets (scripts, styles, media)
+│   ├── htmlplot/                  # Rendered HTML plots (wta.html, atp-map.html, etc.)
+│   └── assets/                    # Web assets (scripts, styles, data, media)
+│       ├── css/
+│       ├── data/                  # JSON files (e.g. df_plotly, underdogs.json)
+│       ├── fonts/
+│       ├── img/                   # Icons, logos, surface backgrounds
+│       └── js/                    # JavaScript for dynamic charts
 │
 ├── README.md                      # Project summary and navigation
 └── .gitignore                     # Files ignored by Git
@@ -46,5 +57,3 @@ SmashData/
 </p>
 
 ---
-
-

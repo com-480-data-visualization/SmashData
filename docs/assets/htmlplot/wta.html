@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WTA Bets Visualized</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      color: #111;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 0.6rem;
+      border-radius: 6px;
+      margin: 1rem;
+    }
+
+    .controls label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    #playerPopup {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: white;
+      border: 2px solid #007bff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 400px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    #playerPopup h4 {
+      margin-top: 0;
+    }
+
+    #playerPopup ul {
+      padding-left: 1.2rem;
+    }
+
+    #playerPopup button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #topPlayersPrompt {
+      margin-top: 2rem;
+    }
+
+    #topOpponentsButtons button {
+      background: #dc3545;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 0.3rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>💸 WTA Underdog Wins vs Top-10 Players</h3>
+    <p style="max-width: 800px; margin: auto; font-size: 1rem;">
+      Explore which underdogs delivered the biggest surprises by beating top-10 players. Each point shows the player's average rank and betting return. Click on a point or choose a top-10 opponent to see results.
+    </p>
+
+    <div class="controls">
+      <label for="year">Year:</label>
+      <select id="year"></select>
+
+      <label for="surface">Surface:</label>
+      <select id="surface">
+        <option value="Hard">Hard</option>
+        <option value="Clay">Clay</option>
+        <option value="Grass">Grass</option>
+      </select>
+
+      <label for="opponent">Top-10 Opponent:</label>
+      <select id="opponent">
+        <option value="">All</option>
+      </select>
+    </div>
+
+    <div id="topPlayersPrompt">
+      <p><strong>Who do you want to see first?</strong></p>
+      <div id="topOpponentsButtons" style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
+    </div>
+
+    <div id="plot" style="margin-top: 2rem;"></div>
+  </div>
+
+  <div id="playerPopup" class="hidden">
+    <h4 id="popupName"></h4>
+    <p><strong>Avg Rank:</strong> <span id="popupRank"></span></p>
+    <p><strong>Avg Return:</strong> $<span id="popupReturn"></span></p>
+    <p><strong>Top-10 Matches:</strong></p>
+    <ul id="popupMatches"></ul>
+    <button onclick="document.getElementById('playerPopup').classList.add('hidden')">Close</button>
+  </div>
+
+  <script>
+    let rawData = [];
+    const surfaceBg = {
+      hard: "../img/hard.jpeg",
+      clay: "../img/clay.jpg",
+      grass: "../img/grass.jpg"
+    };
+
+    const tierLogos = {
+      "Grand Slam": "../img/grandslam.png",
+      "WTA 1000": "../img/logo-wta1000-black-1.png",
+      "WTA 500": "../img/wta500.png",
+      "WTA 250": "../img/wta250.png",
+      "WTA Finals": "../img/wtafinals.png",
+      "125 / ITF": "../img/wta125.png"
+    };
+
+    let playerStats = {};
+
+    fetch("../data/underdogs.json")
+      .then(res => res.json())
+      .then(data => {
+        rawData = data;
+        populateYearDropdown();
+        populateOpponentDropdown(+document.getElementById("year").value);
+        updatePlot();
+      });
+
+    function populateYearDropdown() {
+      const yearSelect = document.getElementById("year");
+      const years = [...new Set(rawData.map(d => d.Year))].sort();
+      for (const y of years) {
+        const opt = document.createElement("option");
+        opt.value = y;
+        opt.textContent = y;
+        yearSelect.appendChild(opt);
+      }
+      yearSelect.value = years[years.length - 1];
+      yearSelect.addEventListener("change", () => {
+        populateOpponentDropdown(+yearSelect.value);
+        updatePlot();
+      });
+    }
+
+    function populateOpponentDropdown(selectedYear) {
+      const oppSelect = document.getElementById("opponent");
+      oppSelect.innerHTML = `<option value="">All</option>`;
+      const top10s = rawData.filter(d => d.Year === selectedYear).map(d => d.Top10).filter(Boolean);
+      const uniqueTop10 = [...new Set(top10s)].sort();
+      for (const name of uniqueTop10) {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        oppSelect.appendChild(opt);
+      }
+      oppSelect.addEventListener("change", () => updatePlot());
+      document.getElementById("surface").addEventListener("change", () => updatePlot());
+    }
+
+    function updatePlot(selectedOpponent = "") {
+      const year = +document.getElementById("year").value;
+      const surface = document.getElementById("surface").value;
+      const manualOpponent = selectedOpponent || document.getElementById("opponent").value;
+
+      const filtered = rawData.filter(d =>
+        d.Year === year &&
+        d.Surface.toLowerCase() === surface.toLowerCase() &&
+        (!manualOpponent || d.Top10 === manualOpponent)
+      );
+
+      playerStats = {};
+      const data = [];
+      const layoutImages = [];
+
+      for (let row of filtered) {
+        const name = row.Underdog;
+        if (!playerStats[name]) {
+          playerStats[name] = {
+            ranks: [],
+            odds: [],
+            matches: [],
+            tier: row.TierCat
+          };
+        }
+        playerStats[name].ranks.push(row.UDRank);
+        playerStats[name].odds.push(row.Odds);
+        playerStats[name].matches.push(`${row.Tournament} vs ${row.Top10} (${row.Odds})`);
+      }
+
+      const top10Counts = {};
+      rawData
+        .filter(d => d.Year === year && d.Top10)
+        .forEach(d => {
+          top10Counts[d.Top10] = (top10Counts[d.Top10] || 0) + 1;
+        });
+
+      const topOpponents = Object.entries(top10Counts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([name]) => name);
+
+      const btnContainer = document.getElementById("topOpponentsButtons");
+      btnContainer.innerHTML = "";
+      topOpponents.forEach(opponent => {
+        const btn = document.createElement("button");
+        btn.textContent = opponent;
+        btn.onclick = () => {
+          document.getElementById("opponent").value = opponent;
+          updatePlot(opponent);
+        };
+        btnContainer.appendChild(btn);
+      });
+
+      for (let [player, stats] of Object.entries(playerStats)) {
+        const x = average(stats.ranks);
+        const y = average(stats.odds);
+        const tier = stats.tier;
+        data.push({
+          x: [x],
+          y: [y],
+          mode: "markers+text",
+          type: "scatter",
+          name: player,
+          text: [player],
+          textposition: "top center",
+          marker: { size: 20, opacity: 0.9 },
+          customdata: [player],
+          hovertemplate: `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<extra></extra>`
+        });
+
+        const logoPath = tierLogos[tier];
+        if (logoPath) {
+          layoutImages.push({
+            source: logoPath,
+            xref: "x", yref: "y",
+            x: x, y: y,
+            sizex: 3, sizey: 0.6,
+            xanchor: "center", yanchor: "middle",
+            layer: "above"
+          });
+        }
+      }
+
+      const layout = {
+        title: `WTA Underdog Returns in ${year} on ${surface}${manualOpponent ? ` vs ${manualOpponent}` : ""}`,
+        xaxis: { title: "Average Rank", autorange: "reversed" },
+        yaxis: { title: "Avg Return ($1 Stake)", rangemode: "tozero" },
+        paper_bgcolor: "#fff",
+        plot_bgcolor: "#fff",
+        font: { color: "#111" },
+        images: layoutImages
+      };
+
+      const bg = surfaceBg[surface.toLowerCase()];
+      if (bg) {
+        layout.images.unshift({
+          source: bg,
+          xref: "paper", yref: "paper",
+          x: 0, y: 1,
+          sizex: 1, sizey: 1,
+          xanchor: "left", yanchor: "top",
+          sizing: "stretch",
+          opacity: 0.2,
+          layer: "below"
+        });
+      }
+
+      Plotly.newPlot("plot", data, layout).then(plot => {
+        plot.on('plotly_click', function(event) {
+          const player = event.points[0].customdata;
+          showPlayerPopup(player);
+        });
+      });
+    }
+
+    function showPlayerPopup(player) {
+      const popup = document.getElementById("playerPopup");
+      const info = playerStats[player];
+      if (info) {
+        document.getElementById("popupName").textContent = player;
+        document.getElementById("popupRank").textContent = average(info.ranks).toFixed(1);
+        document.getElementById("popupReturn").textContent = average(info.odds).toFixed(2);
+        const list = document.getElementById("popupMatches");
+        list.innerHTML = '';
+        info.matches.forEach(m => {
+          const li = document.createElement("li");
+          li.textContent = m;
+          list.appendChild(li);
+        });
+        popup.classList.remove("hidden");
+      }
+    }
+
+    window.addEventListener("click", function(event) {
+      const popup = document.getElementById("playerPopup");
+      if (!popup.classList.contains("hidden") && !popup.contains(event.target)) {
+        popup.classList.add("hidden");
+      }
+    });
+
+    function average(arr) {
+      return arr.reduce((a, b) => a + b, 0) / arr.length;
+    }
+  </script>
+</body>
+</html>
