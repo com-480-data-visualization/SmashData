@@ -34,6 +34,7 @@ SmashData/
 │   ├── map.ipynb                  # Jupyter notebook for tennis map
 │   └── elo_other_non_published_plots.ipynb # Extra plots and analysis
 │   └── process_book.pdf           # Process Book for Milestone 3
+│   └── screencast.mp4             # Screencast for Milestone 3
 │
 ├── docs/                          # GitHub Pages website files
 │   ├── index.html                 # Home page of the website
