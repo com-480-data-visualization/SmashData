@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+∂ƒ<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -93,7 +93,7 @@
 <body>
 
   <div class="card">
-    <h3>💸 WTA Underdog Wins vs Top-10 Players</h3>
+    <h3> WTA Underdog Wins vs Top-10 Players</h3>
     <p style="max-width: 800px; margin: auto; font-size: 1rem;">
       Explore which underdogs delivered the biggest surprises by beating top-10 players. Each point shows the player's average rank and betting return. Click on a point or choose a top-10 opponent to see results.
     </p>
@@ -257,7 +257,7 @@
           name: player,
           text: [player],
           textposition: "top center",
-          marker: { size: 20, opacity: 0.9 },
+          marker: { size: 20, opacity: 0.5 },
           customdata: [player],
           hovertemplate: `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<extra></extra>`
         });
@@ -268,7 +268,7 @@
             source: logoPath,
             xref: "x", yref: "y",
             x: x, y: y,
-            sizex: 3, sizey: 0.6,
+            sizex: 5, sizey: 1.2,
             xanchor: "center", yanchor: "middle",
             layer: "above"
           });
@@ -282,7 +282,8 @@
         paper_bgcolor: "#fff",
         plot_bgcolor: "#fff",
         font: { color: "#111" },
-        images: layoutImages
+        images: layoutImages,
+        showlegend:false
       };
 
       const bg = surfaceBg[surface.toLowerCase()];
@@ -294,7 +295,7 @@
           sizex: 1, sizey: 1,
           xanchor: "left", yanchor: "top",
           sizing: "stretch",
-          opacity: 0.2,
+          opacity: 0.3,
           layer: "below"
         });
       }
