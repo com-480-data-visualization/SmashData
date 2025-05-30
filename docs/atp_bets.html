@@ -212,7 +212,7 @@
           name: player,
           text: [player],
           textposition: "top center",
-          marker: { size: 20, opacity: 0.9 },
+          marker: { size: 20, opacity: 0.4 }, // More transparent markers
           hovertemplate: `${player}<br>Avg Rank: ${x.toFixed(1)}<br>Avg Return: $${y.toFixed(2)}<extra></extra>`
         });
 
@@ -224,8 +224,8 @@
             yref: "y",
             x: x,
             y: y,
-            sizex: 3,
-            sizey: 0.6,
+            sizex: 6,
+            sizey: 1.2,
             xanchor: "center",
             yanchor: "middle",
             layer: "above"
@@ -240,6 +240,7 @@
         paper_bgcolor: "#fff",
         plot_bgcolor: "#fff",
         font: { color: "#111" },
+        showlegend: false,
         images: layoutImages
       };
 
