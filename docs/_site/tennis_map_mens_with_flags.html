@@ -1,0 +1,4528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_895d48191ceff9b2f2c313fa689ddb1f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_895d48191ceff9b2f2c313fa689ddb1f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_895d48191ceff9b2f2c313fa689ddb1f = L.map(
+                "map_895d48191ceff9b2f2c313fa689ddb1f",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_895d48191ceff9b2f2c313fa689ddb1f);
+
+            
+
+        
+    
+            var tile_layer_43aa16c32769e4fa635f7f74c2c3f68d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_43aa16c32769e4fa635f7f74c2c3f68d.addTo(map_895d48191ceff9b2f2c313fa689ddb1f);
+        
+    
+            var tile_layer_cdadc42ef36ebd0ae1f62cc9306a5a07 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_e0084de52596d4480fee4fab3d4e11c8 = new L.Control.MiniMap(
+                tile_layer_cdadc42ef36ebd0ae1f62cc9306a5a07,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_895d48191ceff9b2f2c313fa689ddb1f.addControl(mini_map_e0084de52596d4480fee4fab3d4e11c8);
+        
+    
+            var marker_cluster_327af69aa695e8a10b535af0ed6c2c54 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c391d7a9f258576bf3122aee9867251b = L.circleMarker(
+                [48.8588897, 2.320041],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_7c18cab5d369310f96e742cfd2a1e7c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfd7242903f575b9c9ffad5108c4b224 = $(`<div id="html_dfd7242903f575b9c9ffad5108c4b224" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Paris</b><br>Surface: Clay<br>Matches: 4153<br>Top Player: 🇷🇸 Djokovic N.</div></div>`)[0];
+                popup_7c18cab5d369310f96e742cfd2a1e7c9.setContent(html_dfd7242903f575b9c9ffad5108c4b224);
+            
+        
+
+        circle_marker_c391d7a9f258576bf3122aee9867251b.bindPopup(popup_7c18cab5d369310f96e742cfd2a1e7c9)
+        ;
+
+        
+    
+    
+            circle_marker_c391d7a9f258576bf3122aee9867251b.bindTooltip(
+                `<div>
+                     Paris
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_745b4d70ec639567e08f331ba3e61736 = L.circleMarker(
+                [-37.8142454, 144.9631732],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.3383096556706, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e166528582e88ace364039a9b22c97e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b07856d3dd4ce724182e81c97c3e8347 = $(`<div id="html_b07856d3dd4ce724182e81c97c3e8347" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Melbourne</b><br>Surface: Hard<br>Matches: 3185<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_e166528582e88ace364039a9b22c97e5.setContent(html_b07856d3dd4ce724182e81c97c3e8347);
+            
+        
+
+        circle_marker_745b4d70ec639567e08f331ba3e61736.bindPopup(popup_e166528582e88ace364039a9b22c97e5)
+        ;
+
+        
+    
+    
+            circle_marker_745b4d70ec639567e08f331ba3e61736.bindTooltip(
+                `<div>
+                     Melbourne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7371aba14b39fe9cfae29fe5656af3a8 = L.circleMarker(
+                [51.4893335, -0.1440551],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.083072477726944, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9b9b0d30486eabb48c34cd7902392f17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ab95e298dee782062d4cd38796888dc = $(`<div id="html_9ab95e298dee782062d4cd38796888dc" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>London</b><br>Surface: Grass<br>Matches: 3132<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_9b9b0d30486eabb48c34cd7902392f17.setContent(html_9ab95e298dee782062d4cd38796888dc);
+            
+        
+
+        circle_marker_7371aba14b39fe9cfae29fe5656af3a8.bindPopup(popup_9b9b0d30486eabb48c34cd7902392f17)
+        ;
+
+        
+    
+    
+            circle_marker_7371aba14b39fe9cfae29fe5656af3a8.bindTooltip(
+                `<div>
+                     London
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7e1fba6cb96808c2249e6f7940f5245 = L.circleMarker(
+                [40.7127281, -74.0060152],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.721887791957622, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_031425f8f2d3aa62152bc3fd252ede88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fb15c3044e0e4b79d5c1429e99326e7 = $(`<div id="html_6fb15c3044e0e4b79d5c1429e99326e7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>New York</b><br>Surface: Hard<br>Matches: 3057<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_031425f8f2d3aa62152bc3fd252ede88.setContent(html_6fb15c3044e0e4b79d5c1429e99326e7);
+            
+        
+
+        circle_marker_c7e1fba6cb96808c2249e6f7940f5245.bindPopup(popup_031425f8f2d3aa62152bc3fd252ede88)
+        ;
+
+        
+    
+    
+            circle_marker_c7e1fba6cb96808c2249e6f7940f5245.bindTooltip(
+                `<div>
+                     New York
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f0173e05dfc0aab8367ebc3f299f141 = L.circleMarker(
+                [25.7741728, -80.19362],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.522513845412956, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_60fe4606b13bba560d7989642086dbaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e5c6e39523039594cc6ad608b31e696 = $(`<div id="html_3e5c6e39523039594cc6ad608b31e696" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Miami</b><br>Surface: Hard<br>Matches: 2185<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_60fe4606b13bba560d7989642086dbaa.setContent(html_3e5c6e39523039594cc6ad608b31e696);
+            
+        
+
+        circle_marker_2f0173e05dfc0aab8367ebc3f299f141.bindPopup(popup_60fe4606b13bba560d7989642086dbaa)
+        ;
+
+        
+    
+    
+            circle_marker_2f0173e05dfc0aab8367ebc3f299f141.bindTooltip(
+                `<div>
+                     Miami
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_415d84c7b0042ce7dc1d01082d21680d = L.circleMarker(
+                [33.7217965, -116.338303],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.906091981699976, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_445f24d5a5aff62298b8749c9f271560 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_517bde9d702aac57623f0f2f1da58168 = $(`<div id="html_517bde9d702aac57623f0f2f1da58168" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Indian Wells</b><br>Surface: Hard<br>Matches: 2057<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_445f24d5a5aff62298b8749c9f271560.setContent(html_517bde9d702aac57623f0f2f1da58168);
+            
+        
+
+        circle_marker_415d84c7b0042ce7dc1d01082d21680d.bindPopup(popup_445f24d5a5aff62298b8749c9f271560)
+        ;
+
+        
+    
+    
+            circle_marker_415d84c7b0042ce7dc1d01082d21680d.bindTooltip(
+                `<div>
+                     Indian Wells
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf859b23ba1a3f77f29e724b5de6c9e1 = L.circleMarker(
+                [41.8933203, 12.4829321],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.814351071514569, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c99288bcc8d266030d264834f47663ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f35ad6749b8162316f14cf6a31afc4a = $(`<div id="html_2f35ad6749b8162316f14cf6a31afc4a" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Rome</b><br>Surface: Clay<br>Matches: 1415<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_c99288bcc8d266030d264834f47663ee.setContent(html_2f35ad6749b8162316f14cf6a31afc4a);
+            
+        
+
+        circle_marker_bf859b23ba1a3f77f29e724b5de6c9e1.bindPopup(popup_c99288bcc8d266030d264834f47663ee)
+        ;
+
+        
+    
+    
+            circle_marker_bf859b23ba1a3f77f29e724b5de6c9e1.bindTooltip(
+                `<div>
+                     Rome
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_665103f8bd53cf095ce2ff8a3473498d = L.circleMarker(
+                [43.7402961, 7.426559],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.361666265350348, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_02f9ba06db953608223963eea3cc0101 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdd92b254763309259541777c4066a5f = $(`<div id="html_bdd92b254763309259541777c4066a5f" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Monte Carlo</b><br>Surface: Clay<br>Matches: 1321<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_02f9ba06db953608223963eea3cc0101.setContent(html_bdd92b254763309259541777c4066a5f);
+            
+        
+
+        circle_marker_665103f8bd53cf095ce2ff8a3473498d.bindPopup(popup_02f9ba06db953608223963eea3cc0101)
+        ;
+
+        
+    
+    
+            circle_marker_665103f8bd53cf095ce2ff8a3473498d.bindTooltip(
+                `<div>
+                     Monte Carlo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8db5465a6226049e356c48977f69618 = L.circleMarker(
+                [39.1014537, -84.5124602],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.096797495786178, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5ae0f270280908381d6fa90dfd3f2604 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26daaf85d22402bfcb07602756cb380c = $(`<div id="html_26daaf85d22402bfcb07602756cb380c" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Cincinnati</b><br>Surface: Hard<br>Matches: 1266<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_5ae0f270280908381d6fa90dfd3f2604.setContent(html_26daaf85d22402bfcb07602756cb380c);
+            
+        
+
+        circle_marker_c8db5465a6226049e356c48977f69618.bindPopup(popup_5ae0f270280908381d6fa90dfd3f2604)
+        ;
+
+        
+    
+    
+            circle_marker_c8db5465a6226049e356c48977f69618.bindTooltip(
+                `<div>
+                     Cincinnati
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b6e75c5ae79fbf2c9068c27bbf639c3 = L.circleMarker(
+                [41.3825802, 2.177073],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.706718035155309, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_815e8268d2c904e0b810ebb949af3b3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc6c426f680ca82799b7730960322af1 = $(`<div id="html_fc6c426f680ca82799b7730960322af1" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Barcelona</b><br>Surface: Clay<br>Matches: 1185<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_815e8268d2c904e0b810ebb949af3b3d.setContent(html_fc6c426f680ca82799b7730960322af1);
+            
+        
+
+        circle_marker_1b6e75c5ae79fbf2c9068c27bbf639c3.bindPopup(popup_815e8268d2c904e0b810ebb949af3b3d)
+        ;
+
+        
+    
+    
+            circle_marker_1b6e75c5ae79fbf2c9068c27bbf639c3.bindTooltip(
+                `<div>
+                     Barcelona
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7799fb695cc98ab198a5c2d709fa72d7 = L.circleMarker(
+                [40.4167047, -3.7035825],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.485191427883458, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_80c6627a059f53611a96523ebc035628 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35440ec6736876a3270a76444bfd8103 = $(`<div id="html_35440ec6736876a3270a76444bfd8103" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Madrid</b><br>Surface: Clay<br>Matches: 1139<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_80c6627a059f53611a96523ebc035628.setContent(html_35440ec6736876a3270a76444bfd8103);
+            
+        
+
+        circle_marker_7799fb695cc98ab198a5c2d709fa72d7.bindPopup(popup_80c6627a059f53611a96523ebc035628)
+        ;
+
+        
+    
+    
+            circle_marker_7799fb695cc98ab198a5c2d709fa72d7.bindTooltip(
+                `<div>
+                     Madrid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db15c2aa338a0e4a7413bf1d1ed6f818 = L.circleMarker(
+                [53.550341, 10.000654],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.258849024801348, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_99a24b64d4ed788731873eac48d01c67 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25a175e1b108082cc4b28ed78be39eb8 = $(`<div id="html_25a175e1b108082cc4b28ed78be39eb8" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Hamburg</b><br>Surface: Clay<br>Matches: 1092<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_99a24b64d4ed788731873eac48d01c67.setContent(html_25a175e1b108082cc4b28ed78be39eb8);
+            
+        
+
+        circle_marker_db15c2aa338a0e4a7413bf1d1ed6f818.bindPopup(popup_99a24b64d4ed788731873eac48d01c67)
+        ;
+
+        
+    
+    
+            circle_marker_db15c2aa338a0e4a7413bf1d1ed6f818.bindTooltip(
+                `<div>
+                     Hamburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6fa5e974f1f408dcd8fb7181c961c402 = L.circleMarker(
+                [47.2649115, 11.4036563],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.167348904406453, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c20be7d12902e30369612e40d9eed467 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18c690416cdae10296bd50bda3c38374 = $(`<div id="html_18c690416cdae10296bd50bda3c38374" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Queens Club</b><br>Surface: Grass<br>Matches: 1073<br>Top Player:  Hewitt L.</div></div>`)[0];
+                popup_c20be7d12902e30369612e40d9eed467.setContent(html_18c690416cdae10296bd50bda3c38374);
+            
+        
+
+        circle_marker_6fa5e974f1f408dcd8fb7181c961c402.bindPopup(popup_c20be7d12902e30369612e40d9eed467)
+        ;
+
+        
+    
+    
+            circle_marker_6fa5e974f1f408dcd8fb7181c961c402.bindTooltip(
+                `<div>
+                     Queens Club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7dc4ca55ee452483ff40f9de70b60db1 = L.circleMarker(
+                [38.8950368, -77.0365427],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.090296171442331, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_ef2772a248e7c08d38d71096cd866bcd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7251a5a96421e60913e24e00fc464f7f = $(`<div id="html_7251a5a96421e60913e24e00fc464f7f" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Washington</b><br>Surface: Hard<br>Matches: 1057<br>Top Player:  Roddick A.</div></div>`)[0];
+                popup_ef2772a248e7c08d38d71096cd866bcd.setContent(html_7251a5a96421e60913e24e00fc464f7f);
+            
+        
+
+        circle_marker_7dc4ca55ee452483ff40f9de70b60db1.bindPopup(popup_ef2772a248e7c08d38d71096cd866bcd)
+        ;
+
+        
+    
+    
+            circle_marker_7dc4ca55ee452483ff40f9de70b60db1.bindTooltip(
+                `<div>
+                     Washington
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15334e0e354eca785a24f5e75d4e97c6 = L.circleMarker(
+                [48.7784485, 9.1800132],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.021189501565134, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_929fa21c7d740db00fda9e1ee71c116a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_699be05216d5907648c490e0242af33c = $(`<div id="html_699be05216d5907648c490e0242af33c" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Stuttgart</b><br>Surface: Clay<br>Matches: 835<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_929fa21c7d740db00fda9e1ee71c116a.setContent(html_699be05216d5907648c490e0242af33c);
+            
+        
+
+        circle_marker_15334e0e354eca785a24f5e75d4e97c6.bindPopup(popup_929fa21c7d740db00fda9e1ee71c116a)
+        ;
+
+        
+    
+    
+            circle_marker_15334e0e354eca785a24f5e75d4e97c6.bindTooltip(
+                `<div>
+                     Stuttgart
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe96514598fbefd0dd743066f1797b85 = L.circleMarker(
+                [35.6768601, 139.7638947],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9441367686010116, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b260752318d71bed1825aa0ffff6f818 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b6c7a44ca9b72ff3c66805970d6bbf3 = $(`<div id="html_1b6c7a44ca9b72ff3c66805970d6bbf3" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Tokyo</b><br>Surface: Hard<br>Matches: 819<br>Top Player:  Nishikori K.</div></div>`)[0];
+                popup_b260752318d71bed1825aa0ffff6f818.setContent(html_1b6c7a44ca9b72ff3c66805970d6bbf3);
+            
+        
+
+        circle_marker_fe96514598fbefd0dd743066f1797b85.bindPopup(popup_b260752318d71bed1825aa0ffff6f818)
+        ;
+
+        
+    
+    
+            circle_marker_fe96514598fbefd0dd743066f1797b85.bindTooltip(
+                `<div>
+                     Tokyo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a1988f792a55503b25cc7d44955b384 = L.circleMarker(
+                [31.2312707, 121.4700152],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.8718998314471467, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_89dea4d89e01ea87776c24668afcd16b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a9a428e607af60b21d0a69297cc3f10 = $(`<div id="html_3a9a428e607af60b21d0a69297cc3f10" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Shanghai</b><br>Surface: Hard<br>Matches: 804<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_89dea4d89e01ea87776c24668afcd16b.setContent(html_3a9a428e607af60b21d0a69297cc3f10);
+            
+        
+
+        circle_marker_3a1988f792a55503b25cc7d44955b384.bindPopup(popup_89dea4d89e01ea87776c24668afcd16b)
+        ;
+
+        
+    
+    
+            circle_marker_3a1988f792a55503b25cc7d44955b384.bindTooltip(
+                `<div>
+                     Shanghai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c00b7e405b6aad8699b66d0c7d89c4da = L.circleMarker(
+                [47.4463585, 12.3911473],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.7996628942932817, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b1d7b4e0cf78f82e3708ed63bcd33ba4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dc76bc647cff0f757f6f7091d5ae568 = $(`<div id="html_7dc76bc647cff0f757f6f7091d5ae568" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Kitzbuhel</b><br>Surface: Clay<br>Matches: 789<br>Top Player:  Massu N.</div></div>`)[0];
+                popup_b1d7b4e0cf78f82e3708ed63bcd33ba4.setContent(html_7dc76bc647cff0f757f6f7091d5ae568);
+            
+        
+
+        circle_marker_c00b7e405b6aad8699b66d0c7d89c4da.bindPopup(popup_b1d7b4e0cf78f82e3708ed63bcd33ba4)
+        ;
+
+        
+    
+    
+            circle_marker_c00b7e405b6aad8699b66d0c7d89c4da.bindTooltip(
+                `<div>
+                     Kitzbuhel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_881518ff354ce9f137c3174c687accad = L.circleMarker(
+                [51.9244424, 4.47775],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.582952082831688, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_4ee0caa26ec2b1be36b4ba636e3c72ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7b9758aeae94b7161b3ad8f7150ecf5 = $(`<div id="html_d7b9758aeae94b7161b3ad8f7150ecf5" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Rotterdam</b><br>Surface: Hard<br>Matches: 744<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_4ee0caa26ec2b1be36b4ba636e3c72ab.setContent(html_d7b9758aeae94b7161b3ad8f7150ecf5);
+            
+        
+
+        circle_marker_881518ff354ce9f137c3174c687accad.bindPopup(popup_4ee0caa26ec2b1be36b4ba636e3c72ab)
+        ;
+
+        
+    
+    
+            circle_marker_881518ff354ce9f137c3174c687accad.bindTooltip(
+                `<div>
+                     Rotterdam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6bc6e2ff5bcc0ad4db1c9f44270d548 = L.circleMarker(
+                [26.4614625, -80.0728201],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5251625331085963, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_01c4cb5b01b293bc53d7443d4c5bb5a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02ad3fbb0e91f0992872277ee8f82551 = $(`<div id="html_02ad3fbb0e91f0992872277ee8f82551" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Delray Beach</b><br>Surface: Hard<br>Matches: 732<br>Top Player:  Malisse X.</div></div>`)[0];
+                popup_01c4cb5b01b293bc53d7443d4c5bb5a6.setContent(html_02ad3fbb0e91f0992872277ee8f82551);
+            
+        
+
+        circle_marker_e6bc6e2ff5bcc0ad4db1c9f44270d548.bindPopup(popup_01c4cb5b01b293bc53d7443d4c5bb5a6)
+        ;
+
+        
+    
+    
+            circle_marker_e6bc6e2ff5bcc0ad4db1c9f44270d548.bindTooltip(
+                `<div>
+                     Delray Beach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e42872c2028557f131571e759e77ca29 = L.circleMarker(
+                [25.2856329, 51.5264162],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5058993498675655, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_6e02e1a57e4b87dc0c64147b400d52a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3fb70594556dbd902886091024b31c8 = $(`<div id="html_b3fb70594556dbd902886091024b31c8" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Doha</b><br>Surface: Hard<br>Matches: 728<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_6e02e1a57e4b87dc0c64147b400d52a9.setContent(html_b3fb70594556dbd902886091024b31c8);
+            
+        
+
+        circle_marker_e42872c2028557f131571e759e77ca29.bindPopup(popup_6e02e1a57e4b87dc0c64147b400d52a9)
+        ;
+
+        
+    
+    
+            circle_marker_e42872c2028557f131571e759e77ca29.bindTooltip(
+                `<div>
+                     Doha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2110ca19de5d5b2e7a7dba2bcba023c = L.circleMarker(
+                [16.8680495, -99.8940182],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.433662412713701, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_476c3fe097afd6beac0303d02626181e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d18383fd964c4f971fb1f087676cc6f1 = $(`<div id="html_d18383fd964c4f971fb1f087676cc6f1" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Acapulco</b><br>Surface: Clay<br>Matches: 713<br>Top Player:  Ferrer D.</div></div>`)[0];
+                popup_476c3fe097afd6beac0303d02626181e.setContent(html_d18383fd964c4f971fb1f087676cc6f1);
+            
+        
+
+        circle_marker_b2110ca19de5d5b2e7a7dba2bcba023c.bindPopup(popup_476c3fe097afd6beac0303d02626181e)
+        ;
+
+        
+    
+    
+            circle_marker_b2110ca19de5d5b2e7a7dba2bcba023c.bindTooltip(
+                `<div>
+                     Acapulco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e54bbddc554975a683002efe3b29399 = L.circleMarker(
+                [51.4824354, 11.9712985],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.3758728629906094, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9f526b0d45da3073a189f576061895f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69a89aeb86ffec5603ed952613b764b2 = $(`<div id="html_69a89aeb86ffec5603ed952613b764b2" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Halle</b><br>Surface: Grass<br>Matches: 701<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_9f526b0d45da3073a189f576061895f3.setContent(html_69a89aeb86ffec5603ed952613b764b2);
+            
+        
+
+        circle_marker_7e54bbddc554975a683002efe3b29399.bindPopup(popup_9f526b0d45da3073a189f576061895f3)
+        ;
+
+        
+    
+    
+            circle_marker_7e54bbddc554975a683002efe3b29399.bindTooltip(
+                `<div>
+                     Halle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cba177d1a704b2e1cbe3938439b7288e = L.circleMarker(
+                [43.2961743, 5.3699525],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.3132675174572594, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_311cdb49e4f1361f72530965b160a4c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_597bc5092ab8840f4336bec6d7ad8cf2 = $(`<div id="html_597bc5092ab8840f4336bec6d7ad8cf2" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Marseille</b><br>Surface: Hard<br>Matches: 688<br>Top Player:  Simon G.</div></div>`)[0];
+                popup_311cdb49e4f1361f72530965b160a4c8.setContent(html_597bc5092ab8840f4336bec6d7ad8cf2);
+            
+        
+
+        circle_marker_cba177d1a704b2e1cbe3938439b7288e.bindPopup(popup_311cdb49e4f1361f72530965b160a4c8)
+        ;
+
+        
+    
+    
+            circle_marker_cba177d1a704b2e1cbe3938439b7288e.bindTooltip(
+                `<div>
+                     Marseille
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3cbfc8639aae3c11507d98b949daeb05 = L.circleMarker(
+                [41.4899827, -71.3137707],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.279556946785456, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e032fd08f96c4b7d3b7bc232bd4f7e8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29f931bae3e4633cec8556fde2a9e293 = $(`<div id="html_29f931bae3e4633cec8556fde2a9e293" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Newport</b><br>Surface: Grass<br>Matches: 681<br>Top Player:  Isner J.</div></div>`)[0];
+                popup_e032fd08f96c4b7d3b7bc232bd4f7e8c.setContent(html_29f931bae3e4633cec8556fde2a9e293);
+            
+        
+
+        circle_marker_3cbfc8639aae3c11507d98b949daeb05.bindPopup(popup_e032fd08f96c4b7d3b7bc232bd4f7e8c)
+        ;
+
+        
+    
+    
+            circle_marker_3cbfc8639aae3c11507d98b949daeb05.bindTooltip(
+                `<div>
+                     Newport
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_996c23883eae1787aecbf84e5fa27157 = L.circleMarker(
+                [-34.6083696, -58.4440583],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.260293763544426, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e818fc66a9283d99a1773d5b627c6ede = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f667592ed08469717462aa647cfddb7 = $(`<div id="html_7f667592ed08469717462aa647cfddb7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Buenos Aires</b><br>Surface: Clay<br>Matches: 677<br>Top Player:  Almagro N.</div></div>`)[0];
+                popup_e818fc66a9283d99a1773d5b627c6ede.setContent(html_7f667592ed08469717462aa647cfddb7);
+            
+        
+
+        circle_marker_996c23883eae1787aecbf84e5fa27157.bindPopup(popup_e818fc66a9283d99a1773d5b627c6ede)
+        ;
+
+        
+    
+    
+            circle_marker_996c23883eae1787aecbf84e5fa27157.bindTooltip(
+                `<div>
+                     Buenos Aires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c6a9b72f4ce1ae34569101ea25afcb38 = L.circleMarker(
+                [43.6534817, -79.3839347],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.2554779677341683, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d9aecff4e3ec0978ab82fc5806e79326 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2557ece95a8c7dac08b1156c78296be6 = $(`<div id="html_2557ece95a8c7dac08b1156c78296be6" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Toronto</b><br>Surface: Hard<br>Matches: 676<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_d9aecff4e3ec0978ab82fc5806e79326.setContent(html_2557ece95a8c7dac08b1156c78296be6);
+            
+        
+
+        circle_marker_c6a9b72f4ce1ae34569101ea25afcb38.bindPopup(popup_d9aecff4e3ec0978ab82fc5806e79326)
+        ;
+
+        
+    
+    
+            circle_marker_c6a9b72f4ce1ae34569101ea25afcb38.bindTooltip(
+                `<div>
+                     Toronto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dd9e6be97462e6fda76713f55db56a1 = L.circleMarker(
+                [48.1371079, 11.5753822],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.2217673970623646, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c0711ea8e860034c9e67268fb694227e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef9ebc451e4e52bd32f53b356d887582 = $(`<div id="html_ef9ebc451e4e52bd32f53b356d887582" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Munich</b><br>Surface: Clay<br>Matches: 669<br>Top Player:  Kohlschreiber P.</div></div>`)[0];
+                popup_c0711ea8e860034c9e67268fb694227e.setContent(html_ef9ebc451e4e52bd32f53b356d887582);
+            
+        
+
+        circle_marker_0dd9e6be97462e6fda76713f55db56a1.bindPopup(popup_c0711ea8e860034c9e67268fb694227e)
+        ;
+
+        
+    
+    
+            circle_marker_0dd9e6be97462e6fda76713f55db56a1.bindTooltip(
+                `<div>
+                     Munich
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fad558dfaca2afc9f9725f9ea16df3ca = L.circleMarker(
+                [25.0742823, 55.1885387],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.2025042138213338, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_08e7e1c0227af4d410245c767a38d8d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57f400f317beb976aef3473b5cbaaa59 = $(`<div id="html_57f400f317beb976aef3473b5cbaaa59" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Dubai </b><br>Surface: Hard<br>Matches: 665<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_08e7e1c0227af4d410245c767a38d8d4.setContent(html_57f400f317beb976aef3473b5cbaaa59);
+            
+        
+
+        circle_marker_fad558dfaca2afc9f9725f9ea16df3ca.bindPopup(popup_08e7e1c0227af4d410245c767a38d8d4)
+        ;
+
+        
+    
+    
+            circle_marker_fad558dfaca2afc9f9725f9ea16df3ca.bindTooltip(
+                `<div>
+                     Dubai 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_536b924d976c4544047d2843bf0648b1 = L.circleMarker(
+                [48.2083537, 16.3725042],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1880568263905613, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_ba3be4036c2fb3a8ef8caa05abb8bd4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04e6c9cbfe7580db375dee6131000d54 = $(`<div id="html_04e6c9cbfe7580db375dee6131000d54" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Vienna</b><br>Surface: Hard<br>Matches: 662<br>Top Player:  Haas T.</div></div>`)[0];
+                popup_ba3be4036c2fb3a8ef8caa05abb8bd4e.setContent(html_04e6c9cbfe7580db375dee6131000d54);
+            
+        
+
+        circle_marker_536b924d976c4544047d2843bf0648b1.bindPopup(popup_ba3be4036c2fb3a8ef8caa05abb8bd4e)
+        ;
+
+        
+    
+    
+            circle_marker_536b924d976c4544047d2843bf0648b1.bindTooltip(
+                `<div>
+                     Vienna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6c201b54f18b470f5113d8962f2054f = L.circleMarker(
+                [46.4761004, 7.2873587],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1832410305803034, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_fe142fe56169277453339615788570e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6aa016a422606aa54318912ccaf969cf = $(`<div id="html_6aa016a422606aa54318912ccaf969cf" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Gstaad</b><br>Surface: Clay<br>Matches: 661<br>Top Player:  Lopez F.</div></div>`)[0];
+                popup_fe142fe56169277453339615788570e8.setContent(html_6aa016a422606aa54318912ccaf969cf);
+            
+        
+
+        circle_marker_f6c201b54f18b470f5113d8962f2054f.bindPopup(popup_fe142fe56169277453339615788570e8)
+        ;
+
+        
+    
+    
+            circle_marker_f6c201b54f18b470f5113d8962f2054f.bindTooltip(
+                `<div>
+                     Gstaad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e28a62d7b92706a5fab9500d777125c = L.circleMarker(
+                [45.4323587, 13.5224098],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1639778473392726, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f360a33fa63f28ff90c39e46597f2b29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2acbf771dcfde8045f0e90f6192e68d4 = $(`<div id="html_2acbf771dcfde8045f0e90f6192e68d4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Umag</b><br>Surface: Clay<br>Matches: 657<br>Top Player:  Moya C.</div></div>`)[0];
+                popup_f360a33fa63f28ff90c39e46597f2b29.setContent(html_2acbf771dcfde8045f0e90f6192e68d4);
+            
+        
+
+        circle_marker_3e28a62d7b92706a5fab9500d777125c.bindPopup(popup_f360a33fa63f28ff90c39e46597f2b29)
+        ;
+
+        
+    
+    
+            circle_marker_3e28a62d7b92706a5fab9500d777125c.bindTooltip(
+                `<div>
+                     Umag
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ee817055682781908c5894b4411652f = L.circleMarker(
+                [56.4267895, 12.8607151],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.144714664098242, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_19115762d522a576e5562a5db681df83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5654a962f20858bac533f4212dd4aa7e = $(`<div id="html_5654a962f20858bac533f4212dd4aa7e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Bastad</b><br>Surface: Clay<br>Matches: 653<br>Top Player:  Robredo T.</div></div>`)[0];
+                popup_19115762d522a576e5562a5db681df83.setContent(html_5654a962f20858bac533f4212dd4aa7e);
+            
+        
+
+        circle_marker_6ee817055682781908c5894b4411652f.bindPopup(popup_19115762d522a576e5562a5db681df83)
+        ;
+
+        
+    
+    
+            circle_marker_6ee817055682781908c5894b4411652f.bindTooltip(
+                `<div>
+                     Bastad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b34a82048e693ea5b7c1bd5a4a8aa12d = L.circleMarker(
+                [47.5581077, 7.5878261],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1350830724777268, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_a511dd92d4bc365825256fa94fae3242 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6a17402509ebeaeff28fd2dbf0f2b01 = $(`<div id="html_f6a17402509ebeaeff28fd2dbf0f2b01" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Basel</b><br>Surface: Hard<br>Matches: 651<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_a511dd92d4bc365825256fa94fae3242.setContent(html_f6a17402509ebeaeff28fd2dbf0f2b01);
+            
+        
+
+        circle_marker_b34a82048e693ea5b7c1bd5a4a8aa12d.bindPopup(popup_a511dd92d4bc365825256fa94fae3242)
+        ;
+
+        
+    
+    
+            circle_marker_b34a82048e693ea5b7c1bd5a4a8aa12d.bindTooltip(
+                `<div>
+                     Basel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac8671f96ee39e3d2ba06bcb8c291606 = L.circleMarker(
+                [51.6889387, 5.303116],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.1302672766674693, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f9a3ad1e522ad26415f3fd7f44283657 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_849b2f54057bddf9820a8e11d79b4c9f = $(`<div id="html_849b2f54057bddf9820a8e11d79b4c9f" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>'s-Hertogenbosch</b><br>Surface: Grass<br>Matches: 650<br>Top Player:  Mahut N.</div></div>`)[0];
+                popup_f9a3ad1e522ad26415f3fd7f44283657.setContent(html_849b2f54057bddf9820a8e11d79b4c9f);
+            
+        
+
+        circle_marker_ac8671f96ee39e3d2ba06bcb8c291606.bindPopup(popup_f9a3ad1e522ad26415f3fd7f44283657)
+        ;
+
+        
+    
+    
+            circle_marker_ac8671f96ee39e3d2ba06bcb8c291606.bindTooltip(
+                `<div>
+                     's-Hertogenbosch
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44aa688fe7d146a0e7afc7ccec1628aa = L.circleMarker(
+                [59.3251172, 18.0710935],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.053214543703347, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_8fd4e088a18f5b3f4690003fcd1393cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_068de37598d7234620f836592e0cf5b0 = $(`<div id="html_068de37598d7234620f836592e0cf5b0" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Stockholm</b><br>Surface: Hard<br>Matches: 634<br>Top Player:  Nieminen J.</div></div>`)[0];
+                popup_8fd4e088a18f5b3f4690003fcd1393cd.setContent(html_068de37598d7234620f836592e0cf5b0);
+            
+        
+
+        circle_marker_44aa688fe7d146a0e7afc7ccec1628aa.bindPopup(popup_8fd4e088a18f5b3f4690003fcd1393cd)
+        ;
+
+        
+    
+    
+            circle_marker_44aa688fe7d146a0e7afc7ccec1628aa.bindTooltip(
+                `<div>
+                     Stockholm
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da43df3a6070ca89127c2e314f8d403c = L.circleMarker(
+                [29.7589382, -95.3676974],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.048398747893089, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9713b95e32e3d3b1f24249222fc0c254 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_462b45dec68a1b2c258e0c2251a98242 = $(`<div id="html_462b45dec68a1b2c258e0c2251a98242" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Houston</b><br>Surface: Clay<br>Matches: 633<br>Top Player:  Roddick A.</div></div>`)[0];
+                popup_9713b95e32e3d3b1f24249222fc0c254.setContent(html_462b45dec68a1b2c258e0c2251a98242);
+            
+        
+
+        circle_marker_da43df3a6070ca89127c2e314f8d403c.bindPopup(popup_9713b95e32e3d3b1f24249222fc0c254)
+        ;
+
+        
+    
+    
+            circle_marker_da43df3a6070ca89127c2e314f8d403c.bindTooltip(
+                `<div>
+                     Houston
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48c1fd723609c48041e418e58c63881d = L.circleMarker(
+                [-36.852095, 174.7631803],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0339513604623165, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5837efd1c0e629cdb1fbc23225ad37c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cc5fa52e342a173b9054c5fd1b9e104 = $(`<div id="html_1cc5fa52e342a173b9054c5fd1b9e104" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Auckland</b><br>Surface: Hard<br>Matches: 630<br>Top Player:  Ferrer D.</div></div>`)[0];
+                popup_5837efd1c0e629cdb1fbc23225ad37c7.setContent(html_1cc5fa52e342a173b9054c5fd1b9e104);
+            
+        
+
+        circle_marker_48c1fd723609c48041e418e58c63881d.bindPopup(popup_5837efd1c0e629cdb1fbc23225ad37c7)
+        ;
+
+        
+    
+    
+            circle_marker_48c1fd723609c48041e418e58c63881d.bindTooltip(
+                `<div>
+                     Auckland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92bd253aabfb703e8da92433e0413d7d = L.circleMarker(
+                [45.5031824, -73.5698065],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.029135564652059, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_ac0c2b2b61c3af1bf1e2090e87c5a7fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edb818ca1e8f7f66935a60c5d4d7b412 = $(`<div id="html_edb818ca1e8f7f66935a60c5d4d7b412" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Montreal</b><br>Surface: Hard<br>Matches: 629<br>Top Player: 🇪🇸 Nadal R.</div></div>`)[0];
+                popup_ac0c2b2b61c3af1bf1e2090e87c5a7fc.setContent(html_edb818ca1e8f7f66935a60c5d4d7b412);
+            
+        
+
+        circle_marker_92bd253aabfb703e8da92433e0413d7d.bindPopup(popup_ac0c2b2b61c3af1bf1e2090e87c5a7fc)
+        ;
+
+        
+    
+    
+            circle_marker_92bd253aabfb703e8da92433e0413d7d.bindTooltip(
+                `<div>
+                     Montreal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0be2ec3276074c01eb1cc8e80086d30 = L.circleMarker(
+                [59.938732, 30.316229],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0195039730315436, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_fea6b2f63627e07cc183644ae4794f08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c55e642df75faca26c9921532ec403d = $(`<div id="html_6c55e642df75faca26c9921532ec403d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>St. Petersburg</b><br>Surface: Hard<br>Matches: 627<br>Top Player:  Youzhny M.</div></div>`)[0];
+                popup_fea6b2f63627e07cc183644ae4794f08.setContent(html_6c55e642df75faca26c9921532ec403d);
+            
+        
+
+        circle_marker_e0be2ec3276074c01eb1cc8e80086d30.bindPopup(popup_fea6b2f63627e07cc183644ae4794f08)
+        ;
+
+        
+    
+    
+            circle_marker_e0be2ec3276074c01eb1cc8e80086d30.bindTooltip(
+                `<div>
+                     St. Petersburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2138899de5ca2521047436d652a8db6 = L.circleMarker(
+                [-33.8698439, 151.2082848],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.9761618107392245, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9a4e243e5e97abbf6bede29271b09898 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47684e83286ef2244cc30d2b8103201d = $(`<div id="html_47684e83286ef2244cc30d2b8103201d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Sydney</b><br>Surface: Hard<br>Matches: 618<br>Top Player:  Hewitt L.</div></div>`)[0];
+                popup_9a4e243e5e97abbf6bede29271b09898.setContent(html_47684e83286ef2244cc30d2b8103201d);
+            
+        
+
+        circle_marker_d2138899de5ca2521047436d652a8db6.bindPopup(popup_9a4e243e5e97abbf6bede29271b09898)
+        ;
+
+        
+    
+    
+            circle_marker_d2138899de5ca2521047436d652a8db6.bindTooltip(
+                `<div>
+                     Sydney
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3163e64899c9401e766fe5ea02d35749 = L.circleMarker(
+                [55.625578, 37.6063916],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.923188056826391, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b876c00d2e59ba81586252eea1902648 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed822ec732e06f425e89b5eb14e8ea7d = $(`<div id="html_ed822ec732e06f425e89b5eb14e8ea7d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Moscow</b><br>Surface: Hard<br>Matches: 607<br>Top Player:  Davydenko N.</div></div>`)[0];
+                popup_b876c00d2e59ba81586252eea1902648.setContent(html_ed822ec732e06f425e89b5eb14e8ea7d);
+            
+        
+
+        circle_marker_3163e64899c9401e766fe5ea02d35749.bindPopup(popup_b876c00d2e59ba81586252eea1902648)
+        ;
+
+        
+    
+    
+            circle_marker_3163e64899c9401e766fe5ea02d35749.bindTooltip(
+                `<div>
+                     Moscow
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65dce6a3ee420eea785da29a7e071393 = L.circleMarker(
+                [35.1460249, -90.0517638],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.7642667950878885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_2c125385d325388c403fc1c8ef3f4eb7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e7e5d9968efac9ecdf5332b78ecd79a = $(`<div id="html_6e7e5d9968efac9ecdf5332b78ecd79a" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Memphis</b><br>Surface: Hard<br>Matches: 574<br>Top Player:  Roddick A.</div></div>`)[0];
+                popup_2c125385d325388c403fc1c8ef3f4eb7.setContent(html_6e7e5d9968efac9ecdf5332b78ecd79a);
+            
+        
+
+        circle_marker_65dce6a3ee420eea785da29a7e071393.bindPopup(popup_2c125385d325388c403fc1c8ef3f4eb7)
+        ;
+
+        
+    
+    
+            circle_marker_65dce6a3ee420eea785da29a7e071393.bindTooltip(
+                `<div>
+                     Memphis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1e3deb49612555871e5bdd9d7cc435a = L.circleMarker(
+                [49.1196964, 6.1763552],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.586082350108355, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5c1d4d07942ceb124da32b157c363eb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce4c84e66db5369f08c45d2765ab9fd0 = $(`<div id="html_ce4c84e66db5369f08c45d2765ab9fd0" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Metz</b><br>Surface: Hard<br>Matches: 537<br>Top Player:  Tsonga J.W.</div></div>`)[0];
+                popup_5c1d4d07942ceb124da32b157c363eb9.setContent(html_ce4c84e66db5369f08c45d2765ab9fd0);
+            
+        
+
+        circle_marker_c1e3deb49612555871e5bdd9d7cc435a.bindPopup(popup_5c1d4d07942ceb124da32b157c363eb9)
+        ;
+
+        
+    
+    
+            circle_marker_c1e3deb49612555871e5bdd9d7cc435a.bindTooltip(
+                `<div>
+                     Metz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2338261027d3e5a38f844096b3f8398a = L.circleMarker(
+                [13.0836939, 80.270186],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.5716349626775825, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_4df6fb21b2ebfe288dbb022c90e40c6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b12cd92e63be390276152a8b64c3054e = $(`<div id="html_b12cd92e63be390276152a8b64c3054e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Chennai</b><br>Surface: Hard<br>Matches: 534<br>Top Player:  Wawrinka S.</div></div>`)[0];
+                popup_4df6fb21b2ebfe288dbb022c90e40c6e.setContent(html_b12cd92e63be390276152a8b64c3054e);
+            
+        
+
+        circle_marker_2338261027d3e5a38f844096b3f8398a.bindPopup(popup_4df6fb21b2ebfe288dbb022c90e40c6e)
+        ;
+
+        
+    
+    
+            circle_marker_2338261027d3e5a38f844096b3f8398a.bindTooltip(
+                `<div>
+                     Chennai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e8f42dd0294f3c696489524c1b0002d = L.circleMarker(
+                [36.0998131, -80.2440518],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.4897664339032026, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_fc012edb094fa90405b90c24c78d5c73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85d9197640efbf211dd371347bcc7f9a = $(`<div id="html_85d9197640efbf211dd371347bcc7f9a" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Winston-Salem</b><br>Surface: Hard<br>Matches: 517<br>Top Player:  Johnson S.</div></div>`)[0];
+                popup_fc012edb094fa90405b90c24c78d5c73.setContent(html_85d9197640efbf211dd371347bcc7f9a);
+            
+        
+
+        circle_marker_7e8f42dd0294f3c696489524c1b0002d.bindPopup(popup_fc012edb094fa90405b90c24c78d5c73)
+        ;
+
+        
+    
+    
+            circle_marker_7e8f42dd0294f3c696489524c1b0002d.bindTooltip(
+                `<div>
+                     Winston-Salem
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40ba1b0a7199ddd8237beac7072ccf3e = L.circleMarker(
+                [44.4378654, 26.0863631],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.4030821093185653, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c6c553454c4a249fae02bac19b505670 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3943cc15dea09bc2447b2aa16ace9b4b = $(`<div id="html_3943cc15dea09bc2447b2aa16ace9b4b" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Bucharest</b><br>Surface: Clay<br>Matches: 499<br>Top Player:  Simon G.</div></div>`)[0];
+                popup_c6c553454c4a249fae02bac19b505670.setContent(html_3943cc15dea09bc2447b2aa16ace9b4b);
+            
+        
+
+        circle_marker_40ba1b0a7199ddd8237beac7072ccf3e.bindPopup(popup_c6c553454c4a249fae02bac19b505670)
+        ;
+
+        
+    
+    
+            circle_marker_40ba1b0a7199ddd8237beac7072ccf3e.bindTooltip(
+                `<div>
+                     Bucharest
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ab6f36166a070b3087095274c478ecd = L.circleMarker(
+                [40.190632, 116.412144],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.3693715386467615, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_85444f8a6f622b099b40a03962d1ec6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0cd6e3cf5a005ec3064742d33c1c05f9 = $(`<div id="html_0cd6e3cf5a005ec3064742d33c1c05f9" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Beijing</b><br>Surface: Hard<br>Matches: 492<br>Top Player: 🇷🇸 Djokovic N.</div></div>`)[0];
+                popup_85444f8a6f622b099b40a03962d1ec6e.setContent(html_0cd6e3cf5a005ec3064742d33c1c05f9);
+            
+        
+
+        circle_marker_8ab6f36166a070b3087095274c478ecd.bindPopup(popup_85444f8a6f622b099b40a03962d1ec6e)
+        ;
+
+        
+    
+    
+            circle_marker_8ab6f36166a070b3087095274c478ecd.bindTooltip(
+                `<div>
+                     Beijing
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e3f0efd85281619d0c2338749a13f27 = L.circleMarker(
+                [45.7578137, 4.8320114],
+                {"bubblingMouseEvents": true, "color": "#7F3FBF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7F3FBF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.2730556224416083, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_be04d91d39c1246b922a90b1e6f0500b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19754c60f138b10357e31cd825f7e006 = $(`<div id="html_19754c60f138b10357e31cd825f7e006" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Lyon</b><br>Surface: Carpet<br>Matches: 472<br>Top Player:  Clement A.</div></div>`)[0];
+                popup_be04d91d39c1246b922a90b1e6f0500b.setContent(html_19754c60f138b10357e31cd825f7e006);
+            
+        
+
+        circle_marker_6e3f0efd85281619d0c2338749a13f27.bindPopup(popup_be04d91d39c1246b922a90b1e6f0500b)
+        ;
+
+        
+    
+    
+            circle_marker_6e3f0efd85281619d0c2338749a13f27.bindTooltip(
+                `<div>
+                     Lyon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7104563c07e01f87922a8f4b9ad5510 = L.circleMarker(
+                [33.5945144, -7.6200284],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.2730556224416083, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f76592a6812f6a00839b891af99ea192 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f4c2ded77e7b5a89faefff8470ed9c4 = $(`<div id="html_6f4c2ded77e7b5a89faefff8470ed9c4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Casablanca</b><br>Surface: Clay<br>Matches: 472<br>Top Player:  El Aynaoui Y.</div></div>`)[0];
+                popup_f76592a6812f6a00839b891af99ea192.setContent(html_6f4c2ded77e7b5a89faefff8470ed9c4);
+            
+        
+
+        circle_marker_b7104563c07e01f87922a8f4b9ad5510.bindPopup(popup_f76592a6812f6a00839b891af99ea192)
+        ;
+
+        
+    
+    
+            circle_marker_b7104563c07e01f87922a8f4b9ad5510.bindTooltip(
+                `<div>
+                     Casablanca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_233c3d9b97d29ca6d5925f0733ac2091 = L.circleMarker(
+                [39.7683331, -86.1583502],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.1478449313749097, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_80258111c40a3de005a6e109cb9c1a96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d14c241f1aaed0ea0b490a7f956e3f12 = $(`<div id="html_d14c241f1aaed0ea0b490a7f956e3f12" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Indianapolis</b><br>Surface: Hard<br>Matches: 446<br>Top Player:  Roddick A.</div></div>`)[0];
+                popup_80258111c40a3de005a6e109cb9c1a96.setContent(html_d14c241f1aaed0ea0b490a7f956e3f12);
+            
+        
+
+        circle_marker_233c3d9b97d29ca6d5925f0733ac2091.bindPopup(popup_80258111c40a3de005a6e109cb9c1a96)
+        ;
+
+        
+    
+    
+            circle_marker_233c3d9b97d29ca6d5925f0733ac2091.bindTooltip(
+                `<div>
+                     Indianapolis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58e32f28d67c11d890e7679ef182cb94 = L.circleMarker(
+                [37.3361663, -121.890591],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.051529015169757, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_274ac953d73f5f1da28e84ac4f8bf0dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e9e29a1ef183fd697a1a958a868d7c9 = $(`<div id="html_9e9e29a1ef183fd697a1a958a868d7c9" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>San Jose</b><br>Surface: Hard<br>Matches: 426<br>Top Player:  Roddick A.</div></div>`)[0];
+                popup_274ac953d73f5f1da28e84ac4f8bf0dd.setContent(html_9e9e29a1ef183fd697a1a958a868d7c9);
+            
+        
+
+        circle_marker_58e32f28d67c11d890e7679ef182cb94.bindPopup(popup_274ac953d73f5f1da28e84ac4f8bf0dd)
+        ;
+
+        
+    
+    
+            circle_marker_58e32f28d67c11d890e7679ef182cb94.bindTooltip(
+                `<div>
+                     San Jose
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_353efcc6f097452ff585ff598fef44d1 = L.circleMarker(
+                [-34.9281805, 138.5999312],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0130026486876957, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_611eb5d76d10d6cdebd92b21e9802f2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a9af0155f1033a072737f53699eda6e = $(`<div id="html_0a9af0155f1033a072737f53699eda6e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Adelaide</b><br>Surface: Hard<br>Matches: 418<br>Top Player:  Hewitt L.</div></div>`)[0];
+                popup_611eb5d76d10d6cdebd92b21e9802f2c.setContent(html_0a9af0155f1033a072737f53699eda6e);
+            
+        
+
+        circle_marker_353efcc6f097452ff585ff598fef44d1.bindPopup(popup_611eb5d76d10d6cdebd92b21e9802f2c)
+        ;
+
+        
+    
+    
+            circle_marker_353efcc6f097452ff585ff598fef44d1.bindTooltip(
+                `<div>
+                     Adelaide
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da42ea39a5ae073814e6cba33ac71840 = L.circleMarker(
+                [33.7544657, -84.3898151],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.9889236696364074, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_0aafcbc3ff6fd293e27e518d617daead = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_023ac2c969bc2a691af9e4efda2fcc3e = $(`<div id="html_023ac2c969bc2a691af9e4efda2fcc3e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Atlanta</b><br>Surface: Hard<br>Matches: 413<br>Top Player:  Isner J.</div></div>`)[0];
+                popup_0aafcbc3ff6fd293e27e518d617daead.setContent(html_023ac2c969bc2a691af9e4efda2fcc3e);
+            
+        
+
+        circle_marker_da42ea39a5ae073814e6cba33ac71840.bindPopup(popup_0aafcbc3ff6fd293e27e518d617daead)
+        ;
+
+        
+    
+    
+            circle_marker_da42ea39a5ae073814e6cba33ac71840.bindTooltip(
+                `<div>
+                     Atlanta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d49c8ba1baf7f044bd5709fba8a23da = L.circleMarker(
+                [39.4697065, -0.3763353],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.9215025282928002, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_43097ecd753185110d9e09a7a5a51c0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_371a2c05fc8f30c64d3df68aa9b11fb0 = $(`<div id="html_371a2c05fc8f30c64d3df68aa9b11fb0" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Valencia</b><br>Surface: Hard<br>Matches: 399<br>Top Player:  Ferrer D.</div></div>`)[0];
+                popup_43097ecd753185110d9e09a7a5a51c0c.setContent(html_371a2c05fc8f30c64d3df68aa9b11fb0);
+            
+        
+
+        circle_marker_8d49c8ba1baf7f044bd5709fba8a23da.bindPopup(popup_43097ecd753185110d9e09a7a5a51c0c)
+        ;
+
+        
+    
+    
+            circle_marker_8d49c8ba1baf7f044bd5709fba8a23da.bindTooltip(
+                `<div>
+                     Valencia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ae9b8e37e8efc60ddc15d3e52e80d63 = L.circleMarker(
+                [34.0536909, -118.242766],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.844449795328678, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_83cc7ea54fdb2be86dad18353bc30fa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82ecd6842bcfbf946c6752f2b64879f2 = $(`<div id="html_82ecd6842bcfbf946c6752f2b64879f2" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Los Angeles</b><br>Surface: Hard<br>Matches: 383<br>Top Player: 🇺🇸 Agassi A.</div></div>`)[0];
+                popup_83cc7ea54fdb2be86dad18353bc30fa5.setContent(html_82ecd6842bcfbf946c6752f2b64879f2);
+            
+        
+
+        circle_marker_3ae9b8e37e8efc60ddc15d3e52e80d63.bindPopup(popup_83cc7ea54fdb2be86dad18353bc30fa5)
+        ;
+
+        
+    
+    
+            circle_marker_3ae9b8e37e8efc60ddc15d3e52e80d63.bindTooltip(
+                `<div>
+                     Los Angeles
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e436266a4308acd8d798c57a8781e6a = L.circleMarker(
+                [52.9534193, -1.1496461],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.7962918372261016, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_1e2d6858b1264e66c3c83cae994cf716 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c88cb76ce32a9d39ad81dc74449e68ea = $(`<div id="html_c88cb76ce32a9d39ad81dc74449e68ea" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Nottingham</b><br>Surface: Grass<br>Matches: 373<br>Top Player:  Bjorkman J.</div></div>`)[0];
+                popup_1e2d6858b1264e66c3c83cae994cf716.setContent(html_c88cb76ce32a9d39ad81dc74449e68ea);
+            
+        
+
+        circle_marker_8e436266a4308acd8d798c57a8781e6a.bindPopup(popup_1e2d6858b1264e66c3c83cae994cf716)
+        ;
+
+        
+    
+    
+            circle_marker_8e436266a4308acd8d798c57a8781e6a.bindTooltip(
+                `<div>
+                     Nottingham
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bd70c3cb9d3b9641b306c25dd3543b2 = L.circleMarker(
+                [-33.0244535, -71.5517636],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.7144233084517215, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_0ab6bedd5fe057414e5ae5936967396c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bef2bbf7cd8bff28eabed19965f151bd = $(`<div id="html_bef2bbf7cd8bff28eabed19965f151bd" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Vina del Mar</b><br>Surface: Clay<br>Matches: 356<br>Top Player:  Gonzalez F.</div></div>`)[0];
+                popup_0ab6bedd5fe057414e5ae5936967396c.setContent(html_bef2bbf7cd8bff28eabed19965f151bd);
+            
+        
+
+        circle_marker_2bd70c3cb9d3b9641b306c25dd3543b2.bindPopup(popup_0ab6bedd5fe057414e5ae5936967396c)
+        ;
+
+        
+    
+    
+            circle_marker_2bd70c3cb9d3b9641b306c25dd3543b2.bindTooltip(
+                `<div>
+                     Vina del Mar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56402b96dbecbe64ac39b7f334327319 = L.circleMarker(
+                [43.6112422, 3.8767337],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.6903443294004332, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e9604d01afc9cd7845f766b6ea3dbc9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52ba71acf181880655887b5fbccd1275 = $(`<div id="html_52ba71acf181880655887b5fbccd1275" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Montpellier</b><br>Surface: Hard<br>Matches: 351<br>Top Player:  Gasquet R.</div></div>`)[0];
+                popup_e9604d01afc9cd7845f766b6ea3dbc9e.setContent(html_52ba71acf181880655887b5fbccd1275);
+            
+        
+
+        circle_marker_56402b96dbecbe64ac39b7f334327319.bindPopup(popup_e9604d01afc9cd7845f766b6ea3dbc9e)
+        ;
+
+        
+    
+    
+            circle_marker_56402b96dbecbe64ac39b7f334327319.bindTooltip(
+                `<div>
+                     Montpellier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47bf16224409f9fad4bf3e0533e91dec = L.circleMarker(
+                [50.7664372, 0.2781546],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.6181073922465687, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_efb10abe820bdad6b8858303b8ed08bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73e9b738c386698f3eba0ba8deaae747 = $(`<div id="html_73e9b738c386698f3eba0ba8deaae747" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Eastbourne</b><br>Surface: Grass<br>Matches: 336<br>Top Player:  Seppi A.</div></div>`)[0];
+                popup_efb10abe820bdad6b8858303b8ed08bf.setContent(html_73e9b738c386698f3eba0ba8deaae747);
+            
+        
+
+        circle_marker_47bf16224409f9fad4bf3e0533e91dec.bindPopup(popup_efb10abe820bdad6b8858303b8ed08bf)
+        ;
+
+        
+    
+    
+            circle_marker_47bf16224409f9fad4bf3e0533e91dec.bindTooltip(
+                `<div>
+                     Eastbourne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7478a2b2aade295d83e852e9ca0a8fd0 = L.circleMarker(
+                [13.7524938, 100.4935089],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.5266072718516734, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f4271667936aebab2cdb576ac0a09ed2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9016ce0305450f035a917ff15ee721b9 = $(`<div id="html_9016ce0305450f035a917ff15ee721b9" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Bangkok</b><br>Surface: Hard<br>Matches: 317<br>Top Player:  Nieminen J.</div></div>`)[0];
+                popup_f4271667936aebab2cdb576ac0a09ed2.setContent(html_9016ce0305450f035a917ff15ee721b9);
+            
+        
+
+        circle_marker_7478a2b2aade295d83e852e9ca0a8fd0.bindPopup(popup_f4271667936aebab2cdb576ac0a09ed2)
+        ;
+
+        
+    
+    
+            circle_marker_7478a2b2aade295d83e852e9ca0a8fd0.bindTooltip(
+                `<div>
+                     Bangkok
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3641de98cebcaf4f44ba7b19e214d7f7 = L.circleMarker(
+                [-27.4689623, 153.0235009],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.5073440886106428, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b0a0064ebb9497bbed9f7d33801bdb10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44a5123943c68ce88d3dda3dd1d909c7 = $(`<div id="html_44a5123943c68ce88d3dda3dd1d909c7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Brisbane</b><br>Surface: Hard<br>Matches: 313<br>Top Player:  Dimitrov G.</div></div>`)[0];
+                popup_b0a0064ebb9497bbed9f7d33801bdb10.setContent(html_44a5123943c68ce88d3dda3dd1d909c7);
+            
+        
+
+        circle_marker_3641de98cebcaf4f44ba7b19e214d7f7.bindPopup(popup_b0a0064ebb9497bbed9f7d33801bdb10)
+        ;
+
+        
+    
+    
+            circle_marker_3641de98cebcaf4f44ba7b19e214d7f7.bindTooltip(
+                `<div>
+                     Brisbane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_404740f0ca19e5a427b9cec46cd7ab20 = L.circleMarker(
+                [38.7095707, -9.3901368],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4880809053696122, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_85e6b47a9dd0a7f9db08993d195e1f10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c290345e65f3a842ee07931ebf7a43fb = $(`<div id="html_c290345e65f3a842ee07931ebf7a43fb" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Estoril</b><br>Surface: Clay<br>Matches: 309<br>Top Player:  Carreno Busta P.</div></div>`)[0];
+                popup_85e6b47a9dd0a7f9db08993d195e1f10.setContent(html_c290345e65f3a842ee07931ebf7a43fb);
+            
+        
+
+        circle_marker_404740f0ca19e5a427b9cec46cd7ab20.bindPopup(popup_85e6b47a9dd0a7f9db08993d195e1f10)
+        ;
+
+        
+    
+    
+            circle_marker_404740f0ca19e5a427b9cec46cd7ab20.bindTooltip(
+                `<div>
+                     Estoril
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_00733d9c286d274481d8f9898b69275b = L.circleMarker(
+                [38.7095707, -9.3901368],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4351071514567781, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c48976126cea7276dd25b9a3a531d43c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_785ec7a75cf3bf2d0a297d00fe3df83a = $(`<div id="html_785ec7a75cf3bf2d0a297d00fe3df83a" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Estoril </b><br>Surface: Clay<br>Matches: 298<br>Top Player:  Davydenko N.</div></div>`)[0];
+                popup_c48976126cea7276dd25b9a3a531d43c.setContent(html_785ec7a75cf3bf2d0a297d00fe3df83a);
+            
+        
+
+        circle_marker_00733d9c286d274481d8f9898b69275b.bindPopup(popup_c48976126cea7276dd25b9a3a531d43c)
+        ;
+
+        
+    
+    
+            circle_marker_00733d9c286d274481d8f9898b69275b.bindTooltip(
+                `<div>
+                     Estoril 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_11467c234546513488d33969cc8ca67c = L.circleMarker(
+                [45.8130967, 15.9772795],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4158439682157475, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_844cca2d5dc4df1417fddc3dd79a0696 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e34fdff6af288193708367da7691882c = $(`<div id="html_e34fdff6af288193708367da7691882c" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Zagreb</b><br>Surface: Hard<br>Matches: 294<br>Top Player:  Cilic M.</div></div>`)[0];
+                popup_844cca2d5dc4df1417fddc3dd79a0696.setContent(html_e34fdff6af288193708367da7691882c);
+            
+        
+
+        circle_marker_11467c234546513488d33969cc8ca67c.bindPopup(popup_844cca2d5dc4df1417fddc3dd79a0696)
+        ;
+
+        
+    
+    
+            circle_marker_11467c234546513488d33969cc8ca67c.bindTooltip(
+                `<div>
+                     Zagreb
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d29378c421cf0f2f362003cb59d5e3ac = L.circleMarker(
+                [41.3082138, -72.9250518],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.358054418492656, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d51a41edd2b5f66a8e5cb4481326dbcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6224cbb67c9b7de6cce3b7a31c1bcc83 = $(`<div id="html_6224cbb67c9b7de6cce3b7a31c1bcc83" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>New Haven</b><br>Surface: Hard<br>Matches: 282<br>Top Player:  Verdasco F.</div></div>`)[0];
+                popup_d51a41edd2b5f66a8e5cb4481326dbcb.setContent(html_6224cbb67c9b7de6cce3b7a31c1bcc83);
+            
+        
+
+        circle_marker_d29378c421cf0f2f362003cb59d5e3ac.bindPopup(popup_d51a41edd2b5f66a8e5cb4481326dbcb)
+        ;
+
+        
+    
+    
+            circle_marker_d29378c421cf0f2f362003cb59d5e3ac.bindTooltip(
+                `<div>
+                     New Haven
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bf592e8894febfcd657595868685638 = L.circleMarker(
+                [-22.9110137, -43.2093727],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.3243438478208525, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_14ed080ff44391b6f02466f8ad855c1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8f8b8b236a45775a4c02869125726bb = $(`<div id="html_b8f8b8b236a45775a4c02869125726bb" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Rio de Janeiro</b><br>Surface: Clay<br>Matches: 275<br>Top Player:  Fognini F.</div></div>`)[0];
+                popup_14ed080ff44391b6f02466f8ad855c1e.setContent(html_b8f8b8b236a45775a4c02869125726bb);
+            
+        
+
+        circle_marker_3bf592e8894febfcd657595868685638.bindPopup(popup_14ed080ff44391b6f02466f8ad855c1e)
+        ;
+
+        
+    
+    
+            circle_marker_3bf592e8894febfcd657595868685638.bindTooltip(
+                `<div>
+                     Rio de Janeiro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9713be1f8819c0a69630d8115d7e9fa = L.circleMarker(
+                [-12.4391251, -37.9233062],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.3243438478208525, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_1bc4b6ad9556771c3e51ffcf7c543b57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c03bf62877a13478a38516c5999f41d8 = $(`<div id="html_c03bf62877a13478a38516c5999f41d8" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Costa Do Sauipe</b><br>Surface: Clay<br>Matches: 275<br>Top Player:  Almagro N.</div></div>`)[0];
+                popup_1bc4b6ad9556771c3e51ffcf7c543b57.setContent(html_c03bf62877a13478a38516c5999f41d8);
+            
+        
+
+        circle_marker_d9713be1f8819c0a69630d8115d7e9fa.bindPopup(popup_1bc4b6ad9556771c3e51ffcf7c543b57)
+        ;
+
+        
+    
+    
+            circle_marker_d9713be1f8819c0a69630d8115d7e9fa.bindTooltip(
+                `<div>
+                     Costa Do Sauipe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a162661843dba90900893837f0ceb399 = L.circleMarker(
+                [38.1112268, 13.3524434],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.045027690825909, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_c181d887acde40924b9f9f68bfae5a4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e66eb1b16c9f918b39d71082f988ff6 = $(`<div id="html_8e66eb1b16c9f918b39d71082f988ff6" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Palermo</b><br>Surface: Clay<br>Matches: 217<br>Top Player:  Volandri F.</div></div>`)[0];
+                popup_c181d887acde40924b9f9f68bfae5a4a.setContent(html_8e66eb1b16c9f918b39d71082f988ff6);
+            
+        
+
+        circle_marker_a162661843dba90900893837f0ceb399.bindPopup(popup_c181d887acde40924b9f9f68bfae5a4a)
+        ;
+
+        
+    
+    
+            circle_marker_a162661843dba90900893837f0ceb399.bindTooltip(
+                `<div>
+                     Palermo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e90a906ba85f651accc4a15c7b5b4425 = L.circleMarker(
+                [54.4430399, 18.5613095],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.045027690825909, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_20d80d59691703415350e24a436c4d1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a701fbad46344eb6293439062ba1d6c6 = $(`<div id="html_a701fbad46344eb6293439062ba1d6c6" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Sopot</b><br>Surface: Clay<br>Matches: 217<br>Top Player:  Acasuso J.</div></div>`)[0];
+                popup_20d80d59691703415350e24a436c4d1d.setContent(html_a701fbad46344eb6293439062ba1d6c6);
+            
+        
+
+        circle_marker_e90a906ba85f651accc4a15c7b5b4425.bindPopup(popup_20d80d59691703415350e24a436c4d1d)
+        ;
+
+        
+    
+    
+            circle_marker_e90a906ba85f651accc4a15c7b5b4425.bindTooltip(
+                `<div>
+                     Sopot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be71dcdd97d63c5a4923b0c70f83b0c0 = L.circleMarker(
+                [46.2017559, 6.1466014],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0402118950156514, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_98b46f46b96ea88c2a7bd536c6150855 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef8709c7a7129e585a2beda643a084e5 = $(`<div id="html_ef8709c7a7129e585a2beda643a084e5" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Geneva</b><br>Surface: Clay<br>Matches: 216<br>Top Player:  Wawrinka S.</div></div>`)[0];
+                popup_98b46f46b96ea88c2a7bd536c6150855.setContent(html_ef8709c7a7129e585a2beda643a084e5);
+            
+        
+
+        circle_marker_be71dcdd97d63c5a4923b0c70f83b0c0.bindPopup(popup_98b46f46b96ea88c2a7bd536c6150855)
+        ;
+
+        
+    
+    
+            circle_marker_be71dcdd97d63c5a4923b0c70f83b0c0.bindTooltip(
+                `<div>
+                     Geneva
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_954296cab0be0d7d25911a4fbb96401b = L.circleMarker(
+                [-23.5506507, -46.6333824],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0402118950156514, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d33e037c526aed58623c21615fedd549 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed6bd68e76409e3a465d0260569c36cc = $(`<div id="html_ed6bd68e76409e3a465d0260569c36cc" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Sao Paulo</b><br>Surface: Clay<br>Matches: 216<br>Top Player:  Cuevas P.</div></div>`)[0];
+                popup_d33e037c526aed58623c21615fedd549.setContent(html_ed6bd68e76409e3a465d0260569c36cc);
+            
+        
+
+        circle_marker_954296cab0be0d7d25911a4fbb96401b.bindPopup(popup_d33e037c526aed58623c21615fedd549)
+        ;
+
+        
+    
+    
+            circle_marker_954296cab0be0d7d25911a4fbb96401b.bindTooltip(
+                `<div>
+                     Sao Paulo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ab7f9c5ce66062195e5f3876ee3c5b6 = L.circleMarker(
+                [52.1637702, 5.4088845],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0257645075848785, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_0c4f00127d0b29bc23b288ae42839724 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b6f12abdfb32b785c1ae6da0e862045 = $(`<div id="html_2b6f12abdfb32b785c1ae6da0e862045" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Amersfoort</b><br>Surface: Clay<br>Matches: 213<br>Top Player:  Massu N.</div></div>`)[0];
+                popup_0c4f00127d0b29bc23b288ae42839724.setContent(html_2b6f12abdfb32b785c1ae6da0e862045);
+            
+        
+
+        circle_marker_2ab7f9c5ce66062195e5f3876ee3c5b6.bindPopup(popup_0c4f00127d0b29bc23b288ae42839724)
+        ;
+
+        
+    
+    
+            circle_marker_2ab7f9c5ce66062195e5f3876ee3c5b6.bindTooltip(
+                `<div>
+                     Amersfoort
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9ba9abfcdd4cae783fec4ce2cf2c18d = L.circleMarker(
+                [9.8694792, -83.7980749],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9679749578617867, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_1fb68206b30c876cafc9853c764866cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2ecc015e1945bd7106df8aa56c1dd29 = $(`<div id="html_e2ecc015e1945bd7106df8aa56c1dd29" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Santiago</b><br>Surface: Clay<br>Matches: 201<br>Top Player:  Bellucci T.</div></div>`)[0];
+                popup_1fb68206b30c876cafc9853c764866cd.setContent(html_e2ecc015e1945bd7106df8aa56c1dd29);
+            
+        
+
+        circle_marker_b9ba9abfcdd4cae783fec4ce2cf2c18d.bindPopup(popup_1fb68206b30c876cafc9853c764866cd)
+        ;
+
+        
+    
+    
+            circle_marker_b9ba9abfcdd4cae783fec4ce2cf2c18d.bindTooltip(
+                `<div>
+                     Santiago
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2fd297e4b25f1bac5c4d7714e3c9e8cc = L.circleMarker(
+                [3.1526589, 101.7022205],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b01b6da04b9dba053b65c1d26bc68cb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_985b23c4ca2ad68d370814141985d84c = $(`<div id="html_985b23c4ca2ad68d370814141985d84c" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Kuala Lumpur</b><br>Surface: Hard<br>Matches: 189<br>Top Player:  Benneteau J.</div></div>`)[0];
+                popup_b01b6da04b9dba053b65c1d26bc68cb3.setContent(html_985b23c4ca2ad68d370814141985d84c);
+            
+        
+
+        circle_marker_2fd297e4b25f1bac5c4d7714e3c9e8cc.bindPopup(popup_b01b6da04b9dba053b65c1d26bc68cb3)
+        ;
+
+        
+    
+    
+            circle_marker_2fd297e4b25f1bac5c4d7714e3c9e8cc.bindTooltip(
+                `<div>
+                     Kuala Lumpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_577e47bebacc457253eb9db3228114c4 = L.circleMarker(
+                [43.5122922, -6.0973052],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_0a49435f9b4b4d0f912ed47e2f9eb50a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_314b119e010dc7a7d587923f141c0efb = $(`<div id="html_314b119e010dc7a7d587923f141c0efb" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Los Cabos</b><br>Surface: Hard<br>Matches: 189<br>Top Player:  Norrie C.</div></div>`)[0];
+                popup_0a49435f9b4b4d0f912ed47e2f9eb50a.setContent(html_314b119e010dc7a7d587923f141c0efb);
+            
+        
+
+        circle_marker_577e47bebacc457253eb9db3228114c4.bindPopup(popup_0a49435f9b4b4d0f912ed47e2f9eb50a)
+        ;
+
+        
+    
+    
+            circle_marker_577e47bebacc457253eb9db3228114c4.bindTooltip(
+                `<div>
+                     Los Cabos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ce028def426af4d1172940af254063d0 = L.circleMarker(
+                [43.7009358, 7.2683912],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_7ae37bc5e78ff343899d399e71691bbe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c3525d5a746e42518c0ec69bbdc3c48 = $(`<div id="html_5c3525d5a746e42518c0ec69bbdc3c48" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Nice</b><br>Surface: Clay<br>Matches: 189<br>Top Player:  Thiem D.</div></div>`)[0];
+                popup_7ae37bc5e78ff343899d399e71691bbe.setContent(html_5c3525d5a746e42518c0ec69bbdc3c48);
+            
+        
+
+        circle_marker_ce028def426af4d1172940af254063d0.bindPopup(popup_7ae37bc5e78ff343899d399e71691bbe)
+        ;
+
+        
+    
+    
+            circle_marker_ce028def426af4d1172940af254063d0.bindTooltip(
+                `<div>
+                     Nice
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8925baf22b496b38581b8d941460d9f2 = L.circleMarker(
+                [44.8178131, 20.4568974],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9bc9c8418c092600b7944ac307d002be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b8178245a0132cb3d1fa02ce64f64cb = $(`<div id="html_2b8178245a0132cb3d1fa02ce64f64cb" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Belgrade</b><br>Surface: Clay<br>Matches: 189<br>Top Player: 🇷🇸 Djokovic N.</div></div>`)[0];
+                popup_9bc9c8418c092600b7944ac307d002be.setContent(html_2b8178245a0132cb3d1fa02ce64f64cb);
+            
+        
+
+        circle_marker_8925baf22b496b38581b8d941460d9f2.bindPopup(popup_9bc9c8418c092600b7944ac307d002be)
+        ;
+
+        
+    
+    
+            circle_marker_8925baf22b496b38581b8d941460d9f2.bindTooltip(
+                `<div>
+                     Belgrade
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f405fb85f8c35e3d4ef25891cd0d6c4 = L.circleMarker(
+                [51.2211097, 4.3997081],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_eb7c5df22b5e41ae44b9e046bed61156 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_854471cd2bca392badab1b26ebc4064d = $(`<div id="html_854471cd2bca392badab1b26ebc4064d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Antwerp</b><br>Surface: Hard<br>Matches: 189<br>Top Player:  Schwartzman D.</div></div>`)[0];
+                popup_eb7c5df22b5e41ae44b9e046bed61156.setContent(html_854471cd2bca392badab1b26ebc4064d);
+            
+        
+
+        circle_marker_3f405fb85f8c35e3d4ef25891cd0d6c4.bindPopup(popup_eb7c5df22b5e41ae44b9e046bed61156)
+        ;
+
+        
+    
+    
+            circle_marker_3f405fb85f8c35e3d4ef25891cd0d6c4.bindTooltip(
+                `<div>
+                     Antwerp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0870d724ba8f27cbf484a018cc216887 = L.circleMarker(
+                [42.6977028, 23.3217359],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.910185408138695, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_385afa468695c8343005b3024b73f8be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74136b972306889116a4592e56e414b4 = $(`<div id="html_74136b972306889116a4592e56e414b4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Sofia</b><br>Surface: Hard<br>Matches: 189<br>Top Player:  Sinner J.</div></div>`)[0];
+                popup_385afa468695c8343005b3024b73f8be.setContent(html_74136b972306889116a4592e56e414b4);
+            
+        
+
+        circle_marker_0870d724ba8f27cbf484a018cc216887.bindPopup(popup_385afa468695c8343005b3024b73f8be)
+        ;
+
+        
+    
+    
+            circle_marker_0870d724ba8f27cbf484a018cc216887.bindTooltip(
+                `<div>
+                     Sofia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e897d3da75e7f042182a865027dbee5c = L.circleMarker(
+                [40.851497, -73.0994297],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9005538165181797, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_46036bf27bc33f9aa2f1ec53e212ce98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc72be299fd095457f6fc1f7b0a94e24 = $(`<div id="html_fc72be299fd095457f6fc1f7b0a94e24" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Long Island</b><br>Surface: Hard<br>Matches: 187<br>Top Player:  Srichaphan P.</div></div>`)[0];
+                popup_46036bf27bc33f9aa2f1ec53e212ce98.setContent(html_fc72be299fd095457f6fc1f7b0a94e24);
+            
+        
+
+        circle_marker_e897d3da75e7f042182a865027dbee5c.bindPopup(popup_46036bf27bc33f9aa2f1ec53e212ce98)
+        ;
+
+        
+    
+    
+            circle_marker_e897d3da75e7f042182a865027dbee5c.bindTooltip(
+                `<div>
+                     Long Island
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9620372eb3a3fb65597b479deea65fb7 = L.circleMarker(
+                [48.2043985, 15.6229118],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.895738020707922, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d20f94f2ff0518b04c0150cb3a1df99d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74e4cfa648e0713c9c970884e0ef5adb = $(`<div id="html_74e4cfa648e0713c9c970884e0ef5adb" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>St. Polten</b><br>Surface: Clay<br>Matches: 186<br>Top Player:  Davydenko N.</div></div>`)[0];
+                popup_d20f94f2ff0518b04c0150cb3a1df99d.setContent(html_74e4cfa648e0713c9c970884e0ef5adb);
+            
+        
+
+        circle_marker_9620372eb3a3fb65597b479deea65fb7.bindPopup(popup_d20f94f2ff0518b04c0150cb3a1df99d)
+        ;
+
+        
+    
+    
+            circle_marker_9620372eb3a3fb65597b479deea65fb7.bindTooltip(
+                `<div>
+                     St. Polten
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7a2a83855418bd83bcbed45386ddfbd = L.circleMarker(
+                [33.4942189, -111.926018],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.895738020707922, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_44abc10a920f9a0ccad566ab76950d27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68ba7dd2f7ae499104f93e5bbb9755ac = $(`<div id="html_68ba7dd2f7ae499104f93e5bbb9755ac" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Scottsdale</b><br>Surface: Hard<br>Matches: 186<br>Top Player:  Hewitt L.</div></div>`)[0];
+                popup_44abc10a920f9a0ccad566ab76950d27.setContent(html_68ba7dd2f7ae499104f93e5bbb9755ac);
+            
+        
+
+        circle_marker_c7a2a83855418bd83bcbed45386ddfbd.bindPopup(popup_44abc10a920f9a0ccad566ab76950d27)
+        ;
+
+        
+    
+    
+            circle_marker_c7a2a83855418bd83bcbed45386ddfbd.bindTooltip(
+                `<div>
+                     Scottsdale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_537c05f7f89f9f624b0b4af46f7175f3 = L.circleMarker(
+                [31.6258257, -7.9891608],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8379484709848302, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_158dd7e5c62c8c9c92394edaf99a6533 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eea7ece57908456b61055bc26a83b121 = $(`<div id="html_eea7ece57908456b61055bc26a83b121" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Marrakech</b><br>Surface: Clay<br>Matches: 174<br>Top Player:  Andujar P.</div></div>`)[0];
+                popup_158dd7e5c62c8c9c92394edaf99a6533.setContent(html_eea7ece57908456b61055bc26a83b121);
+            
+        
+
+        circle_marker_537c05f7f89f9f624b0b4af46f7175f3.bindPopup(popup_158dd7e5c62c8c9c92394edaf99a6533)
+        ;
+
+        
+    
+    
+            circle_marker_537c05f7f89f9f624b0b4af46f7175f3.bindTooltip(
+                `<div>
+                     Marrakech
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b30f4274c28ea2c21e8455500f555a8f = L.circleMarker(
+                [39.613432, 2.8829185],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8379484709848302, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_8b2dfafef7df859f322aa69968aaa7d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9efc63c4e947f48a62812be443731925 = $(`<div id="html_9efc63c4e947f48a62812be443731925" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Mallorca</b><br>Surface: Clay<br>Matches: 174<br>Top Player:  Martin A.</div></div>`)[0];
+                popup_8b2dfafef7df859f322aa69968aaa7d5.setContent(html_9efc63c4e947f48a62812be443731925);
+            
+        
+
+        circle_marker_b30f4274c28ea2c21e8455500f555a8f.bindPopup(popup_8b2dfafef7df859f322aa69968aaa7d5)
+        ;
+
+        
+    
+    
+            circle_marker_b30f4274c28ea2c21e8455500f555a8f.bindTooltip(
+                `<div>
+                     Mallorca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_af2bf5baa202c16c78311af13759e027 = L.circleMarker(
+                [45.4641943, 9.1896346],
+                {"bubblingMouseEvents": true, "color": "#7F3FBF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7F3FBF", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.746448350589935, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d740bf7b3fa2fabc3ad49c0be2b7bccf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5ee49749fa54abf267c5e4c4644b782 = $(`<div id="html_d5ee49749fa54abf267c5e4c4644b782" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Milan</b><br>Surface: Carpet<br>Matches: 155<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_d740bf7b3fa2fabc3ad49c0be2b7bccf.setContent(html_d5ee49749fa54abf267c5e4c4644b782);
+            
+        
+
+        circle_marker_af2bf5baa202c16c78311af13759e027.bindPopup(popup_d740bf7b3fa2fabc3ad49c0be2b7bccf)
+        ;
+
+        
+    
+    
+            circle_marker_af2bf5baa202c16c78311af13759e027.bindTooltip(
+                `<div>
+                     Milan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_608da3776e29867dee13f3e87c4ebd88 = L.circleMarker(
+                [4.6534109, -74.0836547],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6886588008668433, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_8649951d6423947dc345574c05082e60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f03ddabb2d0a0b74f361a7defc99f1f = $(`<div id="html_7f03ddabb2d0a0b74f361a7defc99f1f" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Bogota</b><br>Surface: Clay<br>Matches: 143<br>Top Player:  Karlovic I.</div></div>`)[0];
+                popup_8649951d6423947dc345574c05082e60.setContent(html_7f03ddabb2d0a0b74f361a7defc99f1f);
+            
+        
+
+        circle_marker_608da3776e29867dee13f3e87c4ebd88.bindPopup(popup_8649951d6423947dc345574c05082e60)
+        ;
+
+        
+    
+    
+            circle_marker_608da3776e29867dee13f3e87c4ebd88.bindTooltip(
+                `<div>
+                     Bogota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa1d21a8dcd3d91723971751ba3b7fd4 = L.circleMarker(
+                [22.5445741, 114.0545429],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6501324343847821, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_794014f2b5f7dd5387523d41a956d3b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_154329ce057a11b6d79040e9331d0783 = $(`<div id="html_154329ce057a11b6d79040e9331d0783" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Shenzhen </b><br>Surface: Hard<br>Matches: 135<br>Top Player:  Berdych T.</div></div>`)[0];
+                popup_794014f2b5f7dd5387523d41a956d3b2.setContent(html_154329ce057a11b6d79040e9331d0783);
+            
+        
+
+        circle_marker_fa1d21a8dcd3d91723971751ba3b7fd4.bindPopup(popup_794014f2b5f7dd5387523d41a956d3b2)
+        ;
+
+        
+    
+    
+            circle_marker_fa1d21a8dcd3d91723971751ba3b7fd4.bindTooltip(
+                `<div>
+                     Shenzhen 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_abbbe4a8d6813c268c8cb3626dd5fbe7 = L.circleMarker(
+                [37.8845813, -4.7760138],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6501324343847821, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5f20e7cf7df02e681dd5086f80c9af6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1656f1d7f67cf2861f4d0c033b5a1575 = $(`<div id="html_1656f1d7f67cf2861f4d0c033b5a1575" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Cordoba</b><br>Surface: Clay<br>Matches: 135<br>Top Player:  Ramos-Vinolas A.</div></div>`)[0];
+                popup_5f20e7cf7df02e681dd5086f80c9af6d.setContent(html_1656f1d7f67cf2861f4d0c033b5a1575);
+            
+        
+
+        circle_marker_abbbe4a8d6813c268c8cb3626dd5fbe7.bindPopup(popup_5f20e7cf7df02e681dd5086f80c9af6d)
+        ;
+
+        
+    
+    
+            circle_marker_abbbe4a8d6813c268c8cb3626dd5fbe7.bindTooltip(
+                `<div>
+                     Cordoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1aca665e072e9649008514526c38c3bf = L.circleMarker(
+                [18.5213738, 73.8545071],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6501324343847821, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_70b6426c804917b03f174cb5701a3b79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14e7bec0cd1f05939be1ec047739008d = $(`<div id="html_14e7bec0cd1f05939be1ec047739008d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Pune</b><br>Surface: Hard<br>Matches: 135<br>Top Player:  Vesely J.</div></div>`)[0];
+                popup_70b6426c804917b03f174cb5701a3b79.setContent(html_14e7bec0cd1f05939be1ec047739008d);
+            
+        
+
+        circle_marker_1aca665e072e9649008514526c38c3bf.bindPopup(popup_70b6426c804917b03f174cb5701a3b79)
+        ;
+
+        
+    
+    
+            circle_marker_1aca665e072e9649008514526c38c3bf.bindTooltip(
+                `<div>
+                     Pune
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a66cff69aa326accf3d89f809fc66368 = L.circleMarker(
+                [55.6867243, 12.5700724],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.597158680471948, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_dd3d2a116e7638561c1f2d3902808003 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52f703e7dee0f89d03798a146af5d367 = $(`<div id="html_52f703e7dee0f89d03798a146af5d367" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Copenhagen</b><br>Surface: Hard<br>Matches: 124<br>Top Player:  Vinciguerra A.</div></div>`)[0];
+                popup_dd3d2a116e7638561c1f2d3902808003.setContent(html_52f703e7dee0f89d03798a146af5d367);
+            
+        
+
+        circle_marker_a66cff69aa326accf3d89f809fc66368.bindPopup(popup_dd3d2a116e7638561c1f2d3902808003)
+        ;
+
+        
+    
+    
+            circle_marker_a66cff69aa326accf3d89f809fc66368.bindTooltip(
+                `<div>
+                     Copenhagen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50f61abca46efd88799b3c1ae280bae4 = L.circleMarker(
+                [36.8865728, 30.7030242],
+                {"bubblingMouseEvents": true, "color": "#2E8B57", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E8B57", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5393691307488562, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b757d2a468604cfb6ecd875902766195 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb537d8f94fdca505e299e96e4bb7ea3 = $(`<div id="html_fb537d8f94fdca505e299e96e4bb7ea3" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Antalya</b><br>Surface: Grass<br>Matches: 112<br>Top Player:  Mannarino A.</div></div>`)[0];
+                popup_b757d2a468604cfb6ecd875902766195.setContent(html_fb537d8f94fdca505e299e96e4bb7ea3);
+            
+        
+
+        circle_marker_50f61abca46efd88799b3c1ae280bae4.bindPopup(popup_b757d2a468604cfb6ecd875902766195)
+        ;
+
+        
+    
+    
+            circle_marker_50f61abca46efd88799b3c1ae280bae4.bindTooltip(
+                `<div>
+                     Antalya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e416f14d88ac2dbe94c42d5198508e41 = L.circleMarker(
+                [30.6598628, 104.0633717],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5201059475078257, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_28b8262071eae5eac82f0f6f91fb1631 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b74bb07674834b640f94cdd5de9a24de = $(`<div id="html_b74bb07674834b640f94cdd5de9a24de" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Chengdu</b><br>Surface: Hard<br>Matches: 108<br>Top Player:  Tomic B.</div></div>`)[0];
+                popup_28b8262071eae5eac82f0f6f91fb1631.setContent(html_b74bb07674834b640f94cdd5de9a24de);
+            
+        
+
+        circle_marker_e416f14d88ac2dbe94c42d5198508e41.bindPopup(popup_28b8262071eae5eac82f0f6f91fb1631)
+        ;
+
+        
+    
+    
+            circle_marker_e416f14d88ac2dbe94c42d5198508e41.bindTooltip(
+                `<div>
+                     Chengdu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee9e853f777a2afcecbbdbc077c738a4 = L.circleMarker(
+                [41.006381, 28.9758715],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5201059475078257, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d793d4af42c4aa0109234126b029490a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd2c8e2cdff77ec77111f966b1edf950 = $(`<div id="html_cd2c8e2cdff77ec77111f966b1edf950" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Istanbul</b><br>Surface: Clay<br>Matches: 108<br>Top Player:  Schwartzman D.</div></div>`)[0];
+                popup_d793d4af42c4aa0109234126b029490a.setContent(html_cd2c8e2cdff77ec77111f966b1edf950);
+            
+        
+
+        circle_marker_ee9e853f777a2afcecbbdbc077c738a4.bindPopup(popup_d793d4af42c4aa0109234126b029490a)
+        ;
+
+        
+    
+    
+            circle_marker_ee9e853f777a2afcecbbdbc077c738a4.bindTooltip(
+                `<div>
+                     Istanbul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d3c4cccb6749228a01aec2fdc01df5c = L.circleMarker(
+                [-0.2201641, -78.5123274],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5201059475078257, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_9fe3c266eb99a6759cb0e107293e9374 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcff50c5bbf450594a13ed61934f0967 = $(`<div id="html_bcff50c5bbf450594a13ed61934f0967" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Quito</b><br>Surface: Clay<br>Matches: 108<br>Top Player:  Estrella Burgos V.</div></div>`)[0];
+                popup_9fe3c266eb99a6759cb0e107293e9374.setContent(html_bcff50c5bbf450594a13ed61934f0967);
+            
+        
+
+        circle_marker_9d3c4cccb6749228a01aec2fdc01df5c.bindPopup(popup_9fe3c266eb99a6759cb0e107293e9374)
+        ;
+
+        
+    
+    
+            circle_marker_9d3c4cccb6749228a01aec2fdc01df5c.bindTooltip(
+                `<div>
+                     Quito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea29f3419c2d4a366d2d7a77c8054531 = L.circleMarker(
+                [22.350627, 114.1849161],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_1a1a2d910321be4f0db880f852c3e3da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61e2d8c911c8a876874bd6a508f1ced = $(`<div id="html_a61e2d8c911c8a876874bd6a508f1ced" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Hong Kong</b><br>Surface: Hard<br>Matches: 93<br>Top Player:  Ferrero J.C.</div></div>`)[0];
+                popup_1a1a2d910321be4f0db880f852c3e3da.setContent(html_a61e2d8c911c8a876874bd6a508f1ced);
+            
+        
+
+        circle_marker_ea29f3419c2d4a366d2d7a77c8054531.bindPopup(popup_1a1a2d910321be4f0db880f852c3e3da)
+        ;
+
+        
+    
+    
+            circle_marker_ea29f3419c2d4a366d2d7a77c8054531.bindTooltip(
+                `<div>
+                     Hong Kong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d442d849fb52fe71272cdbdbe418dfe = L.circleMarker(
+                [25.0742823, 55.1885387],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_a2e62c0402a7286b81fb6d87e5efbb74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80369274bfc6a1955e879614116dd589 = $(`<div id="html_80369274bfc6a1955e879614116dd589" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Dubai</b><br>Surface: Hard<br>Matches: 93<br>Top Player:  Ferrero J.C.</div></div>`)[0];
+                popup_a2e62c0402a7286b81fb6d87e5efbb74.setContent(html_80369274bfc6a1955e879614116dd589);
+            
+        
+
+        circle_marker_2d442d849fb52fe71272cdbdbe418dfe.bindPopup(popup_a2e62c0402a7286b81fb6d87e5efbb74)
+        ;
+
+        
+    
+    
+            circle_marker_2d442d849fb52fe71272cdbdbe418dfe.bindTooltip(
+                `<div>
+                     Dubai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be4495584d700e63f6af2e07ac489943 = L.circleMarker(
+                [41.3123363, 69.2787079],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_7599b1965049265b8b99a63a5ef390f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58fa3b1822113a25d8eed47a087105f7 = $(`<div id="html_58fa3b1822113a25d8eed47a087105f7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Tashkent</b><br>Surface: Hard<br>Matches: 93<br>Top Player:  Safin M.</div></div>`)[0];
+                popup_7599b1965049265b8b99a63a5ef390f2.setContent(html_58fa3b1822113a25d8eed47a087105f7);
+            
+        
+
+        circle_marker_be4495584d700e63f6af2e07ac489943.bindPopup(popup_7599b1965049265b8b99a63a5ef390f2)
+        ;
+
+        
+    
+    
+            circle_marker_be4495584d700e63f6af2e07ac489943.bindTooltip(
+                `<div>
+                     Tashkent
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d54c49505eb5d15c859ea9076a136323 = L.circleMarker(
+                [36.171697, -115.1463536],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_95e7bdb657afeb6560143d711018ac24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_158651a60224cd6a1a981a5d58909184 = $(`<div id="html_158651a60224cd6a1a981a5d58909184" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Las Vegas</b><br>Surface: Hard<br>Matches: 93<br>Top Player:  Hewitt L.</div></div>`)[0];
+                popup_95e7bdb657afeb6560143d711018ac24.setContent(html_158651a60224cd6a1a981a5d58909184);
+            
+        
+
+        circle_marker_d54c49505eb5d15c859ea9076a136323.bindPopup(popup_95e7bdb657afeb6560143d711018ac24)
+        ;
+
+        
+    
+    
+            circle_marker_d54c49505eb5d15c859ea9076a136323.bindTooltip(
+                `<div>
+                     Las Vegas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e0df3e7c2fe734d34c7fdc81997d9f8 = L.circleMarker(
+                [46.6359543, 14.1448209],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_6fd6af64dfa5186b6ad1cc107311cdca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_346b8ff473519b62473fb2775af8836e = $(`<div id="html_346b8ff473519b62473fb2775af8836e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Portschach</b><br>Surface: Clay<br>Matches: 93<br>Top Player:  Davydenko N.</div></div>`)[0];
+                popup_6fd6af64dfa5186b6ad1cc107311cdca.setContent(html_346b8ff473519b62473fb2775af8836e);
+            
+        
+
+        circle_marker_1e0df3e7c2fe734d34c7fdc81997d9f8.bindPopup(popup_6fd6af64dfa5186b6ad1cc107311cdca)
+        ;
+
+        
+    
+    
+            circle_marker_1e0df3e7c2fe734d34c7fdc81997d9f8.bindTooltip(
+                `<div>
+                     Portschach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0eaa4b47d0077b1aaf0dadbb49b70db0 = L.circleMarker(
+                [-26.205, 28.049722],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.447869010353961, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f3779195eb308dcf355e2737c83184a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5752b97835ccb954572ce5c6fe4d6502 = $(`<div id="html_5752b97835ccb954572ce5c6fe4d6502" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Johannesburg </b><br>Surface: Hard<br>Matches: 93<br>Top Player:  Devvarman S.</div></div>`)[0];
+                popup_f3779195eb308dcf355e2737c83184a7.setContent(html_5752b97835ccb954572ce5c6fe4d6502);
+            
+        
+
+        circle_marker_0eaa4b47d0077b1aaf0dadbb49b70db0.bindPopup(popup_f3779195eb308dcf355e2737c83184a7)
+        ;
+
+        
+    
+    
+            circle_marker_0eaa4b47d0077b1aaf0dadbb49b70db0.bindTooltip(
+                `<div>
+                     Johannesburg 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12bfe74a36d828c5e63c50a49208d9b0 = L.circleMarker(
+                [51.1282205, 71.4306682],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4093426438718999, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d386946270bffd5c4a416bc19d15e38a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_effb1ab907bfdb0fb5300494227294fa = $(`<div id="html_effb1ab907bfdb0fb5300494227294fa" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Nur-Sultan</b><br>Surface: Hard<br>Matches: 85<br>Top Player:  Ruusuvuori E.</div></div>`)[0];
+                popup_d386946270bffd5c4a416bc19d15e38a.setContent(html_effb1ab907bfdb0fb5300494227294fa);
+            
+        
+
+        circle_marker_12bfe74a36d828c5e63c50a49208d9b0.bindPopup(popup_d386946270bffd5c4a416bc19d15e38a)
+        ;
+
+        
+    
+    
+            circle_marker_12bfe74a36d828c5e63c50a49208d9b0.bindTooltip(
+                `<div>
+                     Nur-Sultan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5699c545bf2706400eac33fa2d908084 = L.circleMarker(
+                [47.4813896, 19.1460941],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.3900794606308693, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e87b12fec456f92a4ce146e1fd362f4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06b984385269f3062e2115d54127c21e = $(`<div id="html_06b984385269f3062e2115d54127c21e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Budapest</b><br>Surface: Clay<br>Matches: 81<br>Top Player:  Bedene A.</div></div>`)[0];
+                popup_e87b12fec456f92a4ce146e1fd362f4d.setContent(html_06b984385269f3062e2115d54127c21e);
+            
+        
+
+        circle_marker_5699c545bf2706400eac33fa2d908084.bindPopup(popup_e87b12fec456f92a4ce146e1fd362f4d)
+        ;
+
+        
+    
+    
+            circle_marker_5699c545bf2706400eac33fa2d908084.bindTooltip(
+                `<div>
+                     Budapest
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bddc275698feeddc934f5457cbc385a = L.circleMarker(
+                [19.054999, 72.8692035],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.298579340235974, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f9f8520bb9688351c0e16e94e1db399e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f21be1157d07d2f15ef22065930336a = $(`<div id="html_9f21be1157d07d2f15ef22065930336a" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Mumbai</b><br>Surface: Hard<br>Matches: 62<br>Top Player:  Tursunov D.</div></div>`)[0];
+                popup_f9f8520bb9688351c0e16e94e1db399e.setContent(html_9f21be1157d07d2f15ef22065930336a);
+            
+        
+
+        circle_marker_5bddc275698feeddc934f5457cbc385a.bindPopup(popup_f9f8520bb9688351c0e16e94e1db399e)
+        ;
+
+        
+    
+    
+            circle_marker_5bddc275698feeddc934f5457cbc385a.bindTooltip(
+                `<div>
+                     Mumbai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e19049724c9daa1e34126b5308597f96 = L.circleMarker(
+                [13.8000382, -88.9140683],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.298579340235974, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_610f96d737ced3a08418ad15ecf5bc90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54e670e56ffc21f595d541298f1bab8b = $(`<div id="html_54e670e56ffc21f595d541298f1bab8b" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Salvador</b><br>Surface: Hard<br>Matches: 62<br>Top Player:  Kuerten G.</div></div>`)[0];
+                popup_610f96d737ced3a08418ad15ecf5bc90.setContent(html_54e670e56ffc21f595d541298f1bab8b);
+            
+        
+
+        circle_marker_e19049724c9daa1e34126b5308597f96.bindPopup(popup_610f96d737ced3a08418ad15ecf5bc90)
+        ;
+
+        
+    
+    
+            circle_marker_e19049724c9daa1e34126b5308597f96.bindTooltip(
+                `<div>
+                     Salvador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c07fa1d349f561f1fc662016e373df99 = L.circleMarker(
+                [52.3730796, 4.8924534],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.298579340235974, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_cb00008e4d7db6ebaf0060854a40874a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acb5e2caeea23e1008db80186aec0429 = $(`<div id="html_acb5e2caeea23e1008db80186aec0429" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Amsterdam</b><br>Surface: Clay<br>Matches: 62<br>Top Player:  Gustafsson M.</div></div>`)[0];
+                popup_cb00008e4d7db6ebaf0060854a40874a.setContent(html_acb5e2caeea23e1008db80186aec0429);
+            
+        
+
+        circle_marker_c07fa1d349f561f1fc662016e373df99.bindPopup(popup_cb00008e4d7db6ebaf0060854a40874a)
+        ;
+
+        
+    
+    
+            circle_marker_c07fa1d349f561f1fc662016e373df99.bindTooltip(
+                `<div>
+                     Amsterdam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a85865b09c3be97b334a817dadee0cd1 = L.circleMarker(
+                [32.7174202, -117.162772],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.26005297375391284, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_09b777132663ed8880a204bc51751b42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e01ee4770b8940b61a5b99e82bb46237 = $(`<div id="html_e01ee4770b8940b61a5b99e82bb46237" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>San Diego</b><br>Surface: Hard<br>Matches: 54<br>Top Player:  Nakashima B.</div></div>`)[0];
+                popup_09b777132663ed8880a204bc51751b42.setContent(html_e01ee4770b8940b61a5b99e82bb46237);
+            
+        
+
+        circle_marker_a85865b09c3be97b334a817dadee0cd1.bindPopup(popup_09b777132663ed8880a204bc51751b42)
+        ;
+
+        
+    
+    
+            circle_marker_a85865b09c3be97b334a817dadee0cd1.bindTooltip(
+                `<div>
+                     San Diego
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2a9bf3eb5af88f16c3864ea5b63ac59 = L.circleMarker(
+                [51.2254018, 6.7763137],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.26005297375391284, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_429a28c7cad15adb739957e9c6563aba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d8291f4dbd181aff89882c1b0c93eab = $(`<div id="html_8d8291f4dbd181aff89882c1b0c93eab" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Dusseldorf</b><br>Surface: Clay<br>Matches: 54<br>Top Player:  Monaco J.</div></div>`)[0];
+                popup_429a28c7cad15adb739957e9c6563aba.setContent(html_8d8291f4dbd181aff89882c1b0c93eab);
+            
+        
+
+        circle_marker_d2a9bf3eb5af88f16c3864ea5b63ac59.bindPopup(popup_429a28c7cad15adb739957e9c6563aba)
+        ;
+
+        
+    
+    
+            circle_marker_d2a9bf3eb5af88f16c3864ea5b63ac59.bindTooltip(
+                `<div>
+                     Dusseldorf
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f14949068d5a1e1e1e798ad69c31a12 = L.circleMarker(
+                [43.7218277, 0.9774958],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.26005297375391284, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_bc77c4a7e3b8d27fff60d3e1161b0175 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24dbe94f305aa09234b3aafd781ab7b6 = $(`<div id="html_24dbe94f305aa09234b3aafd781ab7b6" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Cologne</b><br>Surface: Hard<br>Matches: 54<br>Top Player:  Zverev A.</div></div>`)[0];
+                popup_bc77c4a7e3b8d27fff60d3e1161b0175.setContent(html_24dbe94f305aa09234b3aafd781ab7b6);
+            
+        
+
+        circle_marker_1f14949068d5a1e1e1e798ad69c31a12.bindPopup(popup_bc77c4a7e3b8d27fff60d3e1161b0175)
+        ;
+
+        
+    
+    
+            circle_marker_1f14949068d5a1e1e1e798ad69c31a12.bindTooltip(
+                `<div>
+                     Cologne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12badc0e81266c94b316a3c831a409b3 = L.circleMarker(
+                [32.7762719, -96.7968559],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.26005297375391284, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_3b1480f0e81ff747b365fe6c8d7c3367 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31d3458135703f356a3635853e542cfc = $(`<div id="html_31d3458135703f356a3635853e542cfc" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Dallas</b><br>Surface: Hard<br>Matches: 54<br>Top Player:  Isner J.</div></div>`)[0];
+                popup_3b1480f0e81ff747b365fe6c8d7c3367.setContent(html_31d3458135703f356a3635853e542cfc);
+            
+        
+
+        circle_marker_12badc0e81266c94b316a3c831a409b3.bindPopup(popup_3b1480f0e81ff747b365fe6c8d7c3367)
+        ;
+
+        
+    
+    
+            circle_marker_12badc0e81266c94b316a3c831a409b3.bindTooltip(
+                `<div>
+                     Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbf99bf321bf98be82e824f41bba114e = L.circleMarker(
+                [38.6925777, -9.3123076],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.26005297375391284, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f39c8b8c719209dc9e0c1dd38c4ada75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de6b28ae889a287f3a15f46042b722d5 = $(`<div id="html_de6b28ae889a287f3a15f46042b722d5" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Oeiras</b><br>Surface: Clay<br>Matches: 54<br>Top Player:  Hanescu V.</div></div>`)[0];
+                popup_f39c8b8c719209dc9e0c1dd38c4ada75.setContent(html_de6b28ae889a287f3a15f46042b722d5);
+            
+        
+
+        circle_marker_bbf99bf321bf98be82e824f41bba114e.bindPopup(popup_f39c8b8c719209dc9e0c1dd38c4ada75)
+        ;
+
+        
+    
+    
+            circle_marker_bbf99bf321bf98be82e824f41bba114e.bindTooltip(
+                `<div>
+                     Oeiras
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6439e099acb179c5362db950aa9dab3e = L.circleMarker(
+                [10.7763897, 106.7011391],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_0fd334c664ca48e154de410bcbd258fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b35580c4982e3d6685eb25696f28ce7 = $(`<div id="html_3b35580c4982e3d6685eb25696f28ce7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Ho Chi Min City</b><br>Surface: Hard<br>Matches: 31<br>Top Player:  Bjorkman J.</div></div>`)[0];
+                popup_0fd334c664ca48e154de410bcbd258fc.setContent(html_3b35580c4982e3d6685eb25696f28ce7);
+            
+        
+
+        circle_marker_6439e099acb179c5362db950aa9dab3e.bindPopup(popup_0fd334c664ca48e154de410bcbd258fc)
+        ;
+
+        
+    
+    
+            circle_marker_6439e099acb179c5362db950aa9dab3e.bindTooltip(
+                `<div>
+                     Ho Chi Min City
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c35191a2f4044a994bbaa46310ac510f = L.circleMarker(
+                [50.8214626, -0.1400561],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_8a8cd9374e4c733eb95ee10d13d2e3e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_123aae1f5b873b64eb2ead4ed69eee4e = $(`<div id="html_123aae1f5b873b64eb2ead4ed69eee4e" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Brighton</b><br>Surface: Hard<br>Matches: 31<br>Top Player:  Henman T.</div></div>`)[0];
+                popup_8a8cd9374e4c733eb95ee10d13d2e3e3.setContent(html_123aae1f5b873b64eb2ead4ed69eee4e);
+            
+        
+
+        circle_marker_c35191a2f4044a994bbaa46310ac510f.bindPopup(popup_8a8cd9374e4c733eb95ee10d13d2e3e3)
+        ;
+
+        
+    
+    
+            circle_marker_c35191a2f4044a994bbaa46310ac510f.bindTooltip(
+                `<div>
+                     Brighton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2f5851d7894bb0986d8c5e86580d336 = L.circleMarker(
+                [48.2083537, 16.3725042],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_31bc41a78ca9e82b6e52e63ea8bafe4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_148184081a9b380b88a9e4c5940f5f6d = $(`<div id="html_148184081a9b380b88a9e4c5940f5f6d" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Vienna </b><br>Surface: Hard<br>Matches: 31<br>Top Player: 🇨🇭 Federer R.</div></div>`)[0];
+                popup_31bc41a78ca9e82b6e52e63ea8bafe4b.setContent(html_148184081a9b380b88a9e4c5940f5f6d);
+            
+        
+
+        circle_marker_f2f5851d7894bb0986d8c5e86580d336.bindPopup(popup_31bc41a78ca9e82b6e52e63ea8bafe4b)
+        ;
+
+        
+    
+    
+            circle_marker_f2f5851d7894bb0986d8c5e86580d336.bindTooltip(
+                `<div>
+                     Vienna 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a03931c4a56638ec454030894e0f3828 = L.circleMarker(
+                [28.5421109, -81.3790304],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_ca028a45459248b0f6a1da328e32655e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_444a85905e293e6ddaa2326f7bb04e70 = $(`<div id="html_444a85905e293e6ddaa2326f7bb04e70" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Orlando</b><br>Surface: Clay<br>Matches: 31<br>Top Player:  Gonzalez F.</div></div>`)[0];
+                popup_ca028a45459248b0f6a1da328e32655e.setContent(html_444a85905e293e6ddaa2326f7bb04e70);
+            
+        
+
+        circle_marker_a03931c4a56638ec454030894e0f3828.bindPopup(popup_ca028a45459248b0f6a1da328e32655e)
+        ;
+
+        
+    
+    
+            circle_marker_a03931c4a56638ec454030894e0f3828.bindTooltip(
+                `<div>
+                     Orlando
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d4f5f0e9c1275a2a9779a46a02fe8df = L.circleMarker(
+                [43.6044622, 1.4442469],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_df936ba7e243f19c260e9de1feb2a988 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cceeb7109a7f7c1d6348bd5dd76bd9a4 = $(`<div id="html_cceeb7109a7f7c1d6348bd5dd76bd9a4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Toulouse</b><br>Surface: Hard<br>Matches: 31<br>Top Player:  Corretja A.</div></div>`)[0];
+                popup_df936ba7e243f19c260e9de1feb2a988.setContent(html_cceeb7109a7f7c1d6348bd5dd76bd9a4);
+            
+        
+
+        circle_marker_9d4f5f0e9c1275a2a9779a46a02fe8df.bindPopup(popup_df936ba7e243f19c260e9de1feb2a988)
+        ;
+
+        
+    
+    
+            circle_marker_9d4f5f0e9c1275a2a9779a46a02fe8df.bindTooltip(
+                `<div>
+                     Toulouse
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df0defd57ff3509538c352578e0f79b3 = L.circleMarker(
+                [43.9458623, 12.458306],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_f20e8440b6b362fa7e0c35004a6981f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52452789401971d00b68ffe748b8e752 = $(`<div id="html_52452789401971d00b68ffe748b8e752" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>San Marino</b><br>Surface: Clay<br>Matches: 31<br>Top Player:  Calatrava A.</div></div>`)[0];
+                popup_f20e8440b6b362fa7e0c35004a6981f3.setContent(html_52452789401971d00b68ffe748b8e752);
+            
+        
+
+        circle_marker_df0defd57ff3509538c352578e0f79b3.bindPopup(popup_f20e8440b6b362fa7e0c35004a6981f3)
+        ;
+
+        
+    
+    
+            circle_marker_df0defd57ff3509538c352578e0f79b3.bindTooltip(
+                `<div>
+                     San Marino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4080f081e87d17a201a1eb9d257ac66f = L.circleMarker(
+                [19.3207722, -99.1514678],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e0391b5ef180e63dd5a6c079a40df096 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_686b2a506a1a06f54592d7cac0918515 = $(`<div id="html_686b2a506a1a06f54592d7cac0918515" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Mexico City</b><br>Surface: Clay<br>Matches: 31<br>Top Player:  Chela J.I.</div></div>`)[0];
+                popup_e0391b5ef180e63dd5a6c079a40df096.setContent(html_686b2a506a1a06f54592d7cac0918515);
+            
+        
+
+        circle_marker_4080f081e87d17a201a1eb9d257ac66f.bindPopup(popup_e0391b5ef180e63dd5a6c079a40df096)
+        ;
+
+        
+    
+    
+            circle_marker_4080f081e87d17a201a1eb9d257ac66f.bindTooltip(
+                `<div>
+                     Mexico City
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd0a02acd12311799c313dce5644d9a0 = L.circleMarker(
+                [52.2337172, 21.0714322],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.149289670117987, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_4eef16da37ff5c77d1cd92f0f6de0679 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92082421523167a0c71fe7ab374ba5ca = $(`<div id="html_92082421523167a0c71fe7ab374ba5ca" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Warsaw</b><br>Surface: Clay<br>Matches: 31<br>Top Player:  Davydenko N.</div></div>`)[0];
+                popup_4eef16da37ff5c77d1cd92f0f6de0679.setContent(html_92082421523167a0c71fe7ab374ba5ca);
+            
+        
+
+        circle_marker_cd0a02acd12311799c313dce5644d9a0.bindPopup(popup_4eef16da37ff5c77d1cd92f0f6de0679)
+        ;
+
+        
+    
+    
+            circle_marker_cd0a02acd12311799c313dce5644d9a0.bindTooltip(
+                `<div>
+                     Warsaw
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47953d24d0e8489ff8b64e9aa8837f7c = L.circleMarker(
+                [45.0677551, 7.6824892],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.14447387430772934, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5e8b32bda5780bc1a288f5955ab76d61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8289ec3ad994e82d5cf5df6a797e3c85 = $(`<div id="html_8289ec3ad994e82d5cf5df6a797e3c85" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Turin</b><br>Surface: Hard<br>Matches: 30<br>Top Player: 🇷🇸 Djokovic N.</div></div>`)[0];
+                popup_5e8b32bda5780bc1a288f5955ab76d61.setContent(html_8289ec3ad994e82d5cf5df6a797e3c85);
+            
+        
+
+        circle_marker_47953d24d0e8489ff8b64e9aa8837f7c.bindPopup(popup_5e8b32bda5780bc1a288f5955ab76d61)
+        ;
+
+        
+    
+    
+            circle_marker_47953d24d0e8489ff8b64e9aa8837f7c.bindTooltip(
+                `<div>
+                     Turin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86e42c693a6a36944e1fe8255cace928 = L.circleMarker(
+                [43.7697955, 11.2556404],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b33a361e7f5ff5c5e7cd03cc50b89038 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2dd5167be45ee29a7736904dd73c671f = $(`<div id="html_2dd5167be45ee29a7736904dd73c671f" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Florence</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Wolf J.J.</div></div>`)[0];
+                popup_b33a361e7f5ff5c5e7cd03cc50b89038.setContent(html_2dd5167be45ee29a7736904dd73c671f);
+            
+        
+
+        circle_marker_86e42c693a6a36944e1fe8255cace928.bindPopup(popup_b33a361e7f5ff5c5e7cd03cc50b89038)
+        ;
+
+        
+    
+    
+            circle_marker_86e42c693a6a36944e1fe8255cace928.bindTooltip(
+                `<div>
+                     Florence
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31a5c57946ec1533b56fbddd4c61663b = L.circleMarker(
+                [37.5666791, 126.9782914],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_2cd10d4e28f75acd911693f65aebeba8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f2b7f32678ec0be381e99ea589d2f85 = $(`<div id="html_1f2b7f32678ec0be381e99ea589d2f85" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Seoul</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Nishioka Y.</div></div>`)[0];
+                popup_2cd10d4e28f75acd911693f65aebeba8.setContent(html_1f2b7f32678ec0be381e99ea589d2f85);
+            
+        
+
+        circle_marker_31a5c57946ec1533b56fbddd4c61663b.bindPopup(popup_2cd10d4e28f75acd911693f65aebeba8)
+        ;
+
+        
+    
+    
+            circle_marker_31a5c57946ec1533b56fbddd4c61663b.bindTooltip(
+                `<div>
+                     Seoul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b29036452d72b71913c1a3fcd28d52c = L.circleMarker(
+                [32.0852997, 34.7818064],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_4bfb1cc06e1fe9045066ca552ea77538 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_520de7f44e09d5b5e5b671898b7f7744 = $(`<div id="html_520de7f44e09d5b5e5b671898b7f7744" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Tel Aviv</b><br>Surface: Hard<br>Matches: 27<br>Top Player: 🇷🇸 Djokovic N.</div></div>`)[0];
+                popup_4bfb1cc06e1fe9045066ca552ea77538.setContent(html_520de7f44e09d5b5e5b671898b7f7744);
+            
+        
+
+        circle_marker_6b29036452d72b71913c1a3fcd28d52c.bindPopup(popup_4bfb1cc06e1fe9045066ca552ea77538)
+        ;
+
+        
+    
+    
+            circle_marker_6b29036452d72b71913c1a3fcd28d52c.bindTooltip(
+                `<div>
+                     Tel Aviv
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b17824f245bf0cd57e2ce10ce72d730 = L.circleMarker(
+                [43.5449422, -5.66275],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5f3e3236ac19cbb35edb1ec6f3a42d2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68b3787bdcfb74a2ee7f470fb848aba9 = $(`<div id="html_68b3787bdcfb74a2ee7f470fb848aba9" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Gijon</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Korda S.</div></div>`)[0];
+                popup_5f3e3236ac19cbb35edb1ec6f3a42d2b.setContent(html_68b3787bdcfb74a2ee7f470fb848aba9);
+            
+        
+
+        circle_marker_5b17824f245bf0cd57e2ce10ce72d730.bindPopup(popup_5f3e3236ac19cbb35edb1ec6f3a42d2b)
+        ;
+
+        
+    
+    
+            circle_marker_5b17824f245bf0cd57e2ce10ce72d730.bindTooltip(
+                `<div>
+                     Gijon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4600f51c7f952bce7fd359031157df70 = L.circleMarker(
+                [44.7720845, 17.1917651],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_af7c890233fec735093b3f208ab2e902 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3019be4cdf6a9fd1109bea795b74c1cf = $(`<div id="html_3019be4cdf6a9fd1109bea795b74c1cf" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Banja Luka</b><br>Surface: Clay<br>Matches: 27<br>Top Player:  Lajovic D.</div></div>`)[0];
+                popup_af7c890233fec735093b3f208ab2e902.setContent(html_3019be4cdf6a9fd1109bea795b74c1cf);
+            
+        
+
+        circle_marker_4600f51c7f952bce7fd359031157df70.bindPopup(popup_af7c890233fec735093b3f208ab2e902)
+        ;
+
+        
+    
+    
+            circle_marker_4600f51c7f952bce7fd359031157df70.bindTooltip(
+                `<div>
+                     Banja Luka
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_272a54c1d15d91688bd1ce747908ae14 = L.circleMarker(
+                [40.8358846, 14.2487679],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_176ad65575f2bd8651114792c69f5292 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7ff82d3102d9e3c0727396a9a585d62 = $(`<div id="html_a7ff82d3102d9e3c0727396a9a585d62" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Napoli</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Musetti L.</div></div>`)[0];
+                popup_176ad65575f2bd8651114792c69f5292.setContent(html_a7ff82d3102d9e3c0727396a9a585d62);
+            
+        
+
+        circle_marker_272a54c1d15d91688bd1ce747908ae14.bindPopup(popup_176ad65575f2bd8651114792c69f5292)
+        ;
+
+        
+    
+    
+            circle_marker_272a54c1d15d91688bd1ce747908ae14.bindTooltip(
+                `<div>
+                     Napoli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7955225ca733e0e54cc1db77ddaa202e = L.circleMarker(
+                [22.273734, 113.5721327],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_bc3e5f1e4038e81853e5baf4c14ebf5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cac43e9c588dc1a6f6b7602ec80bede4 = $(`<div id="html_cac43e9c588dc1a6f6b7602ec80bede4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Zhuhai</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  De Minaur A.</div></div>`)[0];
+                popup_bc3e5f1e4038e81853e5baf4c14ebf5c.setContent(html_cac43e9c588dc1a6f6b7602ec80bede4);
+            
+        
+
+        circle_marker_7955225ca733e0e54cc1db77ddaa202e.bindPopup(popup_bc3e5f1e4038e81853e5baf4c14ebf5c)
+        ;
+
+        
+    
+    
+            circle_marker_7955225ca733e0e54cc1db77ddaa202e.bindTooltip(
+                `<div>
+                     Zhuhai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93cbb91975c1fbaeeb78d0e68baf8e03 = L.circleMarker(
+                [40.0912813, 9.0305773],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_e57e0eddf1f7a2e45c5f30139907f082 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e80ebd11c12f265870f7cacdf77d683 = $(`<div id="html_4e80ebd11c12f265870f7cacdf77d683" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Sardinia</b><br>Surface: Clay<br>Matches: 27<br>Top Player:  Djere L.</div></div>`)[0];
+                popup_e57e0eddf1f7a2e45c5f30139907f082.setContent(html_4e80ebd11c12f265870f7cacdf77d683);
+            
+        
+
+        circle_marker_93cbb91975c1fbaeeb78d0e68baf8e03.bindPopup(popup_e57e0eddf1f7a2e45c5f30139907f082)
+        ;
+
+        
+    
+    
+            circle_marker_93cbb91975c1fbaeeb78d0e68baf8e03.bindTooltip(
+                `<div>
+                     Sardinia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eacc6ac6305f949e7467ada4c0d57209 = L.circleMarker(
+                [1.357107, 103.8194992],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_d672dec9e258706df09a4ce26062b2a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d927111fe4aa7050b3024601327a42cf = $(`<div id="html_d927111fe4aa7050b3024601327a42cf" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Singapore</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Popyrin A.</div></div>`)[0];
+                popup_d672dec9e258706df09a4ce26062b2a2.setContent(html_d927111fe4aa7050b3024601327a42cf);
+            
+        
+
+        circle_marker_eacc6ac6305f949e7467ada4c0d57209.bindPopup(popup_d672dec9e258706df09a4ce26062b2a2)
+        ;
+
+        
+    
+    
+            circle_marker_eacc6ac6305f949e7467ada4c0d57209.bindTooltip(
+                `<div>
+                     Singapore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a21df23f459ade88aa52887ae8e36f9f = L.circleMarker(
+                [39.2171994, 9.113311],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_b495a1cfe4ba12aed45d70f6142aa249 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bda644eac14e156035c4f3455c00af7 = $(`<div id="html_5bda644eac14e156035c4f3455c00af7" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Cagliari</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Djere L.</div></div>`)[0];
+                popup_b495a1cfe4ba12aed45d70f6142aa249.setContent(html_5bda644eac14e156035c4f3455c00af7);
+            
+        
+
+        circle_marker_a21df23f459ade88aa52887ae8e36f9f.bindPopup(popup_b495a1cfe4ba12aed45d70f6142aa249)
+        ;
+
+        
+    
+    
+            circle_marker_a21df23f459ade88aa52887ae8e36f9f.bindTooltip(
+                `<div>
+                     Cagliari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_94162197d655c6f59bfa954bebfd84b9 = L.circleMarker(
+                [36.508976, -4.88562],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_ac7c56391a3f8e752dc61216dfe3c2b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57cdd69e27796d4f83a37e55b89d3d98 = $(`<div id="html_57cdd69e27796d4f83a37e55b89d3d98" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Marbella</b><br>Surface: Hard<br>Matches: 27<br>Top Player:  Munar J.</div></div>`)[0];
+                popup_ac7c56391a3f8e752dc61216dfe3c2b7.setContent(html_57cdd69e27796d4f83a37e55b89d3d98);
+            
+        
+
+        circle_marker_94162197d655c6f59bfa954bebfd84b9.bindPopup(popup_ac7c56391a3f8e752dc61216dfe3c2b7)
+        ;
+
+        
+    
+    
+            circle_marker_94162197d655c6f59bfa954bebfd84b9.bindTooltip(
+                `<div>
+                     Marbella
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52fe2dba43007047dd703af16899f2e4 = L.circleMarker(
+                [44.6952006, 10.0979869],
+                {"bubblingMouseEvents": true, "color": "#CC6600", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC6600", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.13002648687695642, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_5d9b1ada5570fd3303d74628cbef3967 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4d1f7684b659e2c2464f3e7171408f4 = $(`<div id="html_b4d1f7684b659e2c2464f3e7171408f4" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Parma</b><br>Surface: Clay<br>Matches: 27<br>Top Player:  Korda S.</div></div>`)[0];
+                popup_5d9b1ada5570fd3303d74628cbef3967.setContent(html_b4d1f7684b659e2c2464f3e7171408f4);
+            
+        
+
+        circle_marker_52fe2dba43007047dd703af16899f2e4.bindPopup(popup_5d9b1ada5570fd3303d74628cbef3967)
+        ;
+
+        
+    
+    
+            circle_marker_52fe2dba43007047dd703af16899f2e4.bindTooltip(
+                `<div>
+                     Parma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78832ee83454400c8a6291157450d585 = L.circleMarker(
+                [38.7077507, -9.1365919],
+                {"bubblingMouseEvents": true, "color": "#4A90E2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A90E2", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.07223693715386467, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_327af69aa695e8a10b535af0ed6c2c54);
+        
+    
+        var popup_3629b9c1dc8894d01dcf7adc81c52d0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_041760db5d17055e98b6c7a77f7e0a8b = $(`<div id="html_041760db5d17055e98b6c7a77f7e0a8b" style="width: 100.0%; height: 100.0%;"><div style='width: 220px;'><b>Lisbon</b><br>Surface: Hard<br>Matches: 15<br>Top Player: 🇺🇸 Agassi A.</div></div>`)[0];
+                popup_3629b9c1dc8894d01dcf7adc81c52d0c.setContent(html_041760db5d17055e98b6c7a77f7e0a8b);
+            
+        
+
+        circle_marker_78832ee83454400c8a6291157450d585.bindPopup(popup_3629b9c1dc8894d01dcf7adc81c52d0c)
+        ;
+
+        
+    
+    
+            circle_marker_78832ee83454400c8a6291157450d585.bindTooltip(
+                `<div>
+                     Lisbon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            marker_cluster_327af69aa695e8a10b535af0ed6c2c54.addTo(map_895d48191ceff9b2f2c313fa689ddb1f);
+        
+</script>
+</html>

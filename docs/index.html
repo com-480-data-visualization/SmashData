@@ -211,8 +211,8 @@
     <div id="wta-bets" class="wta-frame active">
       <iframe src="wta.html"></iframe>
     </div>
-    <div id="wta-evolution" class="wta-frame">
-      <iframe src="assets/htmlplot/wta_elo_evolution.html"></iframe>
+     <div id="wta-evolution" class="wta-frame">
+    <div id="graph-wta"> <!-- 👈 ID changé ici --></div>
     </div>
     <div id="wta-map" class="wta-frame">
       <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
@@ -222,6 +222,8 @@
     </div>
     
   </div>
+
+    
 
   <!-- ATP Section -->
   <div id="atp" class="section">
@@ -234,9 +236,16 @@
     <div id="atp-bets" class="wta-frame active">
       <iframe src="atp_bets.html"></iframe>
     </div>
-    <div id="atp-evolution" class="wta-frame">
-      <iframe src="assets/htmlplot/elo_evolution.html"></iframe>
+
+    
+     <div id="atp-evolution" class="wta-frame">
+    <div id="graph-atp" >
     </div>
+    </div>
+
+    
+    
+
     <div id="atp-map" class="wta-frame">
       <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
         This interactive map displays the number of matches played per city in the ATP tour. Each marker is colored by the surface type typically used in that city, and the top player (by number of match wins) is highlighted for each location.
@@ -284,5 +293,9 @@
   });
 
   </script>
+      <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="js/elo_clean_wta.js" ></script>
+    <script src="js/elo_clean.js" ></script> <!-- Ton fichier JS -->
 </body>
 </html>
