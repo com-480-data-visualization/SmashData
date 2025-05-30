@@ -176,11 +176,29 @@
 
     .wta-frame {
       display: none;
+      
     }
 
     .wta-frame.active {
       display: block;
     }
+
+/* Étendre le graphe au maximum */
+#wta-evolution,
+#graph-wta {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+/* Supprimer tout padding ou marge inutile */
+#wta-evolution {
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+    
   </style>
 </head>
 <body>
@@ -212,6 +230,14 @@
       <iframe src="wta.html"></iframe>
     </div>
      <div id="wta-evolution" class="wta-frame">
+      <p style="margin: 1rem 0; font-size: 1rem; line-height: 1.6; color:#333; font-weight: 500;">
+  Tired of WTA rankings that don’t reflect what you see on the court?
+Traditional rankings lag behind real performance and rely on rigid point systems.
+ELO updates after every match, rewarding wins against strong opponents and giving you a clearer, fairer view of who's really dominating the tour.
+Wanna see ELO evolution like a TikTok story? Hit <b> play </b> and watch the game change, week by week.</p>
+
+</p>
+
     <div id="graph-wta"> <!-- 👈 ID changé ici --></div>
     </div>
     <div id="wta-map" class="wta-frame">
@@ -238,8 +264,12 @@
     </div>
 
     
-     <div id="atp-evolution" class="wta-frame">
-    <div id="graph-atp" >
+     <div id="atp-evolution" class="wta-frame"><p style="margin: 1rem 0; font-size: 1rem; line-height: 1.6; color: #333; font-weight: 500;">
+  Feeling like the ATP rankings don’t tell the whole story?
+They're slow to adjust, stuck in outdated point mechanics, and often miss the real momentum shifts.
+ELO cuts through the noise — updating after every match to reflect true player performance, not just the politics of the tour.
+Wanna see ELO evolution like a TikTok story? Hit <b> play </b> and watch the game change, week by week.</p>
+    <div id="graph-atp" style="width: 100%; height: 600px;" >
     </div>
     </div>
 

@@ -6,18 +6,20 @@ d3.json("assets/data/df_plotly.json").then(function(data) {
     });
 
 
-        const couleurs = {
-    "Roger Federer": "#B3D1FF",   // bleu très clair
-    "Novak Djokovic": "#80B3FF",  // bleu ciel
-    "Rafael Nadal": "#4D94FF",    // bleu doux
-    "David Ferrer": "#1A75FF",    // bleu moyen
-    "Richard Gasquet": "#0066FF", // bleu soutenu
-    "Andy Murray": "#0052CC",     // bleu classique
-    "Tomas Berdych": "#003D99",   // bleu foncé
-    "Stan Wawrinka": "#002966",   // bleu très foncé
-    "Marin Cilic": "#001A4D",     // bleu nuit
-    "Andy Roddick": "#000D33"     // presque noir bleuté
+const couleurs = {
+    "Roger Federer": "#1f77b4",   // Bleu (standard Plotly)
+    "Novak Djokovic": "#9467bd",  // Violet moyen
+    "Rafael Nadal": "#2ca02c",    // Vert
+    "David Ferrer": "#d62728",    // Rouge sombre
+    "Richard Gasquet": "#17becf", // Cyan clair
+    "Andy Murray": "#8c564b",     // Brun froid
+    "Tomas Berdych": "#e377c2",   // Rose violet
+    "Stan Wawrinka": "#7f7f7f",   // Gris neutre
+    "Marin Cilic": "#bcbd22",     // Vert-jaune kaki
+    "Andy Roddick": "#ff7f0e"     // Orange moyen
 };
+
+
 
     // Définir les joueurs à afficher (top 10)
     const joueurs_freq = {};
@@ -81,6 +83,8 @@ d3.json("assets/data/df_plotly.json").then(function(data) {
     // Layout de la figure
     const layout = {
         title: "Evolution of ELO Ratings of the Top 10 Players (2000–Present)",
+        width : 1200,  // Prend 95% de la largeur de l'écran
+        height: 600,
         xaxis: {
         title: "Date",
         showgrid: false,         // ❌ pas de grille

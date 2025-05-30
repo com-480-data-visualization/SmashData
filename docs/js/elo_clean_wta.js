@@ -6,19 +6,19 @@ d3.json("assets/data/df_plotly_wta.json").then(function(data) {
         d.Joueur = d.player;
     });
 
-    // ✅ Couleurs en nuances de rouge (déplacé ici)
-    const couleurs = {
-        "Jankovic J.": "#FFCCCC",     // rouge très clair
-        "Williams S.": "#FF9999",     // rose rouge doux
-        "Kuznetsova S.": "#FF6666",   // rouge saumon
-        "Azarenka V.": "#FF4D4D",     // rouge clair
-        "Radwanska A.": "#FF3333",    // rouge franc
-        "Sharapova M.": "#FF1A1A",    // rouge vif
-        "Wozniacki C.": "#E60000",    // rouge soutenu
-        "Kerber A.": "#CC0000",       // rouge foncé
-        "Kvitova P.": "#990000",      // bordeaux
-        "Halep S.": "#660000"         // rouge très foncé
-    };
+const couleurs = {
+    "Jankovic J.":   "#1f77b4",  // Bleu
+    "Williams S.":   "#2ca02c",  // Vert
+    "Kuznetsova S.": "#d62728",  // Rouge foncé
+    "Azarenka V.":   "#9467bd",  // Violet
+    "Radwanska A.":  "#17becf",  // Bleu-vert clair
+    "Sharapova M.":  "#8c564b",  // Brun
+    "Wozniacki C.":  "#ff7f0e",  // Orange
+    "Kerber A.":     "#7f7f7f",  // Gris neutre
+    "Kvitova P.":    "#bcbd22",  // Jaune-vert pâle
+    "Halep S.":      "#e377c2"   // Rose-violet
+};
+
 
     // ✅ Définir les joueurs à afficher (top 10 les plus fréquents)
     const joueurs_freq = {};
@@ -76,6 +76,9 @@ d3.json("assets/data/df_plotly_wta.json").then(function(data) {
 
     // ✅ Layout de la figure
     const layout_wta = {
+        autosize: false,
+        width: 1200,  // Prend 95% de la largeur de l'écran
+        height: 600,
         title: "Evolution of ELO Ratings of the Top 10 WTA Players (2000–Present)",
         xaxis: {
             title: "Date",
@@ -155,8 +158,12 @@ d3.json("assets/data/df_plotly_wta.json").then(function(data) {
         }]
     };
 
+
+
+
     // ✅ Créer la figure animée
     Plotly.newPlot("graph-wta", initial_data_wta, layout_wta, {responsive: true}).then(() => {
         Plotly.addFrames("graph-wta", frames);
+
     });
 });
