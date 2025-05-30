@@ -1,129 +1,289 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="baseurl" content="">
-  <title>Tennis Fighters</title>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>COMEDY WAR | Some text here</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="COMEDY WAR" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Some text here" />
-<meta property="og:description" content="Some text here" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="COMEDY WAR" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="COMEDY WAR" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Some text here","headline":"COMEDY WAR","name":"COMEDY WAR","url":"http://localhost:4000/"}</script>
-<!-- End Jekyll SEO tag -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Trends: WTA & ATP Betting Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('assets/img/tennis-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      cursor: none;
+    }
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=086315e7b760fa1586ec618c5c2dd65ac78851b7">
-  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Abang:wght@400&display=swap" rel="stylesheet">
+    .custom-cursor {
+      position: fixed;
+      pointer-events: none;
+      width: 60px;
+      height: 60px;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s linear;
+    }
+
+    header {
+      padding: 1.8rem 1rem 1.2rem;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.8rem;
+      font-weight: 800;
+      color: #f5f5f5;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: #e0e0e0;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .animation {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .animation img {
+      width: 100px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .selector {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      margin: 1rem 1.5rem;
+      padding: 1.5rem 3rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      color: white;
+      max-width: 320px;
+      width: 90%;
+    }
+
+    .explore-btn.wta {
+      background: linear-gradient(135deg, #ff5cad, #ff85cb);
+    }
+
+    .explore-btn.atp {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+
+    .explore-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+      opacity: 0.95;
+    }
+
+    .explore-btn.active {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4) inset, 0 0 20px rgba(0, 0, 0, 0.25);
+      transform: scale(1.12);
+    }
+
+    .section {
+      display: none;
+      margin: 2rem auto;
+      width: 95%;
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      pointer-events: none;
+      color: #222;
+    }
+
+    .section.visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 800px;
+      border-radius: 8px;
+    }
+
+    h2, h3 {
+      color: #0d6efd;
+    }
+
+    .wta-buttons, .atp-buttons {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .wta-buttons button,
+    .atp-buttons button {
+      border: none;
+      border-radius: 30px;
+      padding: 0.8rem 1.8rem;
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      color: white;
+    }
+
+    .wta-buttons button {
+      background: #ff5cad;
+    }
+
+    .wta-buttons button:hover,
+    .wta-buttons button.active {
+      background: #e0449a;
+    }
+
+    .atp-buttons button {
+      background: #00aaff;
+    }
+
+    .atp-buttons button:hover,
+    .atp-buttons button.active {
+      background: #0088cc;
+    }
+
+    .wta-frame {
+      display: none;
+    }
+
+    .wta-frame.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
+  <img src="assets/img/tennis-racket.png" alt="Cursor" class="custom-cursor" id="customCursor" />
 
-  <div class="wrapper" id="mainContent" style="display: block;">
-    <section>
-      <!-- titre image  -->
+  <header>
+    <h1>Tennis Trends: WTA & ATP Over the Years</h1>
+    <p>Explore underdog wins, player evolution, and betting insights across decades of tennis action. Choose your tour below to dive in!</p>
+  </header>
 
-<h1 id="mens-tennis-20002024-two-decades-of-data-and-rivalries">Men’s Tennis (2000–2024): Two Decades of Data and Rivalries</h1>
-
-<p>Welcome to our interactive platform dedicated to exploring men’s professional tennis from 2000 to 2024. Built on comprehensive datasets from ATP matches and betting markets, this project allows you to visualize, compare, and analyze the performances of the greatest players of the modern era.</p>
-
-<hr />
-<h2 id="evolution-of-elo-ranking">Evolution of ELO Ranking</h2>
-
-<iframe src="assets/htmlplot/elo_evolution.html" width="100%" height="600px"></iframe>
-
-<h2 id="stats-of-fighters">Stats of fighters</h2>
-
-<p><img src="assets/img/Stats.png" alt="Evolution ELO" width="600" /></p>
-
-<h2 id="project-goals">Project Goals</h2>
-
-<p>Our mission is to make tennis statistics more accessible and insightful for both casual fans and tennis enthusiasts. With clean, interactive visualizations, you can explore:</p>
-
-<ul>
-  <li>ELO rating evolution of players over time</li>
-  <li>Performance across surfaces (Hard, Clay, Grass)</li>
-  <li>Detailed head-to-head statistical comparisons</li>
-  <li>Historical duel outcomes with interactive pie charts</li>
-  <li>Bookmaker prediction accuracy</li>
-</ul>
-
-<hr />
-
-<h2 id="key-insights">Key Insights</h2>
-
-<ul>
-  <li>The rise of the Big 3: Federer, Nadal, and Djokovic and their dominance in major tournaments</li>
-  <li>Surface specialists: some thrive on clay, others dominate on grass</li>
-  <li>Legendary matchups: explore iconic rivalries and victory breakdowns</li>
-  <li>Next-gen talents: follow the trajectory of rising stars in the 2020s</li>
-</ul>
-
-<hr />
-
-<h2 id="data-sources">Data Sources</h2>
-
-<ul>
-  <li>ATP Matches (2000–2024): Historical tournament results and player stats</li>
-  <li>Dynamic ELO Ratings: Performance-based scores calculated after each match</li>
-  <li>Detailed player stats: Aces, double faults, break points, service games, tie-breaks, and more</li>
-  <li>Betting market odds: Implied win probabilities from multiple bookmakers</li>
-</ul>
-
-<hr />
-
-<h2 id="what-you-can-do">What You Can Do</h2>
-
-<ul>
-  <li>Compare two players based on form and performance metrics</li>
-  <li>Visualize stats by surface or tournament stage</li>
-  <li>Explore head-to-head results with pie charts</li>
-  <li>Track ELO rankings and consistency across seasons</li>
-</ul>
-
-<hr />
-
-<h2 id="technologies-used">Technologies Used</h2>
-
-<ul>
-  <li>Python, Pandas, Plotly, ipywidgets</li>
-  <li>Dynamic visualizations via Jupyter, or web-ready via Dash/Streamlit</li>
-</ul>
-
-<hr />
-
-<h2 id="timeline-coverage">Timeline Coverage</h2>
-
-<ul>
-  <li>From January 1st, 2000 to December 31st, 2024</li>
-  <li>Over 100,000 matches analyzed</li>
-  <li>Continuously updated with the latest ATP results</li>
-</ul>
-
-<hr />
-
-<blockquote>
-  <p>“Data doesn’t replace the game… but it tells the story better.”<br />
-– Tennis Data Explorer Team</p>
-</blockquote>
-
-
-    </section>
-    <footer>
-    </footer>
+  <div class="animation">
+    <img src="assets/img/tennis-ball.gif" alt="Tennis ball animation">
   </div>
+
+  <div class="selector">
+    <button class="explore-btn wta" onclick="showSection('wta')">Explore WTA</button>
+    <button class="explore-btn atp" onclick="showSection('atp')">Explore ATP</button>
+  </div>
+
+  <!-- WTA Section -->
+  <div id="wta" class="section">
+    <h2>WTA Insights</h2>
+    <div class="wta-buttons">
+      <button onclick="switchWtaTab('bets')" class="active">Bets</button>
+      <button onclick="switchWtaTab('evolution')">Player Evolution</button>
+      <button onclick="switchWtaTab('map')">Around the World</button>
+    </div>
+    <div id="wta-bets" class="wta-frame active">
+      <iframe src="wta.html"></iframe>
+    </div>
+    <div id="wta-evolution" class="wta-frame">
+      <iframe src="assets/htmlplot/wta_elo_evolution.html"></iframe>
+    </div>
+    <div id="wta-map" class="wta-frame">
+      <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
+        This interactive map displays the number of matches played per city in the WTA tour. Each marker is colored by the surface type typically used in that city, and the top player (by number of match wins) is highlighted for each location.
+      </p>
+      <iframe src="wta-map.html"></iframe>
+    </div>
+    
+  </div>
+
+  <!-- ATP Section -->
+  <div id="atp" class="section">
+    <h2>ATP Insights</h2>
+    <div class="atp-buttons">
+      <button onclick="switchAtpTab('bets')" class="active">Bets</button>
+      <button onclick="switchAtpTab('evolution')">Player Evolution</button>
+      <button onclick="switchAtpTab('map')">Around the World</button>
+    </div>
+    <div id="atp-bets" class="wta-frame active">
+      <iframe src="atp_bets.html"></iframe>
+    </div>
+        <div id="atp-evolution" class="wta-frame">
+      <div id="graph"></div>
+    </div>
+    <script src="js/elo.js"></script>
+    <div id="atp-map" class="wta-frame">
+      <p style="margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #333;">
+        This interactive map displays the number of matches played per city in the ATP tour. Each marker is colored by the surface type typically used in that city, and the top player (by number of match wins) is highlighted for each location.
+      </p>
+      <iframe src="atp-map.html"></iframe>
+    </div>
+    
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+      document.getElementById(id).classList.add('visible');
+      document.querySelectorAll('.explore-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector('.explore-btn.' + id).classList.add('active');
+    }
+
+    function switchWtaTab(tab) {
+      document.querySelectorAll('#wta .wta-frame').forEach(f => f.classList.remove('active'));
+      document.getElementById('wta-' + tab).classList.add('active');
+      document.querySelectorAll('.wta-buttons button').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.wta-buttons button[onclick*="${tab}"]`).classList.add('active');
+    }
+
+    function switchAtpTab(tab) {
+      document.querySelectorAll('#atp .wta-frame').forEach(f => f.classList.remove('active'));
+      document.getElementById('atp-' + tab).classList.add('active');
+      document.querySelectorAll('.atp-buttons button').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.atp-buttons button[onclick*="${tab}"]`).classList.add('active');
+    }
+
+    const cursor = document.getElementById('customCursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+      // Hide custom cursor when mouse is over iframes
+  document.querySelectorAll('iframe').forEach(iframe => {
+    iframe.addEventListener('mouseenter', () => {
+      cursor.style.display = 'none';
+    });
+    iframe.addEventListener('mouseleave', () => {
+      cursor.style.display = 'block';
+    });
+  });
+
+  </script>
 </body>
 </html>
